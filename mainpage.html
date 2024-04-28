@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            main page !!
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body{
+                height: 3000px;
+            }
+        .header{
+            background-color: blue;
+            height: 80px;
+            
+        }
+        .video-container{
+            width: 100%;
+            height: 850px;
+        }
+        .video-texts{
+              font-size:large;
+              padding-left: 100px;
+              padding-right: 100px;
+        }
+        .text-container {
+  max-height: 150px; /* Set the maximum height for the text */
+  overflow: hidden; /* Hide overflowing content */
+  transition: max-height 0.1s ease-in-out; /* Add smooth transition */
+}
+
+.more-text {
+  display: none; /* Hide the additional text by default */
+}.view-link {
+  color: #007bff; /* Blue color for the link */
+  cursor: pointer;
+  text-decoration: none; /* Remove default underline */
+}
+
+.view-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+.button-container{
+    text-align: center;
+}
+.advertise-image{
+width: 100%;
+height: 300px;
+}
+.image-slider-heading{
+   text-align: center;
+    font-size: xx-large;
+}
+.image-slider-texts{
+text-align: center;
+
+}.slider-container {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 600px;
+width: 100%;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.thumbnails {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1; /* Add this line */
+}
+
+.container {
+            width: 400px;
+            height: 100px;
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            border: solid rgb(226, 83, 83);
+            margin-bottom: 20px;
+            
+            border-radius: 10px;
+        }
+
+        .container-sub {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container-heading {
+            font-size: large;
+            margin-left: 20px;
+            margin-bottom: 0px;
+        }
+
+        .container-description {
+            padding-left: 20px;
+            font-size: small;
+            color: gray;
+        }
+       .image1 {
+            width: 100px;
+            border-radius: 6px;
+            height: 100px;
+        }
+       .container-texts{
+            padding-bottom: 20px;
+        }
+        
+    .container-2-heading{
+        font-size: xx-large;
+        text-align: center;
+    }
+    .container-2-text{
+        text-align: center;
+        
+    }
+    .container-2-main{
+        display: flex;
+        flex-direction: row;
+        margin-left: 100px;
+        margin-right: 100px;
+       
+    }
+    .container-2-main-sub{
+        border: black;
+        margin-right: 100px;
+        border: solid black;
+        padding: 5px;   
+        
+
+    }
+    .container-2-main-sub-img{
+        width: 440px;
+        height: 250px;
+    }
+    .container-2-main-sub-text{
+        text-align: center;
+    }
+
+    .immersive-slide{
+                display: flex;
+                flex-direction: column;
+                margin-right: 20px;
+                margin-left: 30px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                
+            }
+            .immersive-slide-img{
+                width: 360px;
+                height: 200px;
+                
+               
+            }
+            .immersive-containers{
+                display: flex;
+                flex-direction: column;
+                margin-right: 30px;
+                margin-left: 30px;
+                 border: solid blue;
+                 margin-top: 30px;
+                 
+            }
+            .immersive-text-container{
+                text-align: center;
+                font-size: xx-small;
+            }
+            .immersive-container-1{
+                display: flex;
+                flex-direction: row;
+
+            }
+            .immersive-container-2{
+                display: flex;
+                flex-direction: row;
+            }
+
+            .blog-container-heading{
+            text-align: center;
+        }
+        .blog-description{
+            text-align: center;
+        }
+        .blog-containers{
+            display: flex;
+            flex-direction: row;
+            padding-left: 400px;
+            padding-right: 80px;
+
+        }
+        .blog-container{
+            margin-right: 20px;
+
+        }
+         .blog-image{
+            height: 600px;
+            width: 300px;
+         }
+         .blog-Explore-button{
+            margin-left: 120px;
+
+         }
+         .plan-your-trip-button{
+                height: 10px;
+                background-color: yellow;
+                color: black;
+                border: solid black ;
+                padding-bottom: 30px;
+                align-content: center;
+            }
+
+.last-div{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(35, 47, 62);
+   padding-top:10px ;
+   padding-bottom: 50px;
+   color: aliceblue;
+}
+.last-div1{
+    margin-right: 20px;
+    margin-left: 120px;
+    color: aliceblue;
+  
+}
+.p1-1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+    cursor: pointer;
+    color: aliceblue;
+}
+.p1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size:x-small;
+    cursor: pointer;
+}
+.last-div2{
+    margin-right: 200px;
+    width :250px;
+    color: aliceblue;
+}
+.p2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+    padding-bottom: 0px;
+    color: aliceblue;
+}
+.p2-1{
+    font-family: Arial, Helvetica, sans-serif;
+ color: rgb(0, 183, 255);
+ text-decoration: underline;
+ cursor: pointer;
+ 
+}
+.p2-2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-small;
+    color: aliceblue;
+
+}
+.p2-3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-small;
+    color: aliceblue;
+}
+.p2-4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-small;
+    color: aliceblue;
+}
+.p2-5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-small;
+    color: aliceblue;
+}
+.p2-6{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-small;
+    color: aliceblue;
+
+}
+.p3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+    color: aliceblue;
+}
+.p3-1{
+    padding-left: 15px;
+    cursor: pointer;
+    color: aliceblue;
+}
+.mobile-no{
+    color: aliceblue;
+}
+.email{
+    color: aliceblue;
+}
+        </style>
+    </head>
+    <body>
+    <div class="header">
+        <p class="company name ">H comapany Logo</p> 
+         
+    </div>
+    <div class="mainbody">
+        <video class="video-container" src="Incredible India 4K - Beyond the Stereotypes： The Real India Revealed [p8mXAQ6cPxg].mp4" autoplay muted></video>
+    </div>
+    <div class="text-container">
+        <p class="video-texts">
+          One of the oldest civilisations in the world, India is a mosaic of multicultural experiences. With a rich heritage and myriad attractions, the country is among the most popular tourist destinations in the world. It covers an area of 32, 87,263 sq. km, extending from the snow-covered Himalayan heights to the tropical rain forests of the south.
+          <span class="more-text">As the 7th largest country in the world, India stands apart from the rest of Asia, marked off as it is by mountains and the sea, which give the country a distinct geographical entity. Fringed by the Great Himalayas in the north, it stretches southwards and at the Tropic of Cancer, tapers off into the Indian Ocean between the Bay of Bengal on the east and the Arabian Sea on the west. As you travel the expanse of the country, you are greeted by diverse nuances of cuisines, faiths, arts, crafts, music, nature, lands, tribes, history and adventure sports. India has a mesmeric conflation of the old and the new. As the bustling old bazaars rub shoulders with swanky shopping malls, and majestic monuments accompany luxurious heritage hotels, the quintessential traveller can get the best of both worlds. Head to the mountains, enjoy a beach retreat or cruise through the golden Thar, India has options galore for all.</span>
+        </p>
+        <div class="button-container">
+          <span class="view-link" id="view-more">View More</span>
+          <span class="view-link" id="view-less" style="display: none;">View Less</span>
+        </div>
+      </div>
+      
+      <div class="advertise-image-container">
+        <img class="advertise-image" src="india-rich-in-culture.jpg.webp" ></img>
+      </div>
+
+<p class="image-slider-heading">Popular In India</p>
+<p class="image-slider-texts">India's architectural marvels, serene ghats, breathtaking landscapes, and expansive tiger reserves epitomize its diverse beauty</p>
+
+
+<div class="slider-container">
+    <div class="thumbnails">
+        <div class="thumbnail">
+        <div class="container">
+                <div class="container-sub">
+                    <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image1">
+                    <div class="container-texts">
+                        <p class="container-heading">Lonavla </p>
+                        <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                            picture-perfect memory waiting to be captured</p>
+                        
+                    </div>
+                </div>
+            </div> </div>
+        <div class="thumbnail">
+        <div class="container">
+                <div class="container-sub">
+                    <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image1">
+                    <div class="container-texts">
+                        <p class="container-heading">Lonavla </p>
+                        <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                            picture-perfect memory waiting to be captured</p>
+                        
+                    </div>
+                </div>
+            </div> </div>
+        <div class="thumbnail">
+         <div class="container">
+            <div class="container-sub">
+                <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image1">
+                <div class="container-texts">
+                    <p class="container-heading">Lonavla </p>
+                    <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                        picture-perfect memory waiting to be captured</p>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="thumbnail">
+       <div class="container">
+            <div class="container-sub">
+                <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image1">
+                <div class="container-texts">
+                    <p class="container-heading">Lonavla </p>
+                    <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                        picture-perfect memory waiting to be captured</p>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="thumbnail">
+            <div class="container">
+            <div class="container-sub">
+                <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image1">
+                <div class="container-texts">
+                    <p class="container-heading">Lonavla </p>
+                    <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                        picture-perfect memory waiting to be captured</p>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    <div class="slider">
+      <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Maharashtra_Divisions_Eng.svg/2048px-Maharashtra_Divisions_Eng.svg.png" " alt="Image 1"></div>
+      <div class="slide"><img src="https://www.thrillophilia.com/blog/wp-content/uploads/2017/05/Matheran-Maharashtra.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="https://www.trawell.in/admin/images/upload/699699985Alibaug_Main.jpg" alt="Image 3"></div>
+      <!-- Add more slides as needed -->
+    </div>
+    <div class="controls">
+      <button class="control-btn prev" onclick="prevSlide()">&#10094;</button>
+      <button class="control-btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </div>
+  
+
+  <p class="container-2-heading">Explore Before You Visit </p>
+  <p class="container-2-text">Dive deeper into India's rich culture and heritage</p>
+  <div class="container-2-main">
+      <div class="container-2-main-sub">
+          <img class="container-2-main-sub-img" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRlZNVinmZx0Z3iJ8WXC02UV_Gzxwi0_-qX97R2U1QOuBGpHq0Js2gTJ_ROqVLdwaf1bbsFnWWxGrz1_jsyOmR-TfJ8USEkdMQR8qoAsK4">
+          <p class="container-2-main-sub-text"> Khauraho - Poetry In Unity</p>
+      </div>
+      <div class="container-2-main-sub">
+          <img class="container-2-main-sub-img" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRlZNVinmZx0Z3iJ8WXC02UV_Gzxwi0_-qX97R2U1QOuBGpHq0Js2gTJ_ROqVLdwaf1bbsFnWWxGrz1_jsyOmR-TfJ8USEkdMQR8qoAsK4">
+          <p class="container-2-main-sub-text"> Khauraho - Poetry In Unity</p>
+      </div>
+      <div class="container-2-main-sub">
+          <img class="container-2-main-sub-img" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRlZNVinmZx0Z3iJ8WXC02UV_Gzxwi0_-qX97R2U1QOuBGpHq0Js2gTJ_ROqVLdwaf1bbsFnWWxGrz1_jsyOmR-TfJ8USEkdMQR8qoAsK4">
+          <p class="container-2-main-sub-text"> Khauraho - Poetry In Unity</p>
+      </div>
+  </div>
+
+
+
+  <div class="immersive-containers">
+    <div class="immersive-container-1">
+        <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+      <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+      <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+      <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+    </div>
+    <div class="immersive-container-2">
+    <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+      <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+      <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+      <div class="immersive-slide">
+        <img  class="immersive-slide-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4f/5f/c5/turismo-aguaviva-pucon.jpg?w=500&h=500&s=1" alt="Image 1">
+        <div class="immersive-text-container">Adventure</div>
+      </div>
+    </div>
+</div>
+
+
+<p class="blog-container-heading">Blogs</p>
+<p class="blog-description">An insight to the incredible experiences in India</p>
+<div class="blog-containers">
+    <div class="blog-container"> 
+        <img class="blog-image" src="https://static.toiimg.com/photo/87726041.cms"><br>
+        <button class="blog-Explore-button"> Explore </button>
+    </div>
+    <div class="blog-container"> 
+        <img class="blog-image" src="https://static.toiimg.com/photo/87726041.cms"><br>
+        <button class="blog-Explore-button"> Explore </button>
+    </div>
+    <div class="blog-container"> 
+        <img class="blog-image" src="https://static.toiimg.com/photo/87726041.cms"><br>
+        <button class="blog-Explore-button"> Explore </button>
+    </div>
+</div>
+
+
+
+<button class="plan-your-trip-button">Plan your trip</button>
+
+
+          
+<div class="last-div">
+    <div class="last-div1">
+      <p class="p1-1">Explore <i class="fa-solid fa-magnifying-glass"></i></p>
+      <p class="p1">Packages</p>
+      <p class="p1">Hotels</p>
+      <p class="p1">Destinations</p>
+      <p class="p1">Collections</p>
+      <p class="p1">About us </p>
+      </div>
+      <div class="last-div2">
+        <p class="p2">Need help with tour packages ?</p>
+        <p class="p2-1">Fill this Form to get a Callback <i class="fa-solid fa-file-signature"></i></p>
+        <p class="p2-3"><i class="fa-regular fa-phone"></i> <a  class="mobile-no" href="tel:+91 8767365987">022-48934444</a> </span></p>
+        <p class="p2-4"><i class="fa-regular fa-envelope">  </i><span class ='span-email'> <a class="email" href="mailto:lrsangnale_b23@it.vjti.ac.in" 
+          target="_blank">hello@exporewithus.com </a></span></p>
+        <p class="p2-5">Mon-Fri: 10AM - 7PM (IST)</p>
+       <p class="p2-6"> Saturday: 10AM - 2PM (IST)</p>
+      </div>
+      <div class="last-div3">
+        <p class="p3">Follow us <i class="fa-solid fa-user-plus"></i></p>
+        <p class="p3-1"> <i class="fa-brands fa-instagram"></i>  <i class="fa-brands fa-facebook"></i>  <i class="fa-brands fa-twitter"></i>  <i class="fa-brands fa-youtube"></i> </p>
+      </div>
+  </div>
+</div>
+</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  var moreText = document.querySelector('.more-text');
+  var viewMoreBtn = document.querySelector('#view-more');
+  var viewLessBtn = document.querySelector('#view-less');
+  
+  viewMoreBtn.addEventListener('click', function() {
+    moreText.style.display = 'inline';
+    viewMoreBtn.style.display = 'none';
+    viewLessBtn.style.display = 'inline-block';
+    // Adjust the container height to fit the expanded text
+    document.querySelector('.text-container').style.maxHeight = 'none';
+  });
+  
+  viewLessBtn.addEventListener('click', function() {
+    moreText.style.display = 'none';
+    viewMoreBtn.style.display = 'inline-block';
+    viewLessBtn.style.display = 'none';
+    // Reset the container height to its original value
+    document.querySelector('.text-container').style.maxHeight = '150px';
+  });
+});
+
+
+
+    </script>
+
+   
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+  
+    function showSlide(index) {
+      if (index >= slides.length) {
+        slideIndex = 0;
+      } else if (index < 0) {
+        slideIndex = slides.length - 1;
+      }
+  
+      slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${-slideIndex * 100}%)`;
+      });
+    }
+  
+    function nextSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+  
+    function prevSlide() {
+      slideIndex--;
+      showSlide(slideIndex);
+    }
+  
+    // Automatically change slides every 3 seconds
+    setInterval(nextSlide, 3000);
+  
+    showSlide(slideIndex);
+  </script>
+  
+    </body>
+</html>
