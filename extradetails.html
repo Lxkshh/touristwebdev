@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>extra information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        .body {
+            margin-right: 3%;
+            margin-top: 0%;
+            padding-top: 0%;
+        }
+
+        .header {
+            position: fixed;
+            background-color: gray;
+            color: white;
+            margin-bottom: 100px;
+            width: 100%;
+            margin-top: 0%;
+            padding-top: 0%;
+        }
+
+        .pages-location {
+            margin-top: 70px;
+            background-color: aqua;
+            width: 100%;
+        }
+
+        .container {
+            width: 48%;
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            border: solid rgb(226, 83, 83);
+            margin-bottom: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+        }
+
+        .container-sub {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container-heading {
+            margin-left: 20px;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .container-description {
+            padding-left: 20px;
+            color: gray;
+        }
+
+        #details1 {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        .details-image1 {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 700px;
+        }
+
+        .details {
+            width: 42%;
+            height: 900px;
+            margin-top: 130px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+            border: solid black;
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.4%;
+            margin-right: 20px;
+            border-radius: 10px;
+            border: solid rgb(226, 83, 83);
+        }
+         .details-border{
+          
+  border-bottom: 2px solid  rgb(226, 83, 83);/* Faint border color */
+
+
+         }
+        .details.active {
+            opacity: 1;
+            bottom: auto;
+            top: 0;
+        }
+
+        .image1 {
+            width: 500px;
+            border-radius: 6px;
+        }
+
+        .button {
+            /* Adjust padding as needed */
+            background-color: rgb(226, 83, 83);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 200px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+        }
+
+        .button:hover {
+            background-color: #ffffff; /* Darken color on hover */
+            color: rgb(226, 83, 83);
+            border: solid 2px rgb(226, 83, 83);
+        }
+        
+    .slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+    }
+
+    /* Fade animation */
+    .slide {
+      -webkit-animation: fade 5s infinite; /* Chrome, Safari, Opera */
+      animation: fade 5s infinite;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Navigation buttons */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      text-decoration: none; /* added */
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+    .images{
+        width: 700px;
+        height: 394px;
+        border-radius: 10px;
+    }
+   .redirecting{
+    color: white;
+    text-decoration: none;
+   }
+   .redirecting-1{
+    color: white;
+    text-decoration: none;
+   }
+   .redirecting-2{
+    color: white;
+    text-decoration: none;
+   }
+   .redirecting-3{
+    color: white;
+    text-decoration: none;
+   }
+   .links{
+ word-spacing: 10px;    
+}
+    </style>
+</head>
+<body>
+    <header>
+      
+        <img  class="company-logo" src="meekbhatkantilogo.png" alt="Company Logo" class="logo">
+      </header>
+<br>
+<div class="pages-location">
+    <p class="pages-location-text"><a class="redirecting" href="mainpage.html">Home &#x3e;</a> <a class="redirecting-1" href="indiamap.html">Plan Your Trip &#x3e;</a><a class="redirecting-2" href="maharashtra.html"> Explore Maharashtra &#x3e;</a>  <span class="pages-location-text-span"><a class="redirecting-3" > Nature & Wildlife </a></span></p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details1')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details1')"> Explore more </button>
+            <div class="Links">
+                
+            <a href="https://www.google.com/maps/d/u/0/viewer?mid=1z8OxxUD8ePlYgK8lecmky3P4J-__wFPO&hl=en_US&ll=18.733673876486254%2C73.41886162838291&z=12"><i class="fa-regular fa-location-dot"></i></a>
+        <a href="https://www.agoda.com/en-in/search?guid=3c5782a4-4c79-48a8-950d-6df2678afeda&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBR6hNYZUyuJi0sHKG8ekU4hS202d6nMVy%2B8WOY7KXyZ7F2KQjAjmCABWqtv9zIbf%2FTtVnKWhZ24jrVsMFUTxZOiO%2FlnvFk9rWm5OzcXC1vb%2Fu7LRaaa%2FMgNDV9t8x8eEFsqEgLJcdokfX9SBeOhQEEbcj%2BxG%2F0EXyqEpLKdlme8IQ%3D&city=706687&tick=638500066844&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=7ee9de2b-4b6e-4f4e-8830-b7395096ae2f&analyticsSessionId=-7897437997097328045&pageTypeId=1&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-tqm2x&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Lonavla&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i class="fa-solid fa-hotel"></i></a>
+        <a href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+        <a href="https://www.tripadvisor.in/Restaurants-g608474-Lonavala_Pune_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div id="details1" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <div class="details-border">
+    <div class="slider" onmouseover="stopSlider()" onmouseout="startSlider()">
+      <div class="slide">
+        <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Maharashtra_Divisions_Eng.svg/2048px-Maharashtra_Divisions_Eng.svg.png" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img class="images" src="https://www.thrillophilia.com/blog/wp-content/uploads/2017/05/Matheran-Maharashtra.jpg" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img class="images" src="https://www.trawell.in/admin/images/upload/699699985Alibaug_Main.jpg" alt="Image 3">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+    <p class="details-heading">Explore Lonavla </p>
+    <p class="details-description">Lonavla is a popular hill station and tourist destination in Maharashtra, India, known for its scenic beauty, lush greenery, and pleasant climate. Here are some famous places to visit in Lonavla:</p>
+    <p class="details-description-individual">1]Tiger's Leap (Tiger Point) 2]Bhushi Dam 3]Rajmachi Point 4]Karla Caves 5]Lohagad Fort 6]Ryewood Park 7]Wax Museum 8]Kune Waterfalls 9]Duke's Nose 10]Lonavla Lake (Monsoon Lake)</p>
+    <p class="detail-information-para">Nestled amidst the majestic Sahyadri mountain range in Maharashtra, Lonavla beckons with its enchanting beauty and serene ambiance. This picturesque hill station boasts a landscape adorned with rolling hills, verdant valleys, and cascading waterfalls, creating a mesmerizing setting that captivates visitors throughout the year. The monsoon season, in particular, transforms Lonavla into a lush green paradise, as numerous waterfalls come to life, including the renowned Kune Falls and Bhushi Dam Waterfall. These natural wonders draw tourists and nature enthusiasts eager to witness their majestic beauty and experience the rejuvenating power of nature's bounty.</p>
+    
+
+</div>
+
+
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/heritage-sites-in-maharashtra.jpg" alt="Image 1"
+             onclick="showDetails('details2')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details2')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details2" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/heritage-sites-in-maharashtra.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details3')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details3')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details3" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details4')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details4')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details4" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Lonavla </p>
+            <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <img class="details-image1"
+         src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg" alt="Image 1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit unde non est rem nam quaerat saepe
+    autem iure consequuntur iusto eveniet voluptas, voluptatem, porro tempora magni officia, cum tenetur.
+</div>
+<script>
+    function showDetails(id) {
+        var details = document.getElementById(id);
+        if (details.classList.contains('active')) {
+            details.classList.remove('active');
+        } else {
+            // Hide all other details before showing the clicked one
+            var allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(function (detail) {
+                detail.classList.remove('active');
+            });
+            details.classList.add('active');
+        }
+    }
+
+</script>
+
+<script>
+  var slideIndex = 0;
+  var slides = document.getElementsByClassName("slide");
+  var timer;
+
+  showSlides();
+
+  function plusSlides(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides() {
+    var i;
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    timer = setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+
+  function stopSlider() {
+    clearTimeout(timer);
+  }
+
+  function startSlider() {
+    timer = setTimeout(showSlides, 5000);
+  }
+</script>
+</body>
+</html>
