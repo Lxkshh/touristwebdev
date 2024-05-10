@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mahrashtra unesco heritagw webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+
+.body {
+            padding-top: 0%;
+
+            margin: 0%;
+        }
+
+        header {
+            background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .main-container {
+            margin-top: 30px;
+        }
+
+        .pages-location {
+            margin-top: 0%;
+            background-color: #AF8260;
+            ;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location-text {
+            cursor: pointer;
+        }
+
+
+        .pages-location {
+            padding: 0px;
+            margin: 0px;
+            background-color: #AF8260;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location a {
+            text-decoration: none;
+            color: #322C2B;
+        }
+
+        .pages-location-text {
+            margin: 0px;
+            padding: 2px;
+            cursor: pointer;
+
+            .redirecting-3 {
+                color: #803D3B;
+            }
+        }
+
+        .pages-location-text a {
+            transition: all 0.4s;
+        }
+
+        .redirecting:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-1:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-2:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 48%;
+
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0.3, 0.3, 0.3, 0.3);
+        }
+
+        .container-sub {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .container-heading {
+            margin-left: 20px;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container-description {
+            padding-left: 20px;
+            color: gray;
+            font-family: monospace;
+        }
+
+        #details1 {
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+
+        .details-image1 {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 700px;
+        }
+
+        .details {
+            width: 42%;
+
+            margin-top: 240px;
+            position: fixed;
+            padding-bottom: 59px;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            border: solid #AF8260;
+            margin-right: 20px;
+            border-radius: 10px;
+            z-index: -1;
+
+
+        }
+
+        .details.move-up {
+            bottom: 80px;
+        }
+
+        .details-heading {
+            font-size: x-large;
+            color: #803D3B;
+            font-weight: bold;
+
+        }
+
+        .details-description {
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .details-description-individual {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-information-para {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-border {
+               padding-bottom: 5px;
+            border-bottom: 2px solid #AF8260;
+            /* Faint border color */
+
+
+        }
+
+        .details.active {
+            opacity: 1;
+            bottom: auto;
+            top: 0;
+        }
+
+        .image1 {
+            width: 500px;
+            border-radius: 6px;
+            padding-top: 3px;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3px;
+            border-radius: 6px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            border: solid 3px gray;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            
+
+        }
+
+        .button {
+            /* Adjust padding as needed */
+            background-color: rgb(226, 83, 83);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 165px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+            /* Darken color on hover */
+            color: rgb(226, 83, 83);
+            border: solid 2px rgb(226, 83, 83);
+
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+
+        /* Fade animation */
+        .slide {
+            -webkit-animation: fade 5s infinite;
+            /* Chrome, Safari, Opera */
+            animation: fade 5s infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-decoration: none;
+            /* added */
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .images {
+            width: 700px;
+            height: 394px;
+            border-radius: 10px;
+        }
+
+        .redirecting {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-1 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-2 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-3 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .Links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d8d5d5;
+            /* default background color */
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            transition: background-color 0.3s ease;
+            /* transition effect on background color */
+        }
+
+        .Links a:hover {
+            background-color: #999;
+            /* background color on hover */
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+            z-index: 1;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    
+<header>
+  
+    <img  class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+  
+  </header>
+
+  <div class="pages-location">
+    <p class="pages-location-text"><a class="redirecting" href="index.html">Home &#x3e;</a> <a
+            class="redirecting-1" href="indiamap.html">Plan Your Trip &#x3e;</a><a class="redirecting-2"
+            href="maharashtra.html"> Explore Maharashtra &#x3e;</a> <span class="pages-location-text-span"></span><a
+            class="redirecting-3"> Forts </a></span></p>
+</div>
+
+<div class="main-container">
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://i.ytimg.com/vi/8vX7u1il9Bk/maxresdefault.jpg" alt="Image 1"
+             onclick="showDetails('details1')">
+        <div class="container-texts">
+            <p class="container-heading">Raigad Fort </p>
+            <p class="container-description">Located in the Raigad district, this fort was the capital of the Maratha Empire under the rule of Chhatrapati Shivaji Maharaj. It is situated atop a hill and offers panoramic views of the surrounding landscape.</p>
+            
+            <div class="Links">
+                
+            <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1Wwlyg4nsFmnQA5lseJ_-5ro3Bwc&hl=en&ll=18.173417262596306%2C73.36223600000001&z=12"><i class="fa-regular fa-location-dot"></i></a>
+        <a title="Hotels" href="https://www.agoda.com/en-in/search?poi=2706053&checkIn=2024-05-08&los=1&rooms=1&adults=2&children=0&cid=1891461&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=490e2618-e371-4e7d-97f3-0af21c517b13&analyticsSessionId=-5996586747540752636&pageTypeId=1&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86658fc98c-x8kdc&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkOut=2024-05-09&priceCur=INR&textToSearch=Raigad+Fort&travellerType=1&familyMode=off&city=706687&ds=TR3peWHWEJZINXec&productType=-1"><i class="fa-solid fa-hotel"></i></a>
+        <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+        <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g12400033-Raigad_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+        </div>
+        <button class="button" onclick="showDetails('details1')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details1" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <div class="details-border">
+    <div class="slider slider1" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+        <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Nagarkhana%2C_Raigad_Fort%2C_India.jpg" alt="Image 1">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://media.istockphoto.com/id/1226700413/photo/rajgad-a-famous-and-ancient-fort-in-maharashtra-built-by-king-shivaji-near-pune.jpg?s=612x612&w=0&k=20&c=LBPSuEJP0pfWQ-hbl4mnMskpGm8SCWKwb75CN-Y50qg" alt="Image 2">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://media.istockphoto.com/id/1165694557/photo/statue-of-king-shivaji-at-raigad-fort-maharashtra-india.jpg?s=612x612&w=0&k=20&c=chtFvQMZRz1LQbe12cC_drv-84uXumxE2LmfoiQqT64" alt="Image 3">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/03/10/73/25/240_F_310732584_BPVn2vLZbv8rJyBZSgEFSBbic6ruebJf.jpg" alt="Image 4">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/04/01/54/52/240_F_401545285_olGw7zmqjdgFcDS61dKC3md2mH9i8pCn.jpg" alt="Image 5">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/02/10/85/57/240_F_210855775_oIpDd1e2lmVGL7L4B8wDsELBNBAdFzft.jpg" alt="Image 6">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/03/93/62/65/240_F_393626593_pbVJyvscgslVc7uiO8M3pe2mndKr2P3i.jpg" alt="Image 7">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/07/68/75/48/240_F_768754841_KZRYkJaCh2FeUcXQZmACVjCSjHyQg7JG.jpg" alt="Image 8">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/04/79/33/63/240_F_479336329_OJNQSNwQCY9T5rNUO8eMkm2pHEivErnx.jpg" alt="Image 9">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/06/95/27/87/240_F_695278786_UX3Fxh3sSkejWANRd9qFjfmGXKoR1zOm.jpg" alt="Image 10">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/05/17/43/47/240_F_517434767_PJpAoo7VEvT4I0RDtQQN2kkSGsI0ITVO.jpg" alt="Image 11">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/05/64/89/25/240_F_564892522_5IAL2gmM5a5gjmPSiJIYwNcoXds7MSEQ.jpg" alt="Image 12">
+    </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+    <p class="details-heading"><i class="fa-solid fa-tag"></i>Explore Raigad Fort </p>
+    <p class="details-description">Nestled atop a lofty hill in Maharashtra, Raigad Fort stands as a testament to the region's rich historical legacy. Strategically positioned at an elevation of around 2,700 feet, the fort served as the formidable capital of the Maratha Empire during the illustrious reign of Chhatrapati Shivaji Maharaj from 1674 to 1689. Enclosed within towering stone walls adorned with majestic gateways, Raigad Fort boasts architectural splendor and strategic prowess. Its grand entrance, the Maha Darwaja, beckons visitors with its imposing presence, while the inner citadel, known as Balekilla, houses the regal palace and administrative chambers where Shivaji Maharaj held court. The fort's cultural significance is underscored by landmarks such as the Palkhi Darwaja, reserved for royal access, and the sacred throne where Shivaji Maharaj was ceremoniously crowned. Raigad Fort stands as a cherished symbol of Maharashtra's heritage, drawing tourists and history enthusiasts to explore its storied past and architectural grandeur.</p>
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://lh3.googleusercontent.com/proxy/xH2HwvWcxQdNHuuz-i-LJPWiN5rlGaV7wGPMACwMMJ2ePStJ33iVqtfuustEZaF19J8YvzZqTSHGWeYGvNPkztAjscFLqI739Nze8HyOdDNJV93q6cv5a-kir9VwtMrTwA" alt="Tadoba National Park"
+             onclick="showDetails('details2')">
+        <div class="container-texts">
+            <p class="container-heading">Sinhagad Fort</p>
+            <p class="container-description"> Also known as Kondana Fort, Sinhagad Fort is situated near Pune. It has great historical significance and offers breathtaking views of the surrounding hills and valleys.
+                Pratapgad Fort: Located near Mahabaleshwar, Pratapgad Fort is famous for the Battle of Pratapgad, fought between Shivaji Maharaj and Afzal Khan. It is known for its strategic location and architectural brilliance.</p>
+        </p>
+            
+            <div class="Links">
+                
+                <a title="Map" href="https://lh3.googleusercontent.com/proxy/xH2HwvWcxQdNHuuz-i-LJPWiN5rlGaV7wGPMACwMMJ2ePStJ33iVqtfuustEZaF19J8YvzZqTSHGWeYGvNPkztAjscFLqI739Nze8HyOdDNJV93q6cv5a-kir9VwtMrTwA"><i class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels" href="https://www.agoda.com/en-in/search?poi=211257&checkIn=2024-05-08&los=1&rooms=1&adults=2&children=0&cid=1891461&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=f73b5bd5-f355-4956-821f-39b576a3431e&analyticsSessionId=-5996586747540752636&pageTypeId=1&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86658fc98c-9kw4c&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkOut=2024-05-09&priceCur=INR&textToSearch=Sinhagad+Fort&productType=-1&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec"><i class="fa-solid fa-hotel"></i></a>
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g297654-Pune_Pune_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details2')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details2" class="details">
+    <div class="details-border">
+        <div class="slider slider2" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://i.ytimg.com/vi/C5sB-9WhSPE/sddefault.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://i.redd.it/dh6a7d8indt71.jpg" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media1.thrillophilia.com/filestore/rjhcowyu6eptqnl7c6kp9s19dzrs_1581171967_sinhagad1.png" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://c8.alamy.com/comp/B5REFD/sinhagad-fort-pune-maharashtra-india-top-view-of-bastion-or-rampart-B5REFD.jpg" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzga_Rqzhjfyk7UqTXg3-ML6DzwdAscH0dmIjaQbgyOQ&s" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0v2_f4wc7GceanuCRl5dCTX5Wc7meY3YEf5sicWLkAQ&s" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNjcxMjcwNzAvZjBmMWU2NTljZDhjM2U0ZTZmMDRlNmZiZjg4MGJjYjQuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjo1MDAsImhlaWdodCI6NTAwLCJmaXQiOiJpbnNpZGUifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0=" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwX375-oqRq6UyYcm6qpJ8I5L90oRIiDuaG0N4rvQoeg&s" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://i0.wp.com/waywardwayfarer.com/wp-content/uploads/2020/07/Screenshot_11-1.png?resize=1140%2C760&ssl=1" alt="Image 9">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://i.pinimg.com/originals/6e/82/da/6e82daea4447eda5c7a13a74d7ca719b.jpg" alt="Image 10">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Sinhagad Fort </p>
+        <p class="details-description">Sinhagad Fort, a historical gem perched atop a rugged hill in Pune, Maharashtra, is steeped in legends and myths that have withstood the test of time. However, amidst its grandeur and charm, several misconceptions and myths have emerged, shaping the narratives surrounding this majestic structure.
+
+            One of the prevalent misconceptions about Sinhagad Fort is that it was named after the famous Maratha warrior, Tanaji Malusare's pet lion. However, historical records suggest that the fort's name derives from the word "Sinhgad," which translates to "Lion's Fort," owing to its strategic location and the resemblance of the hill to a lion's mane.
+            
+            Another common myth is that Tanaji Malusare scaled the fort's steep cliffs using a monitor lizard (ghorpad in Marathi) to surprise the enemy forces. While Tanaji's valor is undisputed, there is no historical evidence to support this claim, and it likely originated from exaggerated folklore.
+            
+            Contrary to popular belief, the construction of Sinhagad Fort predates the era of Chhatrapati Shivaji Maharaj. While Shivaji Maharaj did capture the fort in 1670, it was originally built centuries earlier by the Koli tribe and later fortified by various rulers, including the Bahmani Sultanate and the Marathas.
+            
+            It is often believed that the British destroyed the Kalyan Darwaza (main entrance) of Sinhagad Fort during their rule. However, historical records indicate that the entrance was demolished in the 18th century due to disrepair and was later reconstructed by the British.
+            
+            Despite its formidable appearance, Sinhagad Fort was not impregnable. In fact, it changed hands multiple times throughout history, witnessing numerous battles and sieges, including the famous Battle of Sinhagad in 1670 between the Marathas and the Mughals.
+            
+            There is a misconception that the fort's main purpose was defense. While defense was undoubtedly a crucial function, Sinhagad also served as a strategic outpost for controlling trade routes, collecting taxes, and maintaining law and order in the region.
+            
+            Legend has it that the fort's original name was "Kondhana," and it was renamed Sinhagad after Shivaji Maharaj's conquest. However, historical sources suggest that the fort was always known as Sinhagad, with "Kondhana" being an alternative name mentioned in some texts.
+            
+            There is a popular belief that the fort's walls are impervious to cannon fire due to their thickness and construction. While the fortifications are indeed sturdy, they were not indestructible, as evidenced by the damage inflicted during various battles and skirmishes over the centuries.
+            
+            It is often claimed that the fort's steep slopes and rugged terrain made it impossible for enemy forces to scale. While the natural defenses of Sinhagad Fort certainly posed challenges to attackers, history reveals instances where the fort was breached through strategic maneuvers and perseverance.
+            
+            Lastly, there is a misconception that Sinhagad Fort is solely a symbol of Maratha pride and resistance against foreign invaders. While it holds immense significance in Maratha history, the fort's legacy transcends regional boundaries, symbolizing the resilience and valor of all those who fought to defend it.
+    </div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src=" https://upload.wikimedia.org/wikipedia/commons/4/49/Suvela_machi%2CRajgad_fort%2C_Maharashtra%2CIndia_July2015.jpg" alt="Image 1"
+             onclick="showDetails('details3')">
+        <div class="container-texts">
+            <p class="container-heading">Rajgad Fort </p>
+            <p class="container-description">Another significant fort associated with Shivaji Maharaj, Rajgad Fort is situated near Pune. It served as the capital of the Maratha Empire for several years and offers stunning views of the Sahyadri mountain range.
+            </p>
+                <div class="Links">
+                
+                    <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1iyZ4gJec7wReAeCYG1prdWV-C9E&hl=en&ll=18.389932018710148%2C73.79263050000002&z=11"><i class="fa-regular fa-location-dot"></i></a>
+                <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=f7e6d06e-5ed6-4785-8e57-c7740cfd6e03&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRE2A%2Fbo%2FHAM3Y%2FWamiX5jPPR0oN4KlKZ1qhhtrtOow4Lz44%2BGlrJD%2BfGp6w2H%2FLrJfa2GuVuKq9KWJ2jFfmqoa3Sk%2FM8eVuQYqDHVLhv%2F6oNIsrGK%2FKbauYo5S3xFa%2BgHTxyehEcY8mMyjH8%2FSJTi1gYzM%2BhQQ9fP3zfSJthwHp4%3D&poi=275978&tick=638503415321&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=ab566409-9ed1-4a09-ad4c-1a70dab12642&analyticsSessionId=-5996586747540752636&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86658fc98c-rn5hd&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Rajgad+Fort&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i class="fa-solid fa-hotel"></i></a>
+                <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+                <a title="Restaurants" href="https://www.tripadvisor.in/Search?q=RAJGAD+FORT&geo=297654&ssrc=e&searchNearby=false&searchSessionId=000ce1fe15c45cce.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-utensils"></i></a>
+                </div>
+                <button class="button" onclick="showDetails('details3')"> Explore more </button>
+        </div>
+    </div>
+</div>
+<div id="details3" class="details">
+
+    <div class="details-border">
+        <div class="slider slider3" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://sgtrekkers.in/wp-content/uploads/2023/03/RajgadP-H1-2.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://static2.tripoto.com/media/filter/tst/img/338659/TripDocument/1482258647_0dd1e615_3889_437c_9cfe_80efddfa9c50_post.jpg.webp" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSupYnuDgkEKufK-FbmPdMNyWfxZ0zQBXmWoj5PkGNnGQ&s" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://preview.redd.it/jixfujy446c71.png?auto=webp&s=fa40a93ef68cc1d31a6635dc0997312d1283fc97" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7R7WjHzzpslYAgL922DgIltXVsYChquDUo_knkRKDVQ&s" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGCWRiZKqGYQV0hvY81NK-RAPqpiO68mo4EFm_NJIug&s" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://vl-prod-static.b-cdn.net/system/images/000/604/898/daa522e23638732438e24ae24e929102/banner/31787774525_6f67aeb86b_b.jpg?1656682110" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://miro.medium.com/v2/resize:fit:3840/1*aftsaFFmuTk0v5Ovz3juYg.jpeg" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://im.rediff.com/getahead/2019/jul/31rajgad-fort.jpg?w=670&h=900" alt="Image 9">
+        </div>
+        
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Rajgad fort</p>
+        <p class="details-description">Rajgad Fort, situated in the Sahyadri mountain range of Maharashtra, India, holds immense historical significance and offers breathtaking views of the surrounding landscape. Originally built in the 17th century by the Maratha king Chhatrapati Shivaji Maharaj, the fort served as a strategic stronghold for the Maratha Empire.
+
+            Perched atop a hill, Rajgad Fort boasts a formidable structure with massive stone walls and gates, making it impregnable against enemy attacks. The fortification includes several bastions, watchtowers, and cannons strategically positioned to defend the fort.
+            
+            Visitors to Rajgad Fort can explore its various attractions, including the ruins of the royal palace, the Darwaja Darshan (gate tour), the Padmavati Temple, and the Bale Killa (citadel). Trekking enthusiasts flock to Rajgad to conquer its challenging trails and witness its historical marvels.
+            
+            Apart from its historical significance, Rajgad Fort offers visitors a serene and picturesque environment, surrounded by lush greenery and panoramic views of the Sahyadri mountains. Whether one is a history buff, a nature lover, or an adventure seeker, Rajgad Fort has something to offer for everyone, making it a must-visit destination in Maharashtra.
+        </p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://i.ytimg.com/vi/ieelcXLhCXs/sddefault.jpg?v=64c1f6cf" alt="Amboli"
+             onclick="showDetails('details4')">
+        <div class="container-texts">
+            <p class="container-heading">Janjira Fort</p>
+            <p class="container-description">Located in the Raigad district, Janjira Fort is situated on an island off the coast of Murud. It is one of the strongest marine forts in India and has a fascinating history of resisting several attacks from foreign invaders.</p>
+            <div class="Links">
+                <a title="Map" href="http://trekshitiz.com/maps/janjira-178-FortMap-.html"><i class="fa-regular fa-location-dot"></i></a>
+                <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=13835706-3b12-45c1-a655-729c0583f357&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBR1tnKD9BCB1f4tguyAsVDNPR0oN4KlKZ1qhhtrtOow4Lz44%2BGlrJD%2BfGp6w2H%2FLrJfa2GuVuKq9KWJ2jFfmqoa3Sk%2FM8eVuQYqDHVLhv%2F6oM%2FvOPnKJ9jXkERz5zp9wH7Xc%2BPgQa6htD0IZDznHFdwNPFWgUcPaTJiZFTEGtL624%3D&poi=2706053&tick=638503422606&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=ca836ec4-3ac1-4471-88a0-0f251e903c04&analyticsSessionId=-5996586747540752636&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86658fc98c-t92nz&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Raigad+Fort&productType=-1&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec"><i class="fa-solid fa-hotel"></i></a>
+            
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Search?q=RAigad+fort&geo=297654&ssrc=a&searchNearby=false&searchSessionId=000ce1fe15c45cce.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details4')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details4" class="details">
+
+    <div class="details-border">
+        <div class="slider slider4" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://sgtrekkers.in/wp-content/uploads/2023/03/RajgadP-H1-2.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://static2.tripoto.com/media/filter/tst/img/338659/TripDocument/1482258647_0dd1e615_3889_437c_9cfe_80efddfa9c50_post.jpg.webp" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSupYnuDgkEKufK-FbmPdMNyWfxZ0zQBXmWoj5PkGNnGQ&s" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://preview.redd.it/jixfujy446c71.png?auto=webp&s=fa40a93ef68cc1d31a6635dc0997312d1283fc97" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7R7WjHzzpslYAgL922DgIltXVsYChquDUo_knkRKDVQ&s" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGCWRiZKqGYQV0hvY81NK-RAPqpiO68mo4EFm_NJIug&s" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://vl-prod-static.b-cdn.net/system/images/000/604/898/daa522e23638732438e24ae24e929102/banner/31787774525_6f67aeb86b_b.jpg?1656682110" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://miro.medium.com/v2/resize:fit:3840/1*aftsaFFmuTk0v5Ovz3juYg.jpeg" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://im.rediff.com/getahead/2019/jul/31rajgad-fort.jpg?w=670&h=900" alt="Image 9">
+        </div>
+        
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Janjira Fort </p>
+        <p class="details-description">Located off the coast of Murud village in the Raigad district of Maharashtra, India, Murud-Janjira Fort is a majestic sea fort steeped in history and legend. It stands on an oval-shaped rock in the Arabian Sea and is renowned for its impressive architecture and strategic location.
+
+            The fort is believed to have been constructed in the 15th century and later fortified by the Siddis of Murud, who were Abyssinian slave merchants. Over the centuries, Murud-Janjira Fort served as an impregnable bastion against numerous invasions by the Portuguese, British, and Marathas, owing to its strategic position and sturdy defenses.
+            
+            One of the unique features of Murud-Janjira Fort is its strong walls and bastions, which are built entirely of black granite rocks and stand tall amidst the sea waves. Despite being surrounded by water, the fort has several freshwater tanks within its premises, providing a reliable source of water to its inhabitants during times of siege.
+            
+            Visitors to Murud-Janjira Fort can explore its various structures, including the palace, mosque, and cannons, which offer glimpses into its glorious past. The fort also offers panoramic views of the Arabian Sea, making it a popular tourist destination for history enthusiasts and nature lovers alike.
+            
+            Today, Murud-Janjira Fort stands as a testament to the rich maritime history of Maharashtra and continues to attract visitors with its awe-inspiring architecture and captivating tales of valor and conquest.</p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/27/3cf7af3a49ad46f9f65b7c43a87aa2c3_1000x1000.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Pratapgad Fort</p>
+            <p class="container-description"> Located near Mahabaleshwar, Pratapgad Fort is famous for the Battle of Pratapgad, fought between Shivaji Maharaj and Afzal Khan. It is known for its strategic location and architectural brilliance.</p><div class="Links">
+                
+                <a title="Map" href="http://trekshitiz.com/Maps/Pratapgad-227-FortMap-.html"><i class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels" href="https://www.tripadvisor.in/Search?q=pratapgad&geo=297654&ssrc=a&searchNearby=false&searchSessionId=000ce1fe15c45cce.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-hotel"></i></a>
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Search?q=pratapgad&geo=297654&ssrc=a&searchNearby=false&searchSessionId=000ce1fe15c45cce.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+   
+    <div class="details-border">
+        <div class="slider slider5" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/03/53/88/00/240_F_353880096_P0nqJ3vtq9tF14KvJ2TgLgxiQprAKUra.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t4.ftcdn.net/jpg/03/62/77/97/240_F_362779728_ampDb4eXDhaplRu2DEoR6yQC7SisGpEg.jpg" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t4.ftcdn.net/jpg/03/14/89/91/240_F_314899189_KmlhoHp4jwhAVETMQwnKEJD7LCAmKWbU.jpg" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/04/31/20/98/240_F_431209813_UzPizyvwkrqZnyoDdBJ8FZoShC3DeoQz.jpg" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/00/00/76/32/240_F_763268_yXC0fyGZ0ocuD9ocuDeSlY09xl3i1K.jpg" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t4.ftcdn.net/jpg/02/87/16/73/240_F_287167380_VCVVM5ayJGWyBj22E9zgoXPKyv3Ki5C3.jpg" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t4.ftcdn.net/jpg/03/62/77/93/240_F_362779341_SIssmoAi0A03p2hCQZOoolkQ018YvhYE.jpg" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/02/94/13/94/240_F_294139497_6yRbFtSPWei04j7DW6BrdAtf1cLSX9CT.jpg" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/02/75/77/60/240_F_275776082_sH482sylqfWZUvgbapGiPfeXvrMO1I8k.jpg" alt="Image 9">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/03/63/44/52/240_F_363445215_fezAqNqssWvwkGUyNsI1Uqtg2pN7BO2g.jpg" alt="Image 10">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/03/20/77/20/240_F_320772025_gntIDwqXVDnMIottAq6cKF7m1ik9HvNo.jpg" alt="Image 11">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/07/70/80/62/240_F_770806289_mOzHErAI4AZOAC3IhlCYQnMJNBXF0d0C.jpg" alt="Image 12">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t4.ftcdn.net/jpg/07/87/85/95/240_F_787859560_HfaixabDvOUd9fi8936hMYm5jk8jprPh.jpg" alt="Image 13">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/07/70/80/50/240_F_770805064_Vkn4JHmda7Uqe4wWcQ6HGUSTs4pDnJYT.jpg" alt="Image 14">
+        </div>
+        
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Pratapgad Fort </p>
+        <p class="details-description">
+            Pratapgad Fort, located in the Satara district of Maharashtra, India, is perched atop a hill near the town of Mahabaleshwar, about 15 kilometers away. Constructed in 1656 by Chhatrapati Shivaji Maharaj, the fort holds a significant place in Indian history. Its purpose was to defend against the Adil Shahi dynasty's forces. The architecture of Pratapgad Fort reflects its strategic importance, boasting a sturdy design with massive gateways, watchtowers, temples, and reservoirs. The fort's stone walls, several meters thick, stand as a testament to its strength.
+
+One of the most renowned events associated with Pratapgad Fort is the Battle of Pratapgad, where Shivaji Maharaj defeated the Adil Shahi Sultanate's general, Afzal Khan. The site features various attractions, including the Bhavani Temple, Afzal Tower, and Afzal Khan's tomb, amidst lush greenery and panoramic vistas. Accessible by road, visitors can either trek or drive to the fort's base and then ascend on foot.
+
+Pratapgad Fort welcomes tourists from morning till evening, offering them a glimpse into Maharashtra's rich cultural heritage and providing opportunities for trekking and photography. Efforts are underway to conserve and preserve the fort, ensuring its structural integrity and promoting sustainable tourism. With its cultural significance deeply rooted in courage, valor, and resilience, Pratapgad Fort stands as an emblem of Maharashtra's glorious past and the legacy of Shivaji Maharaj.</p></div>
+<div class="footer">
+    <a class="footer-text" href="mahrashtra-forts.html">
+    <p class="footer-text">Back To Top <i class="fa-solid fa-arrow-up"></i> </p></a>
+</div>
+<script>
+    function showDetails(id) {
+        var details = document.getElementById(id);
+        if (details.classList.contains('active')) {
+            details.classList.remove('active');
+        } else {
+            // Hide all other details before showing the clicked one
+            var allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(function (detail) {
+                detail.classList.remove('active');
+            });
+            details.classList.add('active');
+        }
+    }
+
+</script>
+
+<script>// For Lonavla slideshow
+    var slideIndex1 = 0;
+    var slides1 = document.querySelectorAll('.slider1 .slide');
+    var timer1;
+    
+    showSlides1();
+    
+    function plusSlides1(n) {
+        clearTimeout(timer1);
+        showSlides1(slideIndex1 += n);
+    }
+    
+    function showSlides1() {
+        var i;
+        for (i = 0; i < slides1.length; i++) {
+            slides1[i].style.display = "none";
+        }
+        slideIndex1++;
+        if (slideIndex1 > slides1.length) { slideIndex1 = 1; }
+        slides1[slideIndex1 - 1].style.display = "block";
+        timer1 = setTimeout(showSlides1, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider1() {
+        clearTimeout(timer1);
+    }
+    
+    function startSlider1() {
+        timer1 = setTimeout(showSlides1, 5000);
+    }
+    
+    // For Tadoba National Park slideshow
+    var slideIndex2 = 0;
+    var slides2 = document.querySelectorAll('.slider2 .slide');
+    var timer2;
+    
+    showSlides2();
+    
+    function plusSlides2(n) {
+        clearTimeout(timer2);
+        showSlides2(slideIndex2 += n);
+    }
+    
+    function showSlides2() {
+        var i;
+        for (i = 0; i < slides2.length; i++) {
+            slides2[i].style.display = "none";
+        }
+        slideIndex2++;
+        if (slideIndex2 > slides2.length) { slideIndex2 = 1; }
+        slides2[slideIndex2 - 1].style.display = "block";
+        timer2 = setTimeout(showSlides2, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider2() {
+        clearTimeout(timer2);
+    }
+    
+    function startSlider2() {
+        timer2 = setTimeout(showSlides2, 5000);
+    }
+    // for Mahabaleshwar
+    var slideIndex3 = 0;
+var slides3 = document.querySelectorAll('.slider3 .slide');
+var timer3;
+
+showSlides3();
+
+function plusSlides3(n) {
+    clearTimeout(timer3);
+    showSlides3(slideIndex3 += n);
+}
+
+function showSlides3() {
+    var i;
+    for (i = 0; i < slides3.length; i++) {
+        slides3[i].style.display = "none";
+    }
+    slideIndex3++;
+    if (slideIndex3 > slides3.length) { slideIndex3 = 1; }
+    slides3[slideIndex3 - 1].style.display = "block";
+    timer3 = setTimeout(showSlides3, 5000); // Change image every 5 seconds
+}
+
+function stopSlider3() {
+    clearTimeout(timer3);
+}
+
+function startSlider3() {
+    timer3 = setTimeout(showSlides3, 5000);
+}
+// 4
+var slideIndex4 = 0;
+var slides4 = document.querySelectorAll('.slider4 .slide');
+var timer4;
+
+showSlides4();
+
+function plusSlides4(n) {
+    clearTimeout(timer4);
+    showSlides4(slideIndex4 += n);
+}
+
+function showSlides4() {
+    var i;
+    for (i = 0; i < slides4.length; i++) {
+        slides4[i].style.display = "none";
+    }
+    slideIndex4++;
+    if (slideIndex4 > slides4.length) { slideIndex4 = 1; }
+    slides4[slideIndex4 - 1].style.display = "block";
+    timer4 = setTimeout(showSlides4, 5000); // Change image every 5 seconds
+}
+
+function stopSlider4() {
+    clearTimeout(timer4);
+}
+
+function startSlider4() {
+    timer4 = setTimeout(showSlides4, 5000);
+}
+//
+var slideIndex5 = 0;
+var slides5 = document.querySelectorAll('.slider5 .slide');
+var timer5;
+
+showSlides5();
+
+function plusSlides5(n) {
+    clearTimeout(timer5);
+    showSlides5(slideIndex5 += n);
+}
+
+function showSlides5() {
+    var i;
+    for (i = 0; i < slides5.length; i++) {
+        slides5[i].style.display = "none";
+    }
+    slideIndex5++;
+    if (slideIndex5 > slides5.length) { slideIndex5 = 1; }
+    slides5[slideIndex5 - 1].style.display = "block";
+    timer5 = setTimeout(showSlides5, 5000); // Change image every 5 seconds
+}
+
+function stopSlider5() {
+    clearTimeout(timer5);
+}
+
+function startSlider5() {
+    timer5 = setTimeout(showSlides5, 5000);
+}
+//
+
+
+</script>
+</script>
+</body>
+</html>

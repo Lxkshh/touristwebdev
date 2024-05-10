@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Maharashtra Nature and wildlife webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .body {
+            padding-top: 0%;
+
+            margin: 0%;
+        }
+
+        header {
+            background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .main-container {
+            margin-top: 30px;
+        }
+
+        .pages-location {
+            margin-top: 0%;
+            background-color: #AF8260;
+            ;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location-text {
+            cursor: pointer;
+        }
+
+
+        .pages-location {
+            padding: 0px;
+            margin: 0px;
+            background-color: #AF8260;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location a {
+            text-decoration: none;
+            color: #322C2B;
+        }
+
+        .pages-location-text {
+            margin: 0px;
+            padding: 2px;
+            cursor: pointer;
+
+            .redirecting-3 {
+                color: #803D3B;
+            }
+        }
+
+        .pages-location-text a {
+            transition: all 0.4s;
+        }
+
+        .redirecting:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-1:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-2:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 48%;
+
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0.3, 0.3, 0.3, 0.3);
+        }
+
+        .container-sub {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .container-heading {
+            margin-left: 20px;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container-description {
+            padding-left: 20px;
+            color: gray;
+            font-family: monospace;
+        }
+
+        #details1 {
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+
+        .details-image1 {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 700px;
+        }
+
+        .details {
+            width: 42%;
+
+            margin-top: 240px;
+            position: fixed;
+            padding-bottom: 59px;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            border: solid #AF8260;
+            margin-right: 20px;
+            border-radius: 10px;
+            z-index: -1;
+
+
+        }
+
+        .details.move-up {
+            bottom: 80px;
+        }
+
+        .details-heading {
+            font-size: x-large;
+            color: #803D3B;
+            font-weight: bold;
+
+        }
+
+        .details-description {
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .details-description-individual {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-information-para {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-border {
+               padding-bottom: px;
+            border-bottom: 2px solid #AF8260;
+            /* Faint border color */
+
+
+        }
+
+        .details.active {
+            opacity: 1;
+            bottom: auto;
+            top: 0;
+        }
+
+        .image1 {
+            width: 500px;
+            border-radius: 6px;
+            padding-top: 3px;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3px;
+            border-radius: 6px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            border: solid 3px gray;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            
+
+        }
+
+        .button {
+            /* Adjust padding as needed */
+            background-color: rgb(226, 83, 83);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 165px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+            /* Darken color on hover */
+            color: rgb(226, 83, 83);
+            border: solid 2px rgb(226, 83, 83);
+
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+
+        /* Fade animation */
+        .slide {
+            -webkit-animation: fade 5s infinite;
+            /* Chrome, Safari, Opera */
+            animation: fade 5s infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-decoration: none;
+            /* added */
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .images {
+            width: 700px;
+            height: 394px;
+            border-radius: 10px;
+        }
+
+        .redirecting {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-1 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-2 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-3 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .Links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d8d5d5;
+            /* default background color */
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            transition: background-color 0.3s ease;
+            /* transition effect on background color */
+        }
+
+        .Links a:hover {
+            background-color: #999;
+            /* background color on hover */
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+            z-index: 1;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <img class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+
+    </header>
+
+    <div class="pages-location">
+        <p class="pages-location-text"><a class="redirecting" href="index.html">Home &#x3e;</a> <a
+                class="redirecting-1" href="indiamap.html">Plan Your Trip &#x3e;</a><a class="redirecting-2"
+                href="maharashtra.html"> Explore Maharashtra &#x3e;</a> <span class="pages-location-text-span"></span><a
+                class="redirecting-3"> Nature & Wildlife </a></span></p>
+    </div>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="container-sub">
+                <img class="image1" src="https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Lonavala.jpg"
+                    alt="Image 1" onclick="showDetails('details1')">
+                <div class="container-texts">
+                    <p class="container-heading">Lonavla </p>
+                    <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                        picture-perfect memory waiting to be captured</p>
+
+                    <div class="Links">
+
+                        <a title="Map"
+                            href="https://www.google.com/maps/d/u/0/viewer?mid=1z8OxxUD8ePlYgK8lecmky3P4J-__wFPO&hl=en_US&ll=18.733673876486254%2C73.41886162838291&z=12"><i
+                                class="fa-regular fa-location-dot"></i></a>
+                        <a title="Hotels"
+                            href="https://www.agoda.com/en-in/search?guid=3c5782a4-4c79-48a8-950d-6df2678afeda&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBR6hNYZUyuJi0sHKG8ekU4hS202d6nMVy%2B8WOY7KXyZ7F2KQjAjmCABWqtv9zIbf%2FTtVnKWhZ24jrVsMFUTxZOiO%2FlnvFk9rWm5OzcXC1vb%2Fu7LRaaa%2FMgNDV9t8x8eEFsqEgLJcdokfX9SBeOhQEEbcj%2BxG%2F0EXyqEpLKdlme8IQ%3D&city=706687&tick=638500066844&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=7ee9de2b-4b6e-4f4e-8830-b7395096ae2f&analyticsSessionId=-7897437997097328045&pageTypeId=1&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-tqm2x&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Lonavla&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i
+                                class="fa-solid fa-hotel"></i></a>
+                        <a title="Transport services" href="https://www.makemytrip.com"><i
+                                class="fa-solid fa-bus"></i></a>
+                        <a title="Restaurants"
+                            href="https://www.tripadvisor.in/Restaurants-g608474-Lonavala_Pune_District_Maharashtra.html"><i
+                                class="fa-solid fa-utensils"></i></a>
+                    </div>
+                    <button class="button" onclick="showDetails('details1')"> Explore more </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="details1" class="details">
+            <!-- Extra details for container 1 will be displayed here -->
+            <div class="details-border">
+                <div class="slider slider1" onmouseover="stopSlider()" onmouseout="startSlider()">
+                    <div class="slide">
+                        <img class="images"
+                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ed/08/48/tiger-s-leap.jpg?w=1200&h=-1&s=1"
+                            alt="Image 1">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://images.hindustantimes.com/img/2022/07/12/1600x900/15f582e2-fd35-11ec-98be-b2e11b91ac5e_1657653340979.jpg"
+                            alt="Image 2">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rajmachi.jpg"
+                            alt="Image 3">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://media2.thrillophilia.com/images/photos/000/172/779/original/1569824454_shutterstock_1174487167.jpg?width=1600&height=775"
+                            alt="Image 4">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://media1.thrillophilia.com/filestore/a3t43c93tgypkeoz6s5n0rfvuggf_1524424251_Lohagad-Fort.jpg?w=400&dpr=2"
+                            alt="Image 5">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/28/1662ff59e92956f9a542e1819aa1c68c_1000x1000.jpg"
+                            alt="Image 6">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/28/c422002e5bfef101b52fff878af77f62_1000x1000.jpg"
+                            alt="Image 7">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.trawell.in/admin/images/upload/080966148Lonavala_Kune_Falls_Main.jpg"
+                            alt="Image 8">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://img.onmanorama.com/content/dam/mm/en/travel/outside-kerala/images/2021/2/24/dukes-nose-trip.jpg.transform/schema-16x9/image.jpg"
+                            alt="Image 9">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://moxtain.s3.ap-south-1.amazonaws.com/blogs/PawanaLakeSideCamping/pawana-lake-camping.jpg"
+                            alt="Image 10">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Lonavla </p>
+            <p class="details-description">Lonavla is a popular hill station and tourist destination in Maharashtra,
+                India, known for its scenic beauty, lush greenery, and pleasant climate. Here are some famous places to
+                visit in Lonavla:</p>
+            <p class="details-description-individual">1]Tiger's Leap (Tiger Point) 2]Bhushi Dam 3]Rajmachi Point 4]Karla
+                Caves 5]Lohagad Fort 6]Ryewood Park 7]Wax Museum 8]Kune Waterfalls 9]Duke's Nose 10]Lonavla Lake
+                (Monsoon Lake)</p>
+            <p class="details-information-para">Nestled amidst the majestic Sahyadri mountain range in Maharashtra,
+                Lonavla beckons with its enchanting beauty and serene ambiance. This picturesque hill station boasts a
+                landscape adorned with rolling hills, verdant valleys, and cascading waterfalls, creating a mesmerizing
+                setting that captivates visitors throughout the year. The monsoon season, in particular, transforms
+                Lonavla into a lush green paradise, as numerous waterfalls come to life, including the renowned Kune
+                Falls and Bhushi Dam Waterfall. These natural wonders draw tourists and nature enthusiasts eager to
+                witness their majestic beauty and experience the rejuvenating power of nature's bounty.</p>
+
+
+        </div>
+
+        <div class="container">
+            <div class="container-sub">
+                <img class="image1" src="https://indianwildjourney.com/wp-content/uploads/2023/12/slider1.jpg"
+                    alt="Tadoba National Park" onclick="showDetails('details2')">
+                <div class="container-texts">
+                    <p class="container-heading">Tadoba National Park </p>
+                    <p class="container-description">Embark on a journey through Tadoba National Park, where each moment
+                        paints a vivid portrait of wildlife's raw splendor, beckoning you to capture the untamed beauty
+                        of nature's embrace.</p>
+
+                    <div class="Links">
+
+                        <a title="Map"
+                            href=" https://www.google.com/maps/d/u/0/viewer?mid=1dAm_MbbHbMSp6_OYxgxm5CIFntM&hl=en&ll=20.683219945505787%2C79.28981150000001&z=10"><i
+                                class="fa-regular fa-location-dot"></i></a>
+                        <a title="Hotels"
+                            href=" https://www.agoda.com/en-in/search?guid=e88311ef-1d0f-42cc-a913-2a6b51041773&hotel=33193762&selectedproperty=33193762&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBREt3nNxeF0qRe4c4QEPlpWMZIqLAC%2BleOAnVwkjhfXgVKLMP1Saw6knlKlWOKXnMULPE2AYoYvKO7PGpQRirdZpgPtQbEl6OlhsaDmCEJnvkQFW7YBvSQi2pXxu8DUwSrdKT8zx5W5BioMdUuG%2F%2Fqg9M%2By6ojo9zM%2BaBuguIhw7zoewqXsnRFiLlbb8awGEKSxjN9geLsnNHrN87VXMisMEUHZWt4XPFwvVA8U2nz5WILV3swwPXt5ODZuc0WXmkb&tick=638500189403&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=0f25716c-acac-4d70-955d-de8260b6cc6c&analyticsSessionId=8409217827101028978&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-dbxh9&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Tigers+Empire+Resort+-+Tadoba+National+Park&productType=-1&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP"><i
+                                class="fa-solid fa-hotel"></i></a>
+                        <a title="Transport services" href="https://www.makemytrip.com"><i
+                                class="fa-solid fa-bus"></i></a>
+                        <a title="Restaurants"
+                            href="https://www.tripadvisor.in/Restaurants-g10594630-Chandrapur_District_Maharashtra.html"><i
+                                class="fa-solid fa-utensils"></i></a>
+                    </div>
+                    <button class="button" onclick="showDetails('details2')"> Explore more </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="details2" class="details">
+            <div class="details-border">
+                <div class="slider slider2" onmouseover="stopSlider()" onmouseout="startSlider()">
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.pugdundeesafaris.com/blog/wp-content/uploads/2020/03/tadoba-national-park.jpg"
+                            alt="Image 1">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://www.tadobanationalparkonline.in/images/about-tadoba-park.jpg"
+                            alt="Image 2">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://nagpurtourism.co.in/images/places-to-visit/header/tadoba-national-park-nagpur-tourism-entry-fee-timings-holidays-reviews-header.jpg"
+                            alt="Image 3">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://www.wildlifedestination.com/images/tadoba-peacock.jpg"
+                            alt="Image 4">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://redearth.in/blog/wp-content/uploads/2021/07/Tadoba-1.jpeg"
+                            alt="Image 5">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://www.tadobanationalpark.in/images/tadoba-national-park.jpg"
+                            alt="Image 6">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://tadobajunglesafari.files.wordpress.com/2015/02/tigers-at-tadoba-national-park-1.jpg"
+                            alt="Image 7">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Tadoba National Park </p>
+            <p class="details-description">Embrace the untamed beauty and diverse landscapes of Tadoba Andhari Tiger
+                Reserve, where every corner holds the promise of adventure and discovery.
+
+                Nestled in the heart of Maharashtra, Tadoba beckons with its lush forests, sprawling meadows, and
+                tranquil water bodies. The reserve is renowned for its thriving population of Bengal tigers, offering
+                visitors the rare opportunity to witness these majestic creatures in their natural habitat.
+
+                As you venture deeper into the reserve, be prepared to encounter a wealth of biodiversity. From elusive
+                leopards and sloth bears to Indian bison and spotted deer, Tadoba is a sanctuary for a myriad of
+                wildlife species.
+
+                But Tadoba is not just about its iconic inhabitants; it's also a haven for birdwatchers, with over 195
+                species of birds recorded within its boundaries. From vibrant kingfishers to majestic eagles, the
+                reserve's avian residents add melody to its already enchanting ambiance.
+
+                Whether you're embarking on a thrilling jungle safari, trekking through its verdant trails, or simply
+                soaking in the serenity of its surroundings, Tadoba promises an adventure like no other. Let nature be
+                your playground and adventure your compass as you explore the untamed beauty of Tadoba Andhari Tiger
+                Reserve</p>
+
+        </div>
+
+        <div class="container">
+            <div class="container-sub">
+                <img class="image1"
+                    src=" https://templeyatri.in/wp-content/uploads/2024/02/bhimashankar-temple-maharashtra.jpg"
+                    alt="Image 1" onclick="showDetails('details3')">
+                <div class="container-texts">
+                    <p class="container-heading">Bhimashankar </p>
+                    <p class="container-description">
+                        Discover the rugged charm of Bhimashankar, where every sight unveils a breathtaking tapestry of
+                        lush forests and cascading waterfalls, inviting you to capture the essence of wilderness in its
+                        purest form.</p>
+
+                    <div class="Links">
+
+                        <a title="Map"
+                            href="https://www.google.com/maps/d/u/0/viewer?mid=1xA37g1TNjIijEOjyB-x_nH3LHo4&hl=en_US&ll=15.947448724160049%2C74.00181915103171&z=14"><i
+                                class="fa-regular fa-location-dot"></i></a>
+                        <a title="Hotels"
+                            href="https://www.agoda.com/en-in/search?guid=e2dd7aaa-7250-4741-970c-348a35b6b942&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRuJoBbBBoV2%2FnBEXrzjmBfMlKN3T7r7aR6%2FMU2RF%2FrhoiciBKQ6l50O4r3Bih8Ggf%2Fh%2Fe4idk67OoEy6KdHwUNum%2B3QacrQMDUE7JkJAfzu33y5kfQARlWhCtghyShkCm7X4YrrstShiM77AQwSRrNw%3D%3D&city=710184&tick=638500203263&txtuuid=e2dd7aaa-7250-4741-970c-348a35b6b942&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=b0d0abf6-a114-4b20-9b0e-56a5bdf932ea&analyticsSessionId=8409217827101028978&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-cdxt8&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Amboli&productType=-1&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP "><i
+                                class="fa-solid fa-hotel"></i></a>
+                        <a title="Transport services" href="https://www.makemytrip.com"><i
+                                class="fa-solid fa-bus"></i></a>
+                        <a title="Restaurants"
+                            href="https://www.tripadvisor.in/Restaurants-g9822497-Amboli_Sindhudurg_District_Maharashtra.htm "><i
+                                class="fa-solid fa-utensils"></i></a>
+                    </div>
+                    <button class="button" onclick="showDetails('details3')"> Explore more </button>
+                </div>
+            </div>
+        </div>
+        <div id="details3" class="details">
+
+            <div class="details-border">
+                <div class="slider slider3" onmouseover="stopSlider()" onmouseout="startSlider()">
+                    <div class="slide">
+                        <img class="images" src="https://s0.wklcdn.com/image_77/2338438/19682532/12327615.400x300.jpg"
+                            alt="Image 1">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Winters-in-Bhimashankar-forest-001.jpg"
+                            alt="Image 2">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.localguidesconnect.com/t5/image/serverpage/image-id/1309328iA77D026266F49BD8?v=v2"
+                            alt="Image 3">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://purplebus.in/bustours/images/Monsoon/Bhimashankar/Bhimashankar1.jpg"
+                            alt="Image 4">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwVjibeT69Ox14B61N7Xl4VYD59lYMBX3sqSSaVR85Q&s"
+                            alt="Image 5">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.ttrikon.com/system/images/000/529/973/729898d9509030153672b085fde92f52/original/naneghat-4.jpg?1712580526"
+                            alt="Image 6">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.artofliving.org/in-en/mahashivratri/app/uploads-shivratri/2023/12/Jyotirlinga-bHIMASHANKAR-1.jpg"
+                            alt="Image 7">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://static.wixstatic.com/media/9716d0_99007cf0bf7d48fbacaffa33d782e86d~mv2.jpeg/v1/fill/w_1280,h_622,al_c,q_85/Bhimashankar.jpeg"
+                            alt="Image 8">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.mischieftreks.com/system/images/000/670/216/3ebc40ce08c3fc57cd4cf92882013eb2/original/Bhimashankar-Trek-By-Mischief-Treks-.jpg?1709035378"
+                            alt="Image 9">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.adotrip.com/public/images/areas/master_images/615d2ed95c401-Places_To_Visit_In_Bhimashankar.jpg"
+                            alt="Image 10">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <p class="details-heading"><i class="fa-solid fa-tag"></i> Bhimashankar </p>
+            <p class="details-description">Embrace the untamed beauty and diverse landscapes of Bhimashankar Wildlife
+                Sanctuary, where every corner holds the promise of adventure and discovery.
+
+                Nestled in the Western Ghats of Maharashtra, Bhimashankar beckons with its dense forests, cascading
+                waterfalls, and pristine wilderness. The sanctuary is renowned for its remarkable biodiversity, serving
+                as a refuge for numerous endangered species.
+
+                At the heart of Bhimashankar lies the Indian Giant Squirrel, a charismatic creature that epitomizes the
+                sanctuary's conservation efforts. As you explore its verdant trails, keep a keen eye out for other
+                inhabitants, including the elusive Indian Pangolin and the majestic Indian Eagle-Owl.
+
+                But Bhimashankar is not merely a sanctuary for wildlife; it's also a sanctuary for the soul. Whether
+                you're trekking through its rugged terrain, meditating amidst its tranquil surroundings, or simply
+                marveling at the beauty of its flora and fauna, Bhimashankar promises an adventure like no other.
+
+                Let nature be your guide and adventure your compass as you immerse yourself in the untamed beauty of
+                Bhimashankar Wildlife Sanctuary.
+        </div>
+
+
+        <div class="container">
+            <div class="container-sub">
+                <img class="image1"
+                    src="https://mygoa365.com/wp-content/uploads/2019/06/Amboli-Ghat-Waterfall-Trip.webp" alt="Amboli"
+                    onclick="showDetails('details4')">
+                <div class="container-texts">
+                    <p class="container-heading">Amboli</p>
+                    <p class="container-description">Immerse yourself in the mystical allure of Amboli, where each scene
+                        reveals a captivating blend of mist-kissed valleys and verdant landscapes, enticing you to
+                        capture the enchanting beauty of nature's tranquility.</p>
+
+                    <div class="Links">
+
+                        <a title="Map"
+                            href="https://www.mappls.com/direction-from--to-koyna,+wildlife,+sanctuary,+jaoli,,+satara,+district,,+maharashtra,,+412806,+a46f1f?@zdata=ZnJvbSsrdG8rNzMuNjc2MTk1LDE3LjY2NjMzNixBNDZGMUYrdmlh"><i
+                                class="fa-regular fa-location-dot"></i></a>
+                        <a title="Hotels"
+                            href="https://www.agoda.com/en-in/search?guid=49e428ca-88c4-4ada-a248-bb27f029b0d4&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRmDzuzONfebA3%2BGFA9oIyt%2Fxr3gtzZ%2FrZj15OgKx1PX6ow0VnvrWFzyuYgDuIxDVW1n5ZEJSJqeD2d3TChQxBv20t3c82nJ%2Fp%2B0GXkwK5hQ8wgIUNAh%2FQDTPs3xecpCJvTCIdlIx0XCtHozsslvauQEGJd1dYsvZ2%2FtKsTNEekJo%3D&poi=199565&tick=638500321008&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=9933bf4c-109a-445c-8472-8d57899323c2&analyticsSessionId=2927848278037199153&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-msppj&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Koyna+Dam&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP&productType=-1"><i
+                                class="fa-solid fa-hotel"></i></a>
+                        <a title="Transport services" href="https://www.makemytrip.com"><i
+                                class="fa-solid fa-bus"></i></a>
+                        <a title="Restaurants"
+                            href="https://www.tripadvisor.in/Restaurants-g12400047-Satara_District_Maharashtra.html"><i
+                                class="fa-solid fa-utensils"></i></a>
+                    </div>
+                    <button class="button" onclick="showDetails('details4')"> Explore more </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="details4" class="details">
+
+            <div class="details-border">
+                <div class="slider slider4" onmouseover="stopSlider()" onmouseout="startSlider()">
+                    <div class="slide">
+                        <img class="images" src="https://tourdefarm.in/wp-content/uploads/2021/01/Amboli-Ghat-1.jpg"
+                            alt="Image 1">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://www.holidify.com/images/bgImages/AMBOLI.jpg" alt="Image 2">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://i0.wp.com/goaprism.com/wp-content/uploads/2014/06/hiranyakeshi-at-ambloli-ghat.jpg"
+                            alt="Image 3">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://assets.telegraphindia.com/telegraph/2022/Aug/1661423768_picture5-min.jpg"
+                            alt="Image 4">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://paramountclientweb.s3.ap-south-1.amazonaws.com/indian-holiday-trip/Place/2023/Apr/Img_7157_202310261028_Amboli_waterfalls.jpg"
+                            alt="Image 5">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.picnicwale.com/attractions/assets/sightseeing/amboli-waterfall-in-goa.jpg"
+                            alt="Image 6">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://res.cloudinary.com/roundglass/image/upload/w_1200,h_675,c_fill/q_auto:best,f_auto/v1570170871/roundglass/sustain/Amboli_Yash-Hegde-CC-BY-SA-4.0_xcy9ak.jpg"
+                            alt="Image 7">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://s0.wklcdn.com/image_77/2338438/19682532/12327615.400x300.jpg"
+                            alt="Image 8">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Winters-in-Bhimashankar-forest-001.jpg"
+                            alt="Image 9">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.localguidesconnect.com/t5/image/serverpage/image-id/1309328iA77D026266F49BD8?v=v2"
+                            alt="Image 10">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <p class="details-heading"><i class="fa-solid fa-tag"></i> Amboli </p>
+            <p class="details-description">Embrace the serene charm and natural splendor of Amboli, a quaint hill
+                station nestled in the Sahyadri Hills of Maharashtra.
+
+                As you ascend through winding roads adorned with verdant foliage, Amboli welcomes you with its misty
+                landscapes, cascading waterfalls, and lush greenery. It's a haven for nature lovers and adventure
+                enthusiasts alike, offering a respite from the hustle and bustle of city life.
+
+                Amboli is blessed with a rich biodiversity, boasting a plethora of flora and fauna that thrive in its
+                cool, moist climate. From vibrant orchids and exotic butterflies to rare species of birds, the hill
+                station is a paradise for wildlife enthusiasts and photographers.
+
+                One of Amboli's highlights is its majestic waterfalls, which come alive during the monsoon season.
+                Witness the spectacle of cascading waters at sites like the Amboli Waterfall and the Nangarta Waterfall,
+                where the symphony of nature's symphony echoes through the lush green valleys.
+
+                For those seeking adventure, Amboli offers numerous trekking trails that lead you through dense forests
+                and panoramic viewpoints. Whether you're trekking to the Sunset Point for a breathtaking view of the
+                horizon or exploring the ancient caves of Hiranyakeshi, every step in Amboli is a journey of discovery.
+        </div>
+
+
+        <div class="container">
+            <div class="container-sub">
+                <img class="image1"
+                    src="https://nomadsaikat.com/wp-content/uploads/2023/11/Koyna-Wildlife-Sanctuary_5.webp"
+                    alt="Image 1" onclick="showDetails('details5')">
+                <div class="container-texts">
+                    <p class="container-heading">koyna wildlife sanctuary</p>
+                    <p class="container-description">Embark on a journey through Koyna Wildlife Sanctuary, where every
+                        corner reveals a captivating display of diverse flora and fauna, urging you to capture the
+                        essence of untamed wilderness in its truest form.</p>
+
+
+                    <div class="Links">
+
+                        <a title="Map"
+                            href="https://www.mappls.com/direction-from--to-koyna,+wildlife,+sanctuary,+jaoli,,+satara,+district,,+maharashtra,,+412806,+a46f1f?@zdata=ZnJvbSsrdG8rNzMuNjc2MTk1LDE3LjY2NjMzNixBNDZGMUYrdmlh"><i
+                                class="fa-regular fa-location-dot"></i></a>
+                        <a title="Hotels"
+                            href="https://www.agoda.com/en-in/search?guid=49e428ca-88c4-4ada-a248-bb27f029b0d4&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRmDzuzONfebA3%2BGFA9oIyt%2Fxr3gtzZ%2FrZj15OgKx1PX6ow0VnvrWFzyuYgDuIxDVW1n5ZEJSJqeD2d3TChQxBv20t3c82nJ%2Fp%2B0GXkwK5hQ8wgIUNAh%2FQDTPs3xecpCJvTCIdlIx0XCtHozsslvauQEGJd1dYsvZ2%2FtKsTNEekJo%3D&poi=199565&tick=638500321008&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=9933bf4c-109a-445c-8472-8d57899323c2&analyticsSessionId=2927848278037199153&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-msppj&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Koyna+Dam&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP&productType=-1"><i
+                                class="fa-solid fa-hotel"></i></a>
+                        <a title="Transport services" href="https://www.makemytrip.com"><i
+                                class="fa-solid fa-bus"></i></a>
+                        <a title="Restaurants"
+                            href="https://www.tripadvisor.in/Restaurants-g12400047-Satara_District_Maharashtra.html"><i
+                                class="fa-solid fa-utensils"></i></a>
+                    </div>
+                    <button class="button" onclick="showDetails('details5')"> Explore more </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="details5" class="details">
+
+            <div class="details-border">
+                <div class="slider slider5" onmouseover="stopSlider()" onmouseout="startSlider()">
+                    <div class="slide">
+                        <img class="images"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Koyna-Dam2.jpg/463px-Koyna-Dam2.jpg"
+                            alt="Image 1">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://res.cloudinary.com/dyiffrkzh/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_400,q_auto,w_700/v1696332138/bbj/fageaz8hjyisdbl2vccr.jpg"
+                            alt="Image 2">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://static.wixstatic.com/media/cab5da_66f1c7b8846c47f4a70aaeafa26df7de~mv2.jpg/v1/crop/x_0,y_4,w_274,h_174/fill/w_384,h_238,al_c,lg_1,q_80,enc_auto/koyanangar-tour3_edited.jpg"
+                            alt="Image 3">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.tripiwiki.com/images/places/uploads/Koyna-Wildlife-Sanctuary31263.jpg"
+                            alt="Image 4">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://logout.world/media/event/294/Gaur-0673_DOmNkRn.JPG"
+                            alt="Image 5">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvuf7wan00X_ATs-tO1vbnpdDrxkpts_egeeZ5CX6Vw&s"
+                            alt="Image 6">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://www.tourmyindia.com/packages-tour-india/maharashtra-tours/images/chikhaldara-hill-station.jpg"
+                            alt="Image 7">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://www.renttempotraveller.com/images/koyna.jpg" alt="Image 8">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://media1.thrillophilia.com/filestore/uzbl2zy4up44gh6d7w2cud9rvjdn_1594408306_Capture.PNG"
+                            alt="Image 9">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <p class="details-heading"><i class="fa-solid fa-tag"></i> koyna wildlife sanctuary </p>
+            <p class="details-description">Embrace the untamed beauty and rich biodiversity of Koyna Wildlife Sanctuary,
+                nestled in the pristine Western Ghats of Maharashtra.
+
+                Spanning across rugged terrain and dense forests, Koyna beckons adventurers and nature enthusiasts alike
+                with its awe-inspiring landscapes and diverse ecosystems.
+                One of Koyna's notable features is its dense evergreen and semi-evergreen forests, which provide habitat
+                to a multitude of plant and animal species. Towering trees, lush undergrowth, and gushing streams create
+                a harmonious ecosystem that supports a variety of wildlife.
+
+                The sanctuary's crown jewel is its population of Bengal tigers, which roam freely amidst the verdant
+                wilderness. Visitors have the rare opportunity to catch a glimpse of these magnificent creatures in
+                their natural habitat, making Koyna a premier destination for wildlife enthusiasts and photographers.
+
+                Apart from its iconic inhabitants, Koyna is also home to a diverse array of fauna, including Indian
+                bison, sloth bears, wild boars, and an abundance of avian species. Birdwatchers will delight in spotting
+                colorful kingfishers, majestic eagles, and rare migratory birds amidst the sanctuary's canopy.
+
+                For those seeking adventure, Koyna offers a range of activities, including jungle safaris, trekking, and
+                nature walks. Explore hidden valleys, discover secluded waterfalls, and immerse yourself in the sights
+                and sounds of the wilderness as you journey through this natural paradise.
+
+        </div>
+        <div class="container">
+            <div class="container-sub">
+                <img class="image1"
+                    src="https://www.hillstationboss.com/wp-content/uploads/2018/02/chikhaldara-hill-station.jpg"
+                    alt="Chikaldhara " onclick="showDetails('details6')">
+                <div class="container-texts">
+                    <p class="container-heading">Chikaldhara </p>
+                    <p class="container-description">Indulge in the serene charm of Chikhaldara, where every vista
+                        unfolds a picturesque panorama of rolling hills and serene lakes, inspiring you to seize the
+                        tranquil beauty of nature's embrace.</p>
+
+                    <div class="Links">
+
+                        <a title="Map"
+                            href="https://www.google.com/maps/d/u/0/viewer?mid=1UkyHKXZVQI1OwNOT5d_uXQxWCG8&hl=en_US&ll=21.401693999999985%2C77.32684099999999&z=17"><i
+                                class="fa-regular fa-location-dot"></i></a>
+                        <a title="Hotels"
+                            href="hhttps://www.agoda.com/en-in/search?guid=223652f7-c532-4867-aa57-b4efd8615177&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRGj9gIRqtkh%2B43%2FZhHdCudy6FO7k%2B0CcAv0zCXBoR%2F6XM%2FKIq5DaMK%2F7DYSNmj%2FgVKXAqHQsieiUck1GrFUH7%2FXSk%2FM8eVuQYqDHVLhv%2F6oOj1s1GQH%2BTwF%2BUcPp%2BubyDYwaqz%2BsoLcmuRxu%2FzbQJ20A9ZvKqYuIH382Z5Xz4lVY%3D&city=724321&tick=638500327308&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=16daaf2b-dd74-493e-a1b0-120005529429&analyticsSessionId=2927848278037199153&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-wwh9b&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Chikhaldara&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP&productType=-1"><i
+                                class="fa-solid fa-hotel"></i></a>
+                        <a title="Transport services" href="https://www.makemytrip.com"><i
+                                class="fa-solid fa-bus"></i></a>
+                        <a title="Restaurants"
+                            href="https://www.tripadvisor.in/Restaurants-g297649-Aurangabad_Aurangabad_District_Maharashtra.html"><i
+                                class="fa-solid fa-utensils"></i></a>
+                    </div>
+                    <button class="button" onclick="showDetails('details6')"> Explore more </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="details6" class="details">
+
+            <div class="details-border">
+                <div class="slider slider6" onmouseover="stopSlider()" onmouseout="startSlider()">
+                    <div class="slide">
+                        <img class="images"
+                            src="https://media-cdn.tripadvisor.com/media/photo-c/1280x250/09/50/41/2d/gawaligad-fort.jpg"
+                            alt="Image 11">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://tourdefarm.in/wp-content/uploads/2021/01/Chikhaldara-1.jpg"
+                            alt="Image 12">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://im.hunt.in/cg/mah/Amravati/City-Guide/Amazing-view-of-Chikhaldara.jpg"
+                            alt="Image 13">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://www.india.com/wp-content/uploads/2019/01/Chikhaldara.jpg"
+                            alt="Image 14">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <p class="details-heading"><i class="fa-solid fa-tag"></i> Chikaldhara </p>
+            <p class="details-description">Nestled amidst the rolling hills of the Satpura mountain range in
+                Maharashtra, Chikhaldara stands as a serene retreat for nature lovers and adventure seekers alike. The
+                crisp mountain air, lush greenery, and cascading waterfalls paint a picture-perfect setting, inviting
+                visitors to immerse themselves in the tranquility of this picturesque hill station.
+
+                Chikhaldara's rich history and cultural heritage add depth to its natural allure. From ancient temples
+                steeped in myth and legend to historic forts that bear witness to the region's storied past, every
+                corner of Chikhaldara resonates with tales of bygone eras waiting to be discovered.
+
+                For those craving adventure, Chikhaldara offers a plethora of outdoor activities to indulge in. Trekking
+                through dense forests, boating on serene lakes, and wildlife safaris in the nearby Melghat Tiger Reserve
+                are just a few of the thrilling experiences that await.
+
+                As the sun sets behind the mist-clad peaks, Chikhaldara transforms into a canvas of vibrant hues,
+                offering breathtaking views from its scenic vantage points. Whether it's witnessing the ethereal beauty
+                of the sunrise at Panchbol Point or simply relishing a quiet moment amidst the tranquil surroundings,
+                Chikhaldara captivates the hearts of all who venture here
+        </div>
+
+        <div class="container">
+            <div class="container-sub">
+                <img class="image1"
+                    src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/28/695f502fb9e6bc32145d12fcb255680c_1000x1000.jpg"
+                    alt="Image 1" onclick="showDetails('details7')">
+                <div class="container-texts">
+                    <p class="container-heading">Rajiv Gandhi National Park</p>
+                    <p class="container-description">Explore the captivating wonders of Rajiv Gandhi National Park,
+                        where each moment unveils a rich tapestry of lush greenery and thriving wildlife, prompting you
+                        to capture the essence of nature's pristine sanctuary.</p>
+
+                    <div class="Links">
+
+                        <a title="Map"
+                            href="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/28/695f502fb9e6bc32145d12fcb255680c_1000x1000.jpg"><i
+                                class="fa-regular fa-location-dot"></i></a>
+                        <a title="Hotels"
+                            href="https://www.agoda.com/en-in/search?guid=86466e3b-e55d-48e3-8fe3-9aeaa6cb355d&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRmGgjyOUZ%2B3NIbRJT8o36pZDWlfjKEgYz2dx1m%2BwkxlCrLyJLKbrOD0fJqYCeWavDqMNFZ761hc8rmIA7iMQ1VtZ%2BWRCUiang9nd0woUMQb9tLd3PNpyf6ftBl5MCuYUP8Lk3AmzxL%2BGBYdgHuppvSaMepMIlJCa0tWkum8GuSfVB2%2Figtnt88purZsr5cwsz&poi=45393&tick=638500335759&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=553aa76d-de61-4887-b1e3-4bc1d1f65544&analyticsSessionId=2927848278037199153&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-qknbl&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Katraj+Snake+Park+and+Zoo&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP&productType=-1"><i
+                                class="fa-solid fa-hotel"></i></a>
+                        <a title="Transport services" href="https://www.makemytrip.com"><i
+                                class="fa-solid fa-bus"></i></a>
+                        <a title="Restaurants"
+                            href="https://www.tripadvisor.in/Restaurant_Review-g297654-d23727228-Reviews-Katraj_Ghat_Rd_Pune-Pune_Pune_District_Maharashtra.html"><i
+                                class="fa-solid fa-utensils"></i></a>
+                    </div>
+                    <button class="button" onclick="showDetails('details7')"> Explore more </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="details7" class="details">
+
+            <div class="details-border">
+                <div class="slider slider7" onmouseover="stopSlider()" onmouseout="startSlider()">
+                    <div class="slide">
+                        <img class="images"
+                            src="https://media-cdn.tripadvisor.com/media/photo-c/1280x250/09/50/41/2d/gawaligad-fort.jpg"
+                            alt="Image 11">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://tourdefarm.in/wp-content/uploads/2021/01/Chikhaldara-1.jpg"
+                            alt="Image 12">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://im.hunt.in/cg/mah/Amravati/City-Guide/Amazing-view-of-Chikhaldara.jpg"
+                            alt="Image 13">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images" src="https://www.india.com/wp-content/uploads/2019/01/Chikhaldara.jpg"
+                            alt="Image 14">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://aryango.com/wp-content/uploads/2022/12/Rajiv-Gandhi-Rameswaram-National-Park-Andhra-Pradesh.jpg"
+                            alt="Image 15">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://images.livemint.com/img/2021/09/02/600x338/ANI-20210901135-0_1630560772446_1630560791987.jpg"
+                            alt="Image 16">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://media-cdn.tripadvisor.com/media/photo-s/14/17/b8/8b/rajiv-gandhi-zoological.jpg"
+                            alt="Image 17">
+                    </div>
+
+                    <div class="slide">
+                        <img class="images"
+                            src="https://images.hindustantimes.com/img/2021/05/06/550x309/47999df8-ae60-11eb-9f70-62ccdf0f6284_1620301732065.jpg"
+                            alt="Image 18">
+                    </div>
+
+
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <p class="details-heading"><i class="fa-solid fa-tag"></i> Rajiv Gandhi National Park </p>
+            <p class="details-description">Rajiv Gandhi Zoological Park and Wildlife Research Centre, located in Katraj,
+                Pune, is a renowned destination for wildlife enthusiasts and families alike. Spread over vast acres of
+                lush greenery, the park is home to a diverse range of animal species, making it a fascinating place to
+                explore. Visitors can encounter various animals, including Asiatic lions, Bengal tigers. Rajiv Gandhi
+                Zoological Park in Pune is a popular destination for wildlife enthusiasts, offering a glimpse into the
+                diverse flora and fauna of the region. , it provides an educational and enjoyable experience for
+                visitors of all ages.The park is not only famous for its diverse wildlife but also for its conservation
+                the park offers recreational activities such as boating, toy train rides, and a butterfly garden, making
+                it a perfect destination for a day of fun and learning for people of all ages.
+        </div>
+    </div>
+
+    </div>
+
+    <div class="footer">
+        <a class="footer-text" href="Maharashtra-Nature&wildlife.html">
+            <p class="footer-text">Back To Top <i class="fa-solid fa-arrow-up"></i> </p>
+        </a>
+    </div>
+    <script>
+        function showDetails(id) {
+            var details = document.getElementById(id);
+            if (details.classList.contains('active')) {
+                details.classList.remove('active');
+            } else {
+                // Hide all other details before showing the clicked one
+                var allDetails = document.querySelectorAll('.details');
+                allDetails.forEach(function (detail) {
+                    detail.classList.remove('active');
+                });
+                details.classList.add('active');
+            }
+        }
+
+    </script>
+
+    <script>// For Lonavla slideshow
+        var slideIndex1 = 0;
+        var slides1 = document.querySelectorAll('.slider1 .slide');
+        var timer1;
+
+        showSlides1();
+
+        function plusSlides1(n) {
+            clearTimeout(timer1);
+            showSlides1(slideIndex1 += n);
+        }
+
+        function showSlides1() {
+            var i;
+            for (i = 0; i < slides1.length; i++) {
+                slides1[i].style.display = "none";
+            }
+            slideIndex1++;
+            if (slideIndex1 > slides1.length) { slideIndex1 = 1; }
+            slides1[slideIndex1 - 1].style.display = "block";
+            timer1 = setTimeout(showSlides1, 5000); // Change image every 5 seconds
+        }
+
+        function stopSlider1() {
+            clearTimeout(timer1);
+        }
+
+        function startSlider1() {
+            timer1 = setTimeout(showSlides1, 5000);
+        }
+
+        // For Tadoba National Park slideshow
+        var slideIndex2 = 0;
+        var slides2 = document.querySelectorAll('.slider2 .slide');
+        var timer2;
+
+        showSlides2();
+
+        function plusSlides2(n) {
+            clearTimeout(timer2);
+            showSlides2(slideIndex2 += n);
+        }
+
+        function showSlides2() {
+            var i;
+            for (i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = "none";
+            }
+            slideIndex2++;
+            if (slideIndex2 > slides2.length) { slideIndex2 = 1; }
+            slides2[slideIndex2 - 1].style.display = "block";
+            timer2 = setTimeout(showSlides2, 5000); // Change image every 5 seconds
+        }
+
+        function stopSlider2() {
+            clearTimeout(timer2);
+        }
+
+        function startSlider2() {
+            timer2 = setTimeout(showSlides2, 5000);
+        }
+        // for Mahabaleshwar
+        var slideIndex3 = 0;
+        var slides3 = document.querySelectorAll('.slider3 .slide');
+        var timer3;
+
+        showSlides3();
+
+        function plusSlides3(n) {
+            clearTimeout(timer3);
+            showSlides3(slideIndex3 += n);
+        }
+
+        function showSlides3() {
+            var i;
+            for (i = 0; i < slides3.length; i++) {
+                slides3[i].style.display = "none";
+            }
+            slideIndex3++;
+            if (slideIndex3 > slides3.length) { slideIndex3 = 1; }
+            slides3[slideIndex3 - 1].style.display = "block";
+            timer3 = setTimeout(showSlides3, 5000); // Change image every 5 seconds
+        }
+
+        function stopSlider3() {
+            clearTimeout(timer3);
+        }
+
+        function startSlider3() {
+            timer3 = setTimeout(showSlides3, 5000);
+        }
+        // 4
+        var slideIndex4 = 0;
+        var slides4 = document.querySelectorAll('.slider4 .slide');
+        var timer4;
+
+        showSlides4();
+
+        function plusSlides4(n) {
+            clearTimeout(timer4);
+            showSlides4(slideIndex4 += n);
+        }
+
+        function showSlides4() {
+            var i;
+            for (i = 0; i < slides4.length; i++) {
+                slides4[i].style.display = "none";
+            }
+            slideIndex4++;
+            if (slideIndex4 > slides4.length) { slideIndex4 = 1; }
+            slides4[slideIndex4 - 1].style.display = "block";
+            timer4 = setTimeout(showSlides4, 5000); // Change image every 5 seconds
+        }
+
+        function stopSlider4() {
+            clearTimeout(timer4);
+        }
+
+        function startSlider4() {
+            timer4 = setTimeout(showSlides4, 5000);
+        }
+        //
+        var slideIndex5 = 0;
+        var slides5 = document.querySelectorAll('.slider5 .slide');
+        var timer5;
+
+        showSlides5();
+
+        function plusSlides5(n) {
+            clearTimeout(timer5);
+            showSlides5(slideIndex5 += n);
+        }
+
+        function showSlides5() {
+            var i;
+            for (i = 0; i < slides5.length; i++) {
+                slides5[i].style.display = "none";
+            }
+            slideIndex5++;
+            if (slideIndex5 > slides5.length) { slideIndex5 = 1; }
+            slides5[slideIndex5 - 1].style.display = "block";
+            timer5 = setTimeout(showSlides5, 5000); // Change image every 5 seconds
+        }
+
+        function stopSlider5() {
+            clearTimeout(timer5);
+        }
+
+        function startSlider5() {
+            timer5 = setTimeout(showSlides5, 5000);
+        }
+        //
+        var slideIndex6 = 0;
+        var slides6 = document.querySelectorAll('.slider6 .slide');
+        var timer6;
+
+        showSlides6();
+
+        function plusSlides6(n) {
+            clearTimeout(timer6);
+            showSlides6(slideIndex6 += n);
+        }
+
+        function showSlides6() {
+            var i;
+            for (i = 0; i < slides6.length; i++) {
+                slides6[i].style.display = "none";
+            }
+            slideIndex6++;
+            if (slideIndex6 > slides6.length) { slideIndex6 = 1; }
+            slides6[slideIndex6 - 1].style.display = "block";
+            timer6 = setTimeout(showSlides6, 5000); // Change image every 5 seconds
+        }
+
+        function stopSlider6() {
+            clearTimeout(timer6);
+        }
+
+        function startSlider6() {
+            timer6 = setTimeout(showSlides6, 5000);
+        }
+        //
+
+        var slideIndex7 = 0;
+        var slides7 = document.querySelectorAll('.slider7 .slide');
+        var timer7;
+
+        showSlides7();
+
+        function plusSlides7(n) {
+            clearTimeout(timer7);
+            showSlides6(slideIndex7 += n);
+        }
+
+        function showSlides7() {
+            var i;
+            for (i = 0; i < slides7.length; i++) {
+                slides7[i].style.display = "none";
+            }
+            slideIndex7++;
+            if (slideIndex7 > slides7.length) { slideIndex7 = 1; }
+            slides7[slideIndex7 - 1].style.display = "block";
+            timer7 = setTimeout(showSlides7, 5000); // Change image every 5 seconds
+        }
+
+        function stopSlider7() {
+            clearTimeout(timer7);
+        }
+
+        function startSlider7() {
+            timer7 = setTimeout(showSlides7, 5000);
+        }
+
+    </script>
+    </script>
+</body>
+
+</html>

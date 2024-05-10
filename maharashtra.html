@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maharashtra webpage</title>
+    <style>
+        body {
+            background-image:url('');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment:fixed ;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Set default font */
+        }
+
+
+  header {
+    
+            background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        
+        .header-quote{
+            padding-top: 0px;
+            position: fixed;
+            color: #803D3B;
+            font-weight: bold;
+            font-size: large;
+        }
+        .header-quote-text {
+           font-weight: bolder;
+           font-size: large;
+            padding-left: 5px;
+        animation: slideFromLeft 4s ease forwards;
+        white-space: nowrap; /* Prevent line break */
+        overflow: hidden; /* Hide overflowed text */
+        position: relative;
+        }
+         
+        .main-div {
+            padding-top: 70px;
+            display: flex;
+        }
+
+        .map-div {
+            
+           padding-top: 280px;
+           padding-right: 60px;
+            width: 40%; /* Adjust width as needed */
+            position: fixed; /* Make the map fixed */
+            top: 0; /* Position at the top */
+            left: 0; /* Position at the left */
+            bottom: 0; /* Fill the height of the viewport */
+            overflow-y: auto; /* Allow vertical scrolling if needed */
+         }
+
+        .map-image {
+            width: 100%; /* Adjust to fill the container */
+            height: auto; /* Maintain aspect ratio */
+           
+            
+        }
+
+        .details-div {
+            margin-left: 45%; /* Reserve space for the fixed map */
+            padding: 20px; /* Add padding for better readability */
+            overflow-y: auto; /* Allow vertical scrolling if needed */
+            margin-right: 10%;
+            
+        }
+
+        .sub-details-div1 {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            margin-bottom: 20px; /* Add some spacing between items */
+            border: solid 1px #ddd; /* Add a border for visual separation */
+            border-radius: 8px; /* Add border radius for rounded corners */
+            overflow: hidden; /* Hide overflowing content */
+            background-color: #ffffff;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 10px;
+            padding-right: 6px;
+            border: solid 3px  rgb(226, 83, 83);
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        
+        .sub-details-div-container-img {
+            flex: 0 0 50%; /* Take half of the available space */
+            max-width: 50%; /* Limit width to 50% of parent */
+            overflow: hidden; /* Hide overflowing content */
+            border: solid 3px gray;
+            padding-top: 3px;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3px;
+            border-radius: 1px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        
+        }
+        
+
+
+        .sub-details-div-container-img img{
+            width: 100%; /* Fill the container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove default inline spacing */
+        }
+
+       
+            .heading-button {
+    flex: 1; /* Take the remaining space */
+    padding: 0 20px; /* Add padding for better spacing */
+    width: calc(100% - 120px); /* Fixed width to accommodate button and padding */
+}
+
+        .sub-details-div-container-heading {
+            font-size: 24px; /* Adjust font size as needed */
+            font-weight: bolder;
+             /* Remove default margin */
+           
+        }
+        .container-quote{
+            font-size: small;
+            color: #8f8f8f;
+            font-family: monospace;
+        }
+
+
+        .button {
+            padding: 10px 20px; /* Adjust padding as needed */
+            background-color: rgb(226, 83, 83);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-left: 170px;
+         }
+
+         .button:hover {
+            background-color: #ffffff; /* Darken color on hover */
+            color: rgb(226, 83, 83);
+            border:solid 2px rgb(226, 83, 83);
+         }
+         .bottom{
+           
+            background-color: rgb(0, 149, 255);
+            height: 150px;
+         }
+     
+   .pages-location {
+            margin-top: 0%;
+            background-color: #AF8260;;
+            width: 100%;
+            cursor: pointer;
+            
+          
+        }
+        .pages-location-text{
+            cursor: pointer;
+            
+        }
+
+
+        .pages-location {
+            padding: 0px;
+            margin: 0px;
+            background-color: #AF8260;
+            width: 100%;
+            cursor: pointer;
+            padding-left: 3px;
+        }
+
+        .pages-location a {
+            text-decoration: none;
+            color: #322C2B;
+        }
+
+        .pages-location-text {
+            margin: 0px;
+            padding: 2px;
+            cursor: pointer;
+        
+
+         .redirecting-3{
+                color: #803D3B;
+            }
+        }
+        .pages-location-text a{
+            transition: all 0.4s;
+        }
+
+        .redirecting:hover{
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+        .redirecting-1:hover{
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+        .redirecting-2:hover{
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+        .footer{
+ 
+        background-color: rgb(35, 47, 62);
+        height: 80px;
+        color: #ddd;
+        text-align: center;
+        padding-top: 10px;
+        font-size: x-large;
+        font-weight: bolder;
+    }
+
+    .footer-text{
+        color: #ddd;
+        text-decoration: none;
+    }
+    .Links{
+        color: white;
+        text-decoration: none;
+    }
+   .Links:hover{
+    color:rgb(226, 83, 83); 
+   }
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    
+    
+<header>
+  
+    <img  class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+  
+  </header>
+
+  <div class="pages-location">
+    <p class="pages-location-text"><a class="redirecting" href="index.html">Home &#x3e;</a> <a
+            class="redirecting-1" href="indiamap.html">Plan Your Trip &#x3e;</a><a class="redirecting-2"
+            href="maharashtra.html"> </a> <span class="pages-location-text-span"></span><a
+            class="redirecting-3"> Explore Maharashtra </a></span></p>
+</div>
+   
+   <div class="header-quote"> <p class="header-quote-text"> Explore Maharashtra: where culture meets nature, inviting all to discover its beauty <i class="fa-solid fa-map-pin"></i> </p></div>
+    <div class="main-div">
+        
+        <div class="map-div">
+           
+            <img class="map-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Maharashtra_Divisions_Eng.svg/2048px-Maharashtra_Divisions_Eng.svg.png">
+        </div>
+        <div class="details-div">
+            <div class="sub-details-div1">
+                <div class="sub-details-div-container-img">
+                    <a class="Links" href="Maharashtra-Nature&wildlife.html">
+                    <img src="https://www.thrillophilia.com/blog/wp-content/uploads/2017/05/Matheran-Maharashtra.jpg">
+                </a>
+                </div>
+                <div class="heading-button">
+                    <p class="sub-details-div-container-heading">Nature & Wildlife <i class="fa-brands fa-pagelines"></i> </p>
+                    <p class="container-quote">Embrace the untamed beauty & diverse landscapes, where every corner holds the promise of adventure and discovery. From soaring peaks to hidden valleys, let nature be your playground and adventure your compass</p>
+                    <button class="button"><a class="Links" href="Maharashtra-Nature&wildlife.html"> Explore more</a> </button>
+                </div>
+            </div>
+            <!-- Add more detail sections as needed -->
+        
+<br>
+<div class="sub-details-div1">
+   
+    <a class="Links" href="Maharashtra-UNESCO.html">
+<div class="sub-details-div-container-img"><img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/heritage-sites-in-maharashtra.jpg">
+</a>
+</div>
+<div class="heading-button">
+<p class="sub-details-div-container-heading" >UNESCO Heritage Sites <i class="fa-solid fa-snowflake"></i> </p>
+<p class="container-quote">Explore the timeless wonders and storied landscapes of UNESCO Heritage Sites,  Let these hallowed grounds be your gateway to a journey of exploration and enlightenment.</p>
+<button class="button"><a class="Links" href="Maharashtra-UNESCO.html"> Explore more</a> </button>
+</div>
+</div>
+<br>
+<div class="sub-details-div1">
+    <a class="Links" href="maharashtra-beaches.html">
+<div class="sub-details-div-container-img"><img src="https://www.trawell.in/admin/images/upload/699699985Alibaug_Main.jpg">
+</a>
+</div>
+<div class="heading-button">
+<p class="sub-details-div-container-heading" > Beaches <i class="fa-solid fa-umbrella-beach"> </i></p>
+<p class="container-quote">Embrace the endless expanse of Maharashtra's beaches, where the rhythm of waves narrates tales of serenity and adventure. From golden sands to azure horizons, let the beaches of Maharashtra be your sanctuary of bliss and exploration</p>
+<button class="button"> <a class="Links" href="maharashtra-beaches.html"> Explore more </a></button>
+</div>
+</div>
+<br>
+<div class="sub-details-div1">
+    <a class="Links" href="maharashtra-forts.html">
+<div class="sub-details-div-container-img"><img src="https://static-blog.treebo.com/wp-content/uploads/2018/02/Suvarnadurg-Fort-.jpg">
+</a>
+</div>
+<div class="heading-button">
+<p class="sub-details-div-container-heading" > Forts <i class="fa-solid fa-torii-gate"></i> </p>
+<p class="container-quote">Embrace the untamed beauty & diverse landscapes, where every corner holds the promise of adventure and discovery. From soaring peaks to hidden valleys, let nature be your playground and adventure your compass</p>
+<button class="button"><a class="Links" href="maharashtra-forts.html">  Explore more </a></button>
+</div>
+</div>
+<br>
+<div class="sub-details-div1">
+    <a class="Links" href="maharashtra-caves.html">
+<div class="sub-details-div-container-img"><img src="https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2021/01/Ajanta-Caves-Aurangabad-Maharashtra.jpg?w=1200&ssl=1">
+</a>
+</div>
+<div class="heading-button">
+<p class="sub-details-div-container-heading" > Caves <i class="fa-brands fa-atlassian"></i> </p>
+<p class="container-quote">Delve into the enigmatic depths of Maharashtra's caves, where nature's artistry intertwines with human history in a mesmerizing tapestry of wonder. Explore these ancient chambers, adorned with age-old stories and mystical allure, where every step leads to a journey of awe and enlightenment</p>
+<button class="button"><a class="Links" href="maharashtra-caves.html"> Explore more </a></button>
+</div>
+</div>
+<br>
+<div class="sub-details-div1">
+    <a class="Links" href="maharshtra-temples.html">
+    <div class="sub-details-div-container-img"><img src="https://www.revv.co.in/blogs/wp-content/uploads/2021/02/famous-templein-maharashtra.jpg">
+    </a>
+</div><div class="heading-button">
+    <p class="sub-details-div-container-heading">Temples <i class="fa-solid fa-gopuram"></i>  </p>
+    <p class="container-quote">Discover the spiritual sanctuaries nestled within Maharashtra's landscapes, where ancient temples echo with the chants of devotion and resonate with timeless wisdom. Journey through these sacred halls, where divinity and architecture converge to offer solace, inspiration, and a glimpse into the eternal</p>
+    <button class="button"> <a class="Links" href="maharshtra-temples.html"> Explore more </button>
+    </div>
+    </div>
+    <br>
+</div>
+
+
+
+</div>
+<div class="footer">
+    <a class="footer-text" href="maharashtra.html">
+    <p class="footer-text">Back To Top <i class="fa-solid fa-arrow-up"></i> </p></a>
+</div>
+
+
+<script>
+    function highlightDetails(element) {
+        // Highlight the hovered detail container
+        element.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        // Get all detail containers and hide others
+        var allDetails = document.getElementsByClassName('sub-details-div1');
+        for (var i = 0; i < allDetails.length; i++) {
+            if (allDetails[i] !== element) {
+                allDetails[i].style.display = 'none';
+            }
+        }
+    }
+
+    function resetHighlight() {
+        // Reset all detail containers to their default state
+        var allDetails = document.getElementsByClassName('sub-details-div1');
+        for (var i = 0; i < allDetails.length; i++) {
+            allDetails[i].style.backgroundColor = 'transparent';
+            allDetails[i].style.display = 'flex';
+        }
+    }
+    
+    var slideIndex = 0;
+    var slides = document.getElementsByClassName("slide");
+    var timer;
+
+    showSlides();
+
+    function plusSlides(n) {
+      clearTimeout(timer);
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides() {
+      var i;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      timer = setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+    function stopSlider() {
+      clearTimeout(timer);
+    }
+
+    function startSlider() {
+      timer = setTimeout(showSlides, 5000);
+    }
+</script>
+
+    </body>
+</html>
+

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mahrashtra temples webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+
+.body {
+            padding-top: 0%;
+
+            margin: 0%;
+        }
+
+        header {
+            background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .main-container {
+            margin-top: 30px;
+        }
+
+        .pages-location {
+            margin-top: 0%;
+            background-color: #AF8260;
+            ;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location-text {
+            cursor: pointer;
+        }
+
+
+        .pages-location {
+            padding: 0px;
+            margin: 0px;
+            background-color: #AF8260;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location a {
+            text-decoration: none;
+            color: #322C2B;
+        }
+
+        .pages-location-text {
+            margin: 0px;
+            padding: 2px;
+            cursor: pointer;
+
+            .redirecting-3 {
+                color: #803D3B;
+            }
+        }
+
+        .pages-location-text a {
+            transition: all 0.4s;
+        }
+
+        .redirecting:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-1:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-2:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 48%;
+
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0.3, 0.3, 0.3, 0.3);
+        }
+
+        .container-sub {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .container-heading {
+            margin-left: 20px;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container-description {
+            padding-left: 20px;
+            color: gray;
+            font-family: monospace;
+        }
+
+        #details1 {
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+
+        .details-image1 {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 700px;
+        }
+
+        .details {
+            width: 42%;
+
+            margin-top: 240px;
+            position: fixed;
+            padding-bottom: 59px;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            border: solid #AF8260;
+            margin-right: 20px;
+            border-radius: 10px;
+            z-index: -1;
+
+
+        }
+
+        .details.move-up {
+            bottom: 80px;
+        }
+
+        .details-heading {
+            font-size: x-large;
+            color: #803D3B;
+            font-weight: bold;
+
+        }
+
+        .details-description {
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .details-description-individual {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-information-para {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-border {
+               padding-bottom: 5px;
+            border-bottom: 2px solid #AF8260;
+            /* Faint border color */
+
+
+        }
+
+        .details.active {
+            opacity: 1;
+            bottom: auto;
+            top: 0;
+        }
+
+        .image1 {
+            width: 500px;
+            border-radius: 6px;
+            padding-top: 3px;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3px;
+            border-radius: 6px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            border: solid 3px gray;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            
+
+        }
+
+        .button {
+            /* Adjust padding as needed */
+            background-color: rgb(226, 83, 83);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 165px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+            /* Darken color on hover */
+            color: rgb(226, 83, 83);
+            border: solid 2px rgb(226, 83, 83);
+
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+
+        /* Fade animation */
+        .slide {
+            -webkit-animation: fade 5s infinite;
+            /* Chrome, Safari, Opera */
+            animation: fade 5s infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-decoration: none;
+            /* added */
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .images {
+            width: 700px;
+            height: 394px;
+            border-radius: 10px;
+        }
+
+        .redirecting {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-1 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-2 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-3 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .Links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d8d5d5;
+            /* default background color */
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            transition: background-color 0.3s ease;
+            /* transition effect on background color */
+        }
+
+        .Links a:hover {
+            background-color: #999;
+            /* background color on hover */
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+            z-index: 1;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    
+<header>
+  
+    <img  class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+  
+  </header>
+
+  <div class="pages-location">
+    <p class="pages-location-text"><a class="redirecting" href="index.html">Home &#x3e;</a> <a
+            class="redirecting-1" href="indiamap.html">Plan Your Trip &#x3e;</a><a class="redirecting-2"
+            href="maharashtra.html"> Explore Maharashtra &#x3e;</a> <span class="pages-location-text-span"></span><a
+            class="redirecting-3"> Temples </a></span></p>
+</div>
+
+<div class="main-container">
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://curlytales.com/wp-content/uploads/2023/04/Shirdi-Sai-Baba-Temple-To-Be-Shutdown-Indefinitely-From-May-1.-Heres-The-Reason-1.jpg" alt="Image 1"
+             onclick="showDetails('details1')">
+        <div class="container-texts">
+            <p class="container-heading">Shirdi Sai Baba Temple </p>
+            <p class="container-description">Located in Shirdi, this temple is dedicated to Sai Baba, a revered saint who is worshipped by millions of devotees. The temple complex includes the Samadhi Mandir where Sai Baba's mortal remains are interred.</p>
+            
+            <div class="Links">
+                
+            <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1KcV5M544F6whPG6X3GSv1GX98Yc&hl=en&ll=9.907878999999992%2C78.10205299999998&z=17"><i class="fa-regular fa-location-dot"></i></a>
+        <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=2dfc7a4e-1aa0-414f-81e9-7b752fc95f3d&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBR%2FyiuSFFd5GjBiL1gw8NMI%2BQclkIQmDbLT4xCcQ%2FrwHfuthh6zYEQrR5CaaBh1LAIV%2BTq7PQ18q%2FQIU9IS%2BwYBSopdCneTaUUH9cxntcQ69Pv5Z7xZPa1puTs3Fwtb2%2F7herQFmg8qmS%2F5lcNhQKNdFp8aCGwJDdMa9oQ2t5DXwLI%2FsRv9BF8qhKSynZZnvCE&poi=140172&tick=638504090023&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=59d91f99-32c8-45a2-9abf-ccc40c64ae46&analyticsSessionId=-7852352634181041326&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-75cdf75b97-npfdm&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Sai+Baba+Samadhi+Mandir&productType=-1&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec"><i class="fa-solid fa-hotel"></i></a>
+        <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+        <a title="Restaurants" href="https://www.tripadvisor.in/Search?q=shirdi+sai+baba+mandir&geo=297654&ssrc=e&searchNearby=false&searchSessionId=0002e9d3e59d6e77.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-utensils"></i></a>
+        </div>
+        <button class="button" onclick="showDetails('details1')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details1" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <div class="details-border">
+    <div class="slider slider1" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+        <img class="images" src="https://shirdi.tourismindia.co.in/images/places-to-visit/headers/sai-baba-samadhi-mandir-shirdi-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Image 1">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://www.holidify.com/images/bgImages/SHIRDI.jpg" alt="Image 2">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://www.savaari.com/blog/wp-content/uploads/2023/06/shirdi-sai-temple1.webp" alt="Image 3">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://images.livemint.com/img/2020/01/19/1600x900/Shirdi_1579406957579.jpg" alt="Image 4">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://shirdisaialandi.org/wp-content/uploads/2018/09/templenew-1.jpg" alt="Image 5">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/206000/206692-Shirdi.jpg" alt="Image 6">
+    </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+    <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Shirdi Sai Baba Mandir </p>
+    <p class="details-description">The Shirdi Sai Baba Temple, nestled in the quaint town of Shirdi, Maharashtra, stands as a beacon of spiritual solace and divine grace for millions of devotees worldwide. Revered as the final resting place of Sai Baba, a revered saint and spiritual luminary of the late 19th and early 20th centuries, the temple holds profound significance in the hearts of believers. Its serene ambiance and sacred aura draw pilgrims from all corners, seeking the blessings and benevolence of Sai Baba. The temple complex, adorned with exquisite architecture blending Hindu and Islamic styles, encompasses the samadhi mandir, where the sacred mortal remains of Sai Baba are enshrined. Here, devotees gather in reverence, offering prayers, floral tributes, and heartfelt devotions to the saint. The temple precincts reverberate with the melodious chants of aarti and bhajans, evoking a sense of transcendence and spiritual communion among the faithful. Throughout the year, the temple hosts vibrant festivals and rituals, including Ram Navami and Guru Purnima, that celebrate the life and teachings of Sai Baba. Beyond its religious significance, the temple exemplifies Sai Baba's enduring legacy of compassion and service through initiatives such as Annadanam, providing free meals to all visitors. For devotees, a pilgrimage to the Shirdi Sai Baba Temple is not merely a ritualistic journey but a transformative experience, where faith finds expression in acts of devotion, love, and selfless service, fostering a deeper connection with the divine.</p>
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1"
+            src="https://i0.wp.com/pune.news/wp-content/uploads/2023/08/bhimashankar-temple-1.webp?fit=1920%2C1080&ssl=1"
+            alt="Image 1" onclick="showDetails('details2')">
+        <div class="container-texts">
+            <p class="container-heading">Bhimashankar </p>
+            <p class="container-description">
+                Discover the rugged charm of Bhimashankar, where every sight unveils a breathtaking tapestry of
+                lush forests and cascading waterfalls, inviting you to capture the essence of wilderness in its
+                purest form.</p>
+
+            <div class="Links">
+
+                <a title="Map"
+                    href="https://www.google.com/maps/d/u/0/viewer?mid=1xA37g1TNjIijEOjyB-x_nH3LHo4&hl=en_US&ll=15.947448724160049%2C74.00181915103171&z=14"><i
+                        class="fa-regular fa-location-dot"></i></a>
+                <a title="Hotels"
+                    href="https://www.agoda.com/en-in/search?guid=e2dd7aaa-7250-4741-970c-348a35b6b942&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRuJoBbBBoV2%2FnBEXrzjmBfMlKN3T7r7aR6%2FMU2RF%2FrhoiciBKQ6l50O4r3Bih8Ggf%2Fh%2Fe4idk67OoEy6KdHwUNum%2B3QacrQMDUE7JkJAfzu33y5kfQARlWhCtghyShkCm7X4YrrstShiM77AQwSRrNw%3D%3D&city=710184&tick=638500203263&txtuuid=e2dd7aaa-7250-4741-970c-348a35b6b942&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=b0d0abf6-a114-4b20-9b0e-56a5bdf932ea&analyticsSessionId=8409217827101028978&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-cdxt8&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Amboli&productType=-1&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP "><i
+                        class="fa-solid fa-hotel"></i></a>
+                <a title="Transport services" href="https://www.makemytrip.com"><i
+                        class="fa-solid fa-bus"></i></a>
+                <a title="Restaurants"
+                    href="https://www.tripadvisor.in/Restaurants-g9822497-Amboli_Sindhudurg_District_Maharashtra.htm "><i
+                        class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details2')"> Explore more </button>
+        </div>
+    </div>
+</div>
+<div id="details2" class="details">
+
+    <div class="details-border">
+        <div class="slider slider2" onmouseover="stopSlider()" onmouseout="startSlider()">
+            <div class="slide">
+                <img class="images" src="https://s0.wklcdn.com/image_77/2338438/19682532/12327615.400x300.jpg"
+                    alt="Image 1">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://img.traveltriangle.com/blog/wp-content/uploads/2017/09/Winters-in-Bhimashankar-forest-001.jpg"
+                    alt="Image 2">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://www.localguidesconnect.com/t5/image/serverpage/image-id/1309328iA77D026266F49BD8?v=v2"
+                    alt="Image 3">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://purplebus.in/bustours/images/Monsoon/Bhimashankar/Bhimashankar1.jpg"
+                    alt="Image 4">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwVjibeT69Ox14B61N7Xl4VYD59lYMBX3sqSSaVR85Q&s"
+                    alt="Image 5">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://www.ttrikon.com/system/images/000/529/973/729898d9509030153672b085fde92f52/original/naneghat-4.jpg?1712580526"
+                    alt="Image 6">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://www.artofliving.org/in-en/mahashivratri/app/uploads-shivratri/2023/12/Jyotirlinga-bHIMASHANKAR-1.jpg"
+                    alt="Image 7">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://static.wixstatic.com/media/9716d0_99007cf0bf7d48fbacaffa33d782e86d~mv2.jpeg/v1/fill/w_1280,h_622,al_c,q_85/Bhimashankar.jpeg"
+                    alt="Image 8">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://www.mischieftreks.com/system/images/000/670/216/3ebc40ce08c3fc57cd4cf92882013eb2/original/Bhimashankar-Trek-By-Mischief-Treks-.jpg?1709035378"
+                    alt="Image 9">
+            </div>
+
+            <div class="slide">
+                <img class="images"
+                    src="https://www.adotrip.com/public/images/areas/master_images/615d2ed95c401-Places_To_Visit_In_Bhimashankar.jpg"
+                    alt="Image 10">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <p class="details-heading"><i class="fa-solid fa-tag"></i> Bhimashankar </p>
+    <p class="details-description">Embrace the untamed beauty and diverse landscapes of Bhimashankar Wildlife
+        Sanctuary, where every corner holds the promise of adventure and discovery.
+
+        Nestled in the Western Ghats of Maharashtra, Bhimashankar beckons with its dense forests, cascading
+        waterfalls, and pristine wilderness. The sanctuary is renowned for its remarkable biodiversity, serving
+        as a refuge for numerous endangered species.
+
+        At the heart of Bhimashankar lies the Indian Giant Squirrel, a charismatic creature that epitomizes the
+        sanctuary's conservation efforts. As you explore its verdant trails, keep a keen eye out for other
+        inhabitants, including the elusive Indian Pangolin and the majestic Indian Eagle-Owl.
+
+        But Bhimashankar is not merely a sanctuary for wildlife; it's also a sanctuary for the soul. Whether
+        you're trekking through its rugged terrain, meditating amidst its tranquil surroundings, or simply
+        marveling at the beauty of its flora and fauna, Bhimashankar promises an adventure like no other.
+
+        Let nature be your guide and adventure your compass as you immerse yourself in the untamed beauty of
+        Bhimashankar Wildlife Sanctuary.
+</div>
+
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://pbs.twimg.com/media/D_iHgQeUwAcyxiL.jpg" alt="Image 1"
+             onclick="showDetails('details3')">
+        <div class="container-texts">
+            <p class="container-heading">Trimbakeshwar Temple </p>
+            <p class="container-description"> This ancient temple is located in the town of Trimbak in Nashik district. It is one of the twelve Jyotirlingas, dedicated to Lord Shiva. The temple is known for its unique architecture and religious significance.</p><div class="Links">
+                
+                       
+            <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1WdwPnP-fffWmG_4rnuI36uXpvGU&hl=en_US"><i class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=049d6a96-78b4-404a-88cf-29de4c6aeb80&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRV4K7Cf%2BQQPX9JJ2Q%2Fgt%2BjYQMd68MzWJ1YPIviyvmocFnxHkvb%2BD8y5Nsok%2FQgD2aLf1qgZ1V8s8DswUF85RJMwW%2FmefF6802aL64jNMttaZdJ%2F1dxV0si%2F7F4R%2BzbABMgVZDfirevQUlNgw5k%2BI%2F%2B9Hu8a7zd5mjeKz11F1HCdk%3D&poi=209697&tick=638504194914&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=58a2b0b9-84d3-4693-ae4d-73c190b7553e&analyticsSessionId=5167291338786278690&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-75cdf75b97-qpjmb&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Trimbakeshwar+Temple&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i class="fa-solid fa-hotel"></i></a>
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Search?q=trimbakeshwar+nashik&geo=297654&ssrc=e&searchNearby=false&searchSessionId=000aea2691e0ca11.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-utensils"></i></a></div>
+                <button class="button" onclick="showDetails('details3')"> Explore more </button>
+        </div>
+    </div>
+</div>
+<div id="details3" class="details">
+
+    <div class="details-border">
+        <div class="slider slider3" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://i.pinimg.com/736x/5c/74/bd/5c74bd1beb1d7b21340a28da947bd3b6.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://i.pinimg.com/originals/83/3a/8e/833a8e1fdcb4c8f17e81af63b045269b.jpg" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKF5MA4A12Gh49VfzUfuXHyJVE-adG73u8_5WF8Fm5OA&s" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://miro.medium.com/v2/resize:fit:1024/1*R6Bdw5Gs9uIxYpbFCspK7w.jpeg" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://as2.ftcdn.net/v2/jpg/05/43/12/99/1000_F_543129974_bRDUuGKYHBNfq1yjz5kO2FQQjMNoNI8R.jpg" alt="Image 5">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Trimbakeshwar Temple</p>
+        <p class="details-description">Trimbakeshwar Temple, located in the Nashik district of Maharashtra, is one of the twelve Jyotirlingas (self-manifested lingas) of Lord Shiva. Situated at the foothills of the Brahmagiri Mountain, it holds immense religious significance for Hindus. The temple's architecture reflects traditional Hindu temple design, characterized by intricate carvings, sculptures, and a towering shikara (spire). The temple complex also includes other smaller shrines dedicated to various deities.
+
+            One of the unique features of Trimbakeshwar Temple is the presence of three lingas representing Brahma, Vishnu, and Mahesh (Shiva), symbolizing the Hindu trinity. The temple is famous for the sacred Kushavarta Kund, believed to be the source of the Godavari River. Devotees often take a holy dip in the Kund before offering prayers at the temple.
+            
+            Trimbakeshwar Temple attracts thousands of devotees, especially during the Mahashivratri festival, when elaborate rituals and ceremonies are performed. The temple also holds historical and mythological significance, with various legends associated with its origin and sanctity. It stands as a symbol of devotion and spirituality, drawing pilgrims from far and wide seeking blessings from Lord Shiva. 
+        </p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://mumbaimirror.indiatimes.com/photo/76824355.cms" alt="Siddhivinayak temple"
+             onclick="showDetails('details4')">
+        <div class="container-texts">
+            <p class="container-heading">Siddhivinayak Temple</p>
+            <p class="container-description">Situated in Mumbai, Siddhivinayak Temple is one of the most visited temples in Maharashtra. It is dedicated to Lord Ganesha, the remover of obstacles, and is known for fulfilling the wishes of devotees.</p><div class="Links">
+                <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=184JkW6ziSGJGDaItB-_aeEDVGKc&hl=en_US&ll=19.013241095721902%2C72.83642&z=16"><i class="fa-regular fa-location-dot"></i></a>
+                <a title="Hotels" href="https://www.agoda.com/en-in/activities/search?cityId=16850&cid=1908612"><i class="fa-solid fa-hotel"></i></a>
+                <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+                <a title="Restaurants" href="https://www.tripadvisor.in/Search?q=mumbai&geo=12400047&ssrc=e&searchNearby=false&searchSessionId=0016c16f3adbe6b6.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-utensils"></i></a>
+                </div>
+            <button class="button" onclick="showDetails('details4')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details4" class="details">
+
+    <div class="details-border">
+        <div class="slider slider4" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://sannidhi.net/wp-content/uploads/2023/04/86B89163-F8BC-4113-B91E-9C7BE640BCBA.jpeg" alt="Siddhivinayak Temple Image 1">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU8l-T8S_D8y6392w20KNgTtIb9h33hHlRpEkXJgrkKg&s" alt="Siddhivinayak Temple Image 2">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://images.mid-day.com/images/images/2021/oct/Siddhivinayak-temple-fa_d.jpg" alt="Siddhivinayak Temple Image 3">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://www.mapsofindia.com/mumbai/places-of-interest/images/siddhivinayak-temple.jpg" alt="Siddhivinayak Temple Image 4">
+        </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Siddhivinayak Temple </p>
+        <p class="details-description">The Siddhivinayak Temple, located in Prabhadevi, Mumbai, is one of the most revered and popular temples dedicated to Lord Ganesha in India. The temple's deity, Lord Siddhivinayak, is believed to fulfill the wishes of devotees and remove obstacles from their lives. The temple's architecture is a blend of traditional and modern styles, with a grand entrance adorned with intricate carvings and sculptures. The inner sanctum houses the idol of Lord Ganesha, carved out of a single black stone.
+
+            Devotees from all walks of life visit the Siddhivinayak Temple to seek blessings, especially during festivals like Ganesh Chaturthi, which is celebrated with great pomp and fervor. The temple complex also includes other shrines dedicated to various deities, providing a serene and spiritual atmosphere for worship and meditation.</p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Mahalaxmi Temple</p>
+            <p class="container-description"> Situated in Kolhapur, the Mahalaxmi Temple is dedicated to Goddess Mahalaxmi, the consort of Lord Vishnu. It is one of the Shakti Peethas and is considered one of the most powerful temples in Maharashtra..<div class="Links">
+                
+
+                <a title="Map"
+                href="https://www.tripadvisor.in/Search?q=Mahalaxmi+temple&geo=297654&ssrc=e&searchNearby=false&searchSessionId=000aea2691e0ca11.ssid&blockRedirect=true&offset=0"><i
+                    class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels"
+                href="https://www.agoda.com/en-in/search?guid=01cefadf-aaac-40c5-bde7-cac6dd0b37e5&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRh7QFQVu5w2w7LvVlHuPjnmq72dDFo8HSlkuoZ%2Fjedm5fAbmLNM2cHuJf2srfzMKm0fjFhExv7%2FAJGx2SG70EHIpK0j93MeO9eTQGF7dDDKmKZ6p1ZwtSlyrq35GiEu2NMWB2ixx6Sa6e0InEzYhzVHQRnYQdKFAf31QGZf%2FL5gQ%3D&poi=140014&tick=638504211382&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=f5ee3805-5199-4f5f-849d-e0ceb24ac7e9&analyticsSessionId=-6053763448692093247&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86658fc98c-96pkw&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Mahalaxmi+Temple&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i
+                    class="fa-solid fa-hotel"></i></a>
+            <a title="Transport services" href="https://www.makemytrip.com"><i
+                    class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants"
+                href="https://www.tripadvisor.in/Search?q=Mahalaxmi+temple&geo=297654&ssrc=e&searchNearby=false&searchSessionId=000aea2691e0ca11.ssid&blockRedirect=true&offset=0"><i
+                    class="fa-solid fa-utensils"></i></a></div>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+   
+    <div class="details-border">
+        <div class="slider slider5" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQbBOoTXB0qr_b3VeWyS_FGBqnBiJI7Z0wTIVM6jq3AQ&s" alt="Mahalaxmi Temple Image 1">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://i.pinimg.com/474x/aa/ac/56/aaac56bbc9841f4b39fb53b1a58ed862.jpg" alt="Mahalaxmi Temple Image 2">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrIAVJV5NnGA0_VreWkAHSMUPHxlTIx_zRKvD5A4TFsg&s" alt="Mahalaxmi Temple Image 3">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://hindupost.in/wp-content/uploads/2021/06/kolhapur-temple.png" alt="Mahalaxmi Temple Image 4">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://media-cdn.tripadvisor.com/media/photo-s/0e/15/df/49/mahalaxmi-temple.jpg" alt="Mahalaxmi Temple Image 5">
+        </div>
+        <div class="slide">
+            <img class="images" src="https://utsav.gov.in/public/uploads/darshan_cover_image/darshan_126/16770476071067494040.jpg" alt="Mahalaxmi Temple Image 6">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Mahalaxmi Temple </p>
+        <p class="details-description">The Mahalaxmi Temple, situated in Mumbai's Mahalaxmi area, is dedicated to the goddess Mahalaxmi, the Hindu goddess of wealth, prosperity, and fortune. The temple's architecture is a blend of Hindu and Marathi styles, featuring intricate carvings, domes, and towers. The main deity, Mahalaxmi, is depicted standing on a lotus flower with four arms, holding symbols of wealth and prosperity.
+
+            The Mahalaxmi Temple is a significant pilgrimage site for devotees seeking blessings for wealth, success, and prosperity. The temple attracts a large number of devotees, especially during Navratri, a nine-day festival dedicated to the worship of the goddess. The ambiance of the temple, coupled with the rhythmic chanting of hymns and the fragrance of incense, creates a spiritually uplifting experience for visitors.</p></div>
+<div class="footer">
+    <a class="footer-text" href="maharshtra-temples.html">
+    <p class="footer-text">Back To Top <i class="fa-solid fa-arrow-up"></i> </p></a>
+</div>
+<script>
+    function showDetails(id) {
+        var details = document.getElementById(id);
+        if (details.classList.contains('active')) {
+            details.classList.remove('active');
+        } else {
+            // Hide all other details before showing the clicked one
+            var allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(function (detail) {
+                detail.classList.remove('active');
+            });
+            details.classList.add('active');
+        }
+    }
+
+</script>
+
+<script>// For Lonavla slideshow
+    var slideIndex1 = 0;
+    var slides1 = document.querySelectorAll('.slider1 .slide');
+    var timer1;
+    
+    showSlides1();
+    
+    function plusSlides1(n) {
+        clearTimeout(timer1);
+        showSlides1(slideIndex1 += n);
+    }
+    
+    function showSlides1() {
+        var i;
+        for (i = 0; i < slides1.length; i++) {
+            slides1[i].style.display = "none";
+        }
+        slideIndex1++;
+        if (slideIndex1 > slides1.length) { slideIndex1 = 1; }
+        slides1[slideIndex1 - 1].style.display = "block";
+        timer1 = setTimeout(showSlides1, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider1() {
+        clearTimeout(timer1);
+    }
+    
+    function startSlider1() {
+        timer1 = setTimeout(showSlides1, 5000);
+    }
+    
+    // For Tadoba National Park slideshow
+    var slideIndex2 = 0;
+    var slides2 = document.querySelectorAll('.slider2 .slide');
+    var timer2;
+    
+    showSlides2();
+    
+    function plusSlides2(n) {
+        clearTimeout(timer2);
+        showSlides2(slideIndex2 += n);
+    }
+    
+    function showSlides2() {
+        var i;
+        for (i = 0; i < slides2.length; i++) {
+            slides2[i].style.display = "none";
+        }
+        slideIndex2++;
+        if (slideIndex2 > slides2.length) { slideIndex2 = 1; }
+        slides2[slideIndex2 - 1].style.display = "block";
+        timer2 = setTimeout(showSlides2, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider2() {
+        clearTimeout(timer2);
+    }
+    
+    function startSlider2() {
+        timer2 = setTimeout(showSlides2, 5000);
+    }
+    // for Mahabaleshwar
+    var slideIndex3 = 0;
+var slides3 = document.querySelectorAll('.slider3 .slide');
+var timer3;
+
+showSlides3();
+
+function plusSlides3(n) {
+    clearTimeout(timer3);
+    showSlides3(slideIndex3 += n);
+}
+
+function showSlides3() {
+    var i;
+    for (i = 0; i < slides3.length; i++) {
+        slides3[i].style.display = "none";
+    }
+    slideIndex3++;
+    if (slideIndex3 > slides3.length) { slideIndex3 = 1; }
+    slides3[slideIndex3 - 1].style.display = "block";
+    timer3 = setTimeout(showSlides3, 5000); // Change image every 5 seconds
+}
+
+function stopSlider3() {
+    clearTimeout(timer3);
+}
+
+function startSlider3() {
+    timer3 = setTimeout(showSlides3, 5000);
+}
+// 4
+var slideIndex4 = 0;
+var slides4 = document.querySelectorAll('.slider4 .slide');
+var timer4;
+
+showSlides4();
+
+function plusSlides4(n) {
+    clearTimeout(timer4);
+    showSlides4(slideIndex4 += n);
+}
+
+function showSlides4() {
+    var i;
+    for (i = 0; i < slides4.length; i++) {
+        slides4[i].style.display = "none";
+    }
+    slideIndex4++;
+    if (slideIndex4 > slides4.length) { slideIndex4 = 1; }
+    slides4[slideIndex4 - 1].style.display = "block";
+    timer4 = setTimeout(showSlides4, 5000); // Change image every 5 seconds
+}
+
+function stopSlider4() {
+    clearTimeout(timer4);
+}
+
+function startSlider4() {
+    timer4 = setTimeout(showSlides4, 5000);
+}
+//
+var slideIndex5 = 0;
+var slides5 = document.querySelectorAll('.slider5 .slide');
+var timer5;
+
+showSlides5();
+
+function plusSlides5(n) {
+    clearTimeout(timer5);
+    showSlides5(slideIndex5 += n);
+}
+
+function showSlides5() {
+    var i;
+    for (i = 0; i < slides5.length; i++) {
+        slides5[i].style.display = "none";
+    }
+    slideIndex5++;
+    if (slideIndex5 > slides5.length) { slideIndex5 = 1; }
+    slides5[slideIndex5 - 1].style.display = "block";
+    timer5 = setTimeout(showSlides5, 5000); // Change image every 5 seconds
+}
+
+function stopSlider5() {
+    clearTimeout(timer5);
+}
+
+function startSlider5() {
+    timer5 = setTimeout(showSlides5, 5000);
+}
+//
+
+
+</script>
+</script>
+</body>
+</html>

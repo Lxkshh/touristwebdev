@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+     
+        .main-heading {
+            margin-left: 350px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #803D3B;
+            font-weight: bold;
+            position: relative; /* Position the underline relative to the text */
+            display: inline-block; /* Ensure the underline doesn't take the full width */
+        }
+
+        .main-heading::after {
+            content: ''; /* Create the underline */
+            position: absolute; /* Position the underline absolutely */
+            left: 50%; /* Start from the center */
+            bottom: -3px; /* Adjust the distance from the text */
+            width: 0; /* Initially no width */
+            height: 2px; /* Height of the underline */
+            background-color: #803D3B; /* Color of the underline */
+            animation: underlineMove 5s infinite; /* Apply the animation */
+        }
+
+        @keyframes underlineMove {
+            0% {
+                width: 0; /* Start with no width */
+                left: 50%; /* Start from the center */
+            }
+            50% {
+                width: 100%; /* Expand to full width */
+                left: 0; /* Move to the left edge */
+            }
+            100% {
+                width: 0; /* Back to no width */
+                left: 50%; /* Move back to the center */
+            }
+        }
+
+        .main-heading {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+            font-weight: bolder;
+        }
+
+        .rajasthan-slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .rajasthan-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .rajasthan-slide {
+            width: 100%; /* Make each slide take up the full width */
+            overflow: hidden;
+            margin-left: 30px;
+            margin-right: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+            margin-bottom: 80px;
+        }
+
+        .rajasthan-slide img {
+            width: 100%; /* Make the image inside each slide take up the full width */
+            height: auto; /* Maintain the aspect ratio of the images */
+            object-fit: cover; /* Cover the entire area of the slide */
+        }
+
+        .text-description {
+            text-align: justify;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 900px;
+            color: #666;
+            line-height: 1.6;
+            font-size:x-large ;
+            margin-bottom: 50px;
+        }
+
+        .text-description::first-letter {
+            font-size: 32px;
+            color: #4CAF50;
+            float: left;
+            margin-right: 5px;
+        }
+
+        .text-description p {
+            margin-bottom: 20px;
+        }
+
+        header {
+            background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pages-location {
+            margin-top: 0%;
+            background-color: #AF8260;;
+            width: 100%;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pages-location-text {
+            padding: 0;
+            margin: 0;
+        }
+
+        .pages-location a {
+            text-decoration: none;
+            color: #322C2B;
+        }
+        
+        .redirecting{
+            padding-left: 10px;
+        }
+
+        .redirecting-3 {
+            color: #803D3B;
+        }
+
+        .pages-location-text a {
+            transition: all 0.4s;
+        }
+
+        .redirecting:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-1:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-2:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+        
+        .footer{
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+
+        .footer-text{
+            color: #ddd;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+<header>
+    <img class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+</header>
+
+<div class="pages-location">
+    <p class="pages-location-text">
+        <a class="redirecting" href="mainpage.html">Home &#x3e;</a>
+        <a class="redirecting-3">Blog</a>
+    </p>
+</div>
+
+<p class="main-heading"><i class="fa-solid fa-tags"></i>  Unveiling the Cultural Splendor of Assam: A Journey Through the Land of Tea Gardens</p>
+<div class="rajasthan-slider">
+    <div class="rajasthan-slide">
+        <img src="https://wallpapercave.com/wp/wp9822330.jpg" alt="Assam Image 1">
+    </div>
+    <div class="rajasthan-slide">
+        <img src="https://wallpapercave.com/wp/wp9822366.jpg" alt="Assam Image 2">
+    </div>
+    <div class="rajasthan-slide">
+        <img src="https://wallpapercave.com/wp/wp9822368.jpg" alt="Assam Image 3">
+    </div>
+    <div class="rajasthan-slide">
+        <img src="https://wallpapercave.com/wp/wp3784615.jpg" alt="Assam Image 4">
+    </div>
+    <div class="rajasthan-slide">
+        <img src="https://wallpapercave.com/wp/wp9822410.jpg" alt="Assam Image 5">
+    </div>
+</div>
+
+<p class="text-description">Welcome to the mesmerizing world of Assam, where every corner is adorned with lush tea gardens and cultural richness. Situated in the northeastern part of India, Assam is renowned for its serene landscapes, vibrant festivals, and warm hospitality. Join us as we embark on an unforgettable journey through the Land of Tea Gardens, exploring its natural beauty, diverse culture, and delectable cuisine.</p>
+<p class="text-description">Assam is famous for its sprawling tea estates, which produce some of the finest tea varieties in the world. Take a stroll through the verdant tea gardens, witness the intricate process of tea plucking, and savor a cup of Assam's aromatic brew while soaking in the breathtaking views of the surrounding hills.</p>
+<p class="text-description">The cultural tapestry of Assam is woven with colorful threads of dance, music, and festivals. Experience the vibrant energy of Bihu, the state's most celebrated festival, marked by traditional dance performances, melodious songs, and delicious feasts.</p>
+<p class="text-description">Explore the rich biodiversity of Assam by visiting its national parks and wildlife sanctuaries. Kaziranga National Park, home to the endangered one-horned rhinoceros, offers thrilling wildlife safaris amidst picturesque landscapes of grasslands and marshes.</p>
+<p class="text-description">Indulge your taste buds in the flavors of Assamese cuisine, known for its simplicity and authenticity. From steaming bowls of Aloo Pitika and Masor Tenga to mouthwatering sweets like Pitha and Narikol Laru, Assamese cuisine is a delightful gastronomic experience.</p>
+<p class="text-description">The handicrafts of Assam reflect the state's rich cultural heritage and skilled craftsmanship. From intricately woven Assamese silk sarees to exquisite bamboo and cane products, the markets of Assam offer a treasure trove of indigenous arts and crafts.</p>
+<p class="text-description">Whether you're cruising along the mighty Brahmaputra River, exploring the ancient temples of Sivasagar, or simply enjoying a serene sunset over the tea gardens, every moment in Assam is a journey of discovery and delight.</p>
+
+<div class="footer">
+    <a class="footer-text" href="assam-blog.html">
+    <p class="footer-text">Back To Top <i class="fa-solid fa-arrow-up"></i> </p></a>
+</div>
+<script>
+    // JavaScript for automatic image sliding
+    let slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        let slides = document.getElementsByClassName("rajasthan-slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
+</body>
+</html>

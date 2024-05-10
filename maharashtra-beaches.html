@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mahrashtra unesco heritagw webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+ 
+ .body {
+            padding-top: 0%;
+
+            margin: 0%;
+        }
+
+        header {
+            background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .main-container {
+            margin-top: 30px;
+        }
+
+        .pages-location {
+            margin-top: 0%;
+            background-color: #AF8260;
+            ;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location-text {
+            cursor: pointer;
+        }
+
+
+        .pages-location {
+            padding: 0px;
+            margin: 0px;
+            background-color: #AF8260;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location a {
+            text-decoration: none;
+            color: #322C2B;
+        }
+
+        .pages-location-text {
+            margin: 0px;
+            padding: 2px;
+            cursor: pointer;
+
+            .redirecting-3 {
+                color: #803D3B;
+            }
+        }
+
+        .pages-location-text a {
+            transition: all 0.4s;
+        }
+
+        .redirecting:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-1:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-2:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 48%;
+
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0.3, 0.3, 0.3, 0.3);
+        }
+
+        .container-sub {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .container-heading {
+            margin-left: 20px;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container-description {
+            padding-left: 20px;
+            color: gray;
+            font-family: monospace;
+        }
+
+        #details1 {
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+
+        .details-image1 {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 700px;
+        }
+
+        .details {
+            width: 42%;
+
+            margin-top: 240px;
+            position: fixed;
+            padding-bottom: 59px;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            border: solid #AF8260;
+            margin-right: 20px;
+            border-radius: 10px;
+            z-index: -1;
+
+
+        }
+
+        .details.move-up {
+            bottom: 80px;
+        }
+
+        .details-heading {
+            font-size: x-large;
+            color: #803D3B;
+            font-weight: bold;
+
+        }
+
+        .details-description {
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .details-description-individual {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-information-para {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-border {
+               padding-bottom: 5px;
+            border-bottom: 2px solid #AF8260;
+            /* Faint border color */
+
+
+        }
+
+        .details.active {
+            opacity: 1;
+            bottom: auto;
+            top: 0;
+        }
+
+        .image1 {
+            width: 500px;
+            border-radius: 6px;
+            padding-top: 3px;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3px;
+            border-radius: 6px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            border: solid 3px gray;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            
+
+        }
+
+        .button {
+            /* Adjust padding as needed */
+            background-color: rgb(226, 83, 83);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 165px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+            /* Darken color on hover */
+            color: rgb(226, 83, 83);
+            border: solid 2px rgb(226, 83, 83);
+
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+
+        /* Fade animation */
+        .slide {
+            -webkit-animation: fade 5s infinite;
+            /* Chrome, Safari, Opera */
+            animation: fade 5s infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-decoration: none;
+            /* added */
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .images {
+            width: 700px;
+            height: 394px;
+            border-radius: 10px;
+        }
+
+        .redirecting {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-1 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-2 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-3 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .Links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d8d5d5;
+            /* default background color */
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            transition: background-color 0.3s ease;
+            /* transition effect on background color */
+        }
+
+        .Links a:hover {
+            background-color: #999;
+            /* background color on hover */
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+            z-index: 1;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    
+    
+<header>
+  
+    <img  class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+  
+  </header>
+
+  <div class="pages-location">
+    <p class="pages-location-text"><a class="redirecting" href="index.html">Home &#x3e;</a> <a
+            class="redirecting-1" href="indiamap.html">Plan Your Trip &#x3e;</a><a class="redirecting-2"
+            href="maharashtra.html"> Explore Maharashtra &#x3e;</a> <span class="pages-location-text-span"></span><a
+            class="redirecting-3"> Beaches </a></span></p>
+</div>
+
+<div class="main-container">
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://media1.thrillophilia.com/filestore/40yso47x2cg58gfr9nsqd4qwzi1w_1574838672_colva-beach-goa-1.jpg?w=400&dpr=2" alt="Image 1"
+             onclick="showDetails('details1')">
+        <div class="container-texts">
+            <p class="container-heading">Juhu Beach, Mumbai </p>
+            <p class="container-description">Situated along the shores of Mumbai, Juhu Beach is a bustling coastal stretch renowned for its vibrant atmosphere and breathtaking sunsets. This iconic beach attracts both locals and tourists alike, offering a plethora of activities such as horse rides, street food stalls, and leisurely walks along the sandy shores.</p>
+            <div class="Links">
+                
+            <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1vBGe92OMJbUht9oUx5RrFujUJWw&hl=en_US&ll=19.108787871872256%2C72.831404&z=15"><i class="fa-regular fa-location-dot"></i></a>
+        <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=04317193-2275-45f3-b79b-8571aae49f82&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRO4ELbcRTM9XTbT2Yhc%2FgQoyaPXCX9i9EieKGNd8acC%2ByX0ytKeO6kTnzePKsTKnVoxinm2V1Ij10M9gMYEWj5QqQMycviD3CIWSJVwpQ8spVKCIsRQ5ML%2FM1CxPfrMRacDOHRShpGlMF%2F98g7ZMfE0Hb%2BKC2e3zym6tmyvlzCzM%3D&area=36657&tick=638502965057&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=292f680f-f49d-45bd-983d-ebe1f6a28804&analyticsSessionId=-7632424750340611108&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-8c65c9d48-fpb2h&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Juhu+Beach&productType=-1&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec"><i class="fa-solid fa-hotel"></i></a>
+        <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+        <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g304554-Mumbai_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+        </div>
+        <button class="button" onclick="showDetails('details1')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details1" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <div class="details-border">
+    <div class="slider slider1" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+        <img class="images" src="https://mumbaitourism.co.in/wp-content/uploads/2024/02/Juhu-Beach-in-Mumbai.webp" alt="Image 1">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/a9/e4.jpg" alt="Image 2">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/27/cea54037cbf270d611406c186848beb9_1000x1000.jpg" alt="Image 3">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://im.whatshot.in/img/2019/Dec/juhu-beach-1575291948.jpg" alt="Image 4">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://travelogyindia.b-cdn.net/storage/app/upload/juhu-beach-mumbai-1.jpg" alt="Image 5">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://www.trawell.in/admin/images/upload/955980692Mumbai_Juhu_Beach_Main.jpg" alt="Image 6">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://res.cloudinary.com/chasset/c_fill,e_improve,f_webp,h_480,w_720/hbimages/desktop/1517998962369-Juhu%20Beach%20720x480.png" alt="Image 7">
+    </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+    <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Juhu Beach </p>
+    <p class="details-description">
+        Juhu Beach, situated in Mumbai, is an iconic coastal gem renowned for its bustling atmosphere and panoramic views of the Arabian Sea. Locals and tourists alike gather here to enjoy leisurely strolls along the expansive coastline, savor delectable street food, and witness mesmerizing sunsets. From horse rides along the shore to vibrant beachside markets, Juhu Beach is alive with the spirit of Mumbai's vibrant culture. As evening falls, the beach transforms into a lively hub of activity, with families and friends coming together to enjoy the cool sea breeze and the warmth of bonfires.Visitors to Juhu Beach can enjoy leisurely walks along the shore, feeling the gentle breeze and soaking in the scenic beauty. The beach is dotted with numerous food stalls and vendors selling local delicacies such as bhel puri, pav bhaji, and fresh coconut water, allowing visitors to indulge in the flavors of Mumbai street food.
+
+        Adventure enthusiasts can partake in various water sports activities like parasailing, jet skiing, and surfing, adding an element of thrill to their beach visit. Horse rides along the shore are also popular among tourists, especially families with children.
+        
+        Apart from its natural beauty, Juhu Beach is known for its vibrant culture and entertainment options. It often hosts events, concerts, and festivals, attracting crowds of people looking to enjoy live music, dance performances, and other cultural activities.
+        
+        One of the highlights of Juhu Beach is witnessing the mesmerizing sunset over the Arabian Sea. As the sun dips below the horizon, casting a golden glow over the waters, visitors gather along the shore to capture the breathtaking views and create lasting memories.
+        
+        For those interested in exploring beyond the beach, Juhu offers proximity to several attractions including the iconic Prithvi Theatre, ISKCON Temple, and the lively Juhu Chowpatty area known for its bustling markets and eateries.</p>
+
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://cdn.iwant2explore.com/gallery/ganpatipule_beach1640687225760.jpg.webp" alt="Tadoba National Park"
+             onclick="showDetails('details2')">
+        <div class="container-texts">
+            <p class="container-heading">Ganpatipule Beach</p>
+            <p class="container-description"> Nestled in the Ratnagiri district, Ganpatipule Beach is celebrated for its tranquil setting and pristine shoreline. Visitors flock to this serene beach to immerse themselves in its peaceful ambiance, indulge in beachside relaxation, and pay homage at the revered Ganpatipule Temple located nearby.</p>
+            <div class="Links">
+                
+                <a title="Map" href="https://www.india.com/travel/ganpatipule/map/"><i class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels" href=" https://www.agoda.com/en-in/search?guid=c303c371-2571-4983-922f-ddea9c3a7eba&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRAxw64cE0wOnUFgufOZwLCbI5UiB9bZHnbe%2F4aJV%2FPjfz44%2BGlrJD%2BfGp6w2H%2FLrJfa2GuVuKq9KWJ2jFfmqoa3Sk%2FM8eVuQYqDHVLhv%2F6oNpkqPq06ZqAL4ap5kbAKA4tLfw9a3O411NiBV28jI3kkA9ZvKqYuIH382Z5Xz4lVY%3D&city=102462&tick=638502964285&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=1e3ee9ab-dffd-44ad-a07b-3cf2eb390605&analyticsSessionId=7847944680495843328&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86d779bc97-gfnxz&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Ganpatipule&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i class="fa-solid fa-hotel"></i></a>
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g1156427-Ganpatipule_Ratnagiri_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details2')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details2" class="details">
+    <div class="details-border">
+        <div class="slider slider2" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://cdn.iwant2explore.com/gallery/ganpatipule_beach1640687225760.jpg.webp" alt="Ganpatipule Beach Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.seawatersports.com/img/newimage/places/ganpatipule-beach-in-maharashtra.jpg" alt="Ganpatipule Beach Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEVjWGURqOVv4Jyl2gGJ_v1E5KYpYlkwR7D8ZKqg5eaQ&s" alt="Ganpatipule Beach Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFaZ2xMsUX-hdZer9E4myn5-vph1iryGxMkiqnh0OjPQ&s" alt="Ganpatipule Beach Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.holidify.com/images/cmsuploads/compressed/204714008_1efb03453d_z_20180308113322.jpg" alt="Ganpatipule Beach Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/27/4943ce5bd19cee6b2e9de093b0f76e06_1000x1000.png" alt="Ganpatipule Beach Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://purplebus.in/images/bustours/purpletrips_1_2.jpg" alt="Ganpatipule Beach Image 7">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Ganpati Pule Beach </p>
+        <p class="details-description">Nestled in the Ratnagiri district, Ganpatipule Beach is celebrated for its tranquil setting and pristine shoreline. Visitors flock to this serene beach to immerse themselves in its peaceful ambiance, indulge in beachside relaxation, and pay homage at the revered Ganpatipule Temple located nearby. With its gentle waves and golden sands, Ganpatipule Beach offers the perfect escape for those seeking solace amidst nature's beauty. Take a leisurely walk along the shore, feel the soft sand between your toes, and let the soothing sound of the waves wash away your worries.The beach holds a special significance for pilgrims as it is home to the revered Ganpatipule Temple, dedicated to the Hindu deity Lord Ganesha. Devotees often visit the temple to seek blessings and offer prayers, adding a spiritual dimension to their beachside experience.
+
+            Apart from its religious significance, Ganpatipule Beach offers ample opportunities for recreational activities such as swimming, sunbathing, and beachside picnics. Adventure enthusiasts can also indulge in water sports like jet skiing and banana boat rides, adding an element of thrill to their visit.
+            
+            Surrounded by lush greenery and coconut palms, the beach presents a picturesque backdrop for leisurely strolls and sunset watching. Additionally, the nearby attractions like the Ganpatipule Hill and Prachin Konkan Museum offer insights into the region's culture and heritage, making Ganpatipule a well-rounded destination for travelers seeking both relaxation and exploration.
+
+        </p>
+    </div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src=" https://assets.zeezest.com/blogs/PROD_Banner_1667904533125_thumb_1200.jpeg" alt="Image 1"
+             onclick="showDetails('details3')">
+        <div class="container-texts">
+            <p class="container-heading">Alibaug Beach</p>
+            <p class="container-description">Alibaug Beach, situated near Mumbai, beckons travelers with its golden sands and panoramic views of the Arabian Sea. Renowned for its black sand and picturesque Kolaba Fort, this beach offers a perfect retreat for sunbathing, beach picnics, and water sports enthusiasts seeking a respite from the city's hustle and bustle.</p>
+                <div class="Links">
+                
+                    <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1_T-FyR0EBxUFGxmZ5-kFz84lFuw&hl=en_US&ll=18.666305911418902%2C72.89000942843325&z=11"><i class="fa-regular fa-location-dot"></i></a>
+                <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=b7b5823a-46e3-4e0b-88a7-1ee97da38b9f&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRgek6W%2BCuoAD5yTWksm7vJ3hoBX3aYd04YXGlSHEjvPlsUYYkxEAfpgS2eZYEKoXU3vQUJ%2F9WMRm0EqCWkhUVK%2B%2FlnvFk9rWm5OzcXC1vb%2Fti%2FTkrmrRtkONFDYSikKWhJ%2BTlvWWU74otoGf%2FA%2BzYrA%3D%3D&city=30344&tick=638502973638&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=b40dc4d5-e42b-4150-8970-d65f4e4c65c2&analyticsSessionId=-7632424750340611108&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-6ddc4659d-q84wp&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Alibaug&productType=-1&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec"><i class="fa-solid fa-hotel"></i></a>
+                <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+                <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g1010231-Alibaug_Raigad_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+                </div>
+                <button class="button" onclick="showDetails('details3')"> Explore more </button>
+        </div>
+    </div>
+</div>
+<div id="details3" class="details">
+
+    <div class="details-border">
+        <div class="slider slider3" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://miro.medium.com/v2/resize:fit:743/0*kGkpECy3UfkjF-Q2.jpeg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/288111337.jpg?k=d78436bc38d3031ddc0ffa715d60cf07d09c9b2537382d7ce335fc444e2f690a&o=&hp=1" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.sunricoresort.in/wp-content/uploads/2023/08/Beach-Resorts-in-Alibaug.webp" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.hireacamp.com/api/external/image?name=uploads/d7e1b0dc70454dbb89e63a0ee8781d53.jpeg&size=3840x3840&q=75" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLNevzFsAkzjbru3CdwHwZZasCa-eqgnojZqEA9GIXVQ&s" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/28/1cde61461e1ed26f37379d5c5c1dcd88_1000x1000.jpg" alt="Image 6">
+        </div>
+        
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Alibaug Beach</p>
+        <p class="details-description">Alibaug Beach charms visitors with its pristine shoreline, swaying palm trees, and laid-back coastal vibe. Popular for its clean waters and panoramic views, this beach destination beckons travelers to relax, unwind, and soak in the coastal charm of Maharashtra. From beach picnics under the shade of coconut trees to thrilling water adventures, Alibaug Beach promises an unforgettable coastal escape for all who visit. You can explore the nearby Kolaba Fort, known for its architectural grandeur, or indulge in water sports like jet skiing and parasailing for an adrenaline rush. After a day of fun in the sun, treat yourself to a sumptuous seafood dinner at one of the beachside shacks, while enjoying the rhythmic sound of waves crashing against the shore.
+        </p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://www.trawell.in/admin/images/upload/699699388Alibaug_Murud_Beach_Main.jpg" alt="Amboli"
+             onclick="showDetails('details4')">
+        <div class="container-texts">
+            <p class="container-heading">Murud Beach</p>
+            <p class="container-description">Located along the Konkan coast, Murud Beach captivates visitors with its idyllic charm and serene ambiance. The soft golden sands and crystal-clear waters make it an ideal destination for beachgoers looking to unwind amidst nature's splendor or embark on thrilling water sports adventures.</p>
+            <div  class="Links">
+                <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1-aXG-SsINgNImj7DTPdX7FaIqZ0&hl=en_US&ll=18.94591249418083%2C72.88373399999999&z=13"><i class="fa-regular fa-location-dot"></i></a>
+                <a title="Hotels" href="https://www.agoda.com/en-in/search?asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n+9gOEofyfxg2ME%2FUV+n09wpBRBXTtyjGSMNrnmUG8DXokmxFMGd8ad6DtqJ7Oj3FtIfLz44+GlrJD+fGp6w2H%2FLrJUyBhLwSqISEUjWSzzryzknSk%2FM8eVuQYqDHVLhv%2F6oMqMwXO+WzwwSt1i2kCAjUq3sAUicEiLB2S6b57GNd%2FsEep3bNIlAO3jWoc3FcKp9WRMCMLHypJBhQbJahvZsuCdRIr5UeNuuGsjNX3sv2wfg%3D%3D&city=712898&ds=TR3peWHWEJZINXec"><i class="fa-solid fa-hotel"></i></a>
+            
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g1156425-Dapoli_Ratnagiri_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details4')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details4" class="details">
+
+    <div class="details-border">
+        <div class="slider slider4" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://www.seawatersports.com/img/newimage/places/murud-beach-in-maharashtra.jpg" alt="Murud Beach Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/7/2016/09/220916_MurudJanjira4.jpg" alt="Murud Beach Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.assettype.com/esakal%2F2022-12%2F094fd7b8-16e0-4f2a-b25b-32df8b877ec0%2F4.jpg" alt="Murud Beach Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://static2.tripoto.com/media/filter/tst/img/338308/TripDocument/1521972719_dsc0280.jpg" alt="Murud Beach Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.licdn.com/dms/image/C4D12AQGwlkbxfGDDGA/article-cover_image-shrink_600_2000/0/1618487100200?e=2147483647&v=beta&t=E9cnHo7YyfrDwlIgj6Nma8fsGhDCbmMey9FRNulzeEI" alt="Murud Beach Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://jetsettersush.com/wp-content/uploads/2024/01/IMG20240106172809-scaled-e1704821715841.jpg" alt="Murud Beach Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.hlimg.com/images/things2do/738X538/Murud-Janjira-Buggy-Ride_1508007054t.jpg" alt="Murud Beach Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://konkantrip.com/wp-content/uploads/2019/03/parasailing-in-dapoli.jpg" alt="Murud Beach Image 8">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Murud Beaches </p>
+        <p class="details-description">Nestled along the scenic Konkan coastline, Murud Beach is renowned for its tranquil atmosphere and breathtaking vistas. The beach stretches for several kilometers, offering ample space for leisurely strolls along the shoreline or thrilling adventures in the water.
+
+            Water sports enthusiasts flock to Murud Beach to partake in activities such as jet skiing, banana boat rides, parasailing, and more. Adventurous souls can explore the underwater world by snorkeling or scuba diving in the crystal-clear waters teeming with marine life.
+            
+            History buffs will delight in visiting the nearby Murud-Janjira Fort, a majestic sea fortress that stands as a testament to the region's rich heritage. Built in the 17th century, this imposing structure served as a stronghold for the Siddis of Murud, offering panoramic views of the Arabian Sea.
+            
+            As evening descends, Murud Beach transforms into a magical setting, perfect for romantic walks or peaceful contemplation. Visitors can witness stunning sunsets that cast a warm glow over the landscape, creating an idyllic ambiance for relaxation and reflection.
+            
+            For those seeking culinary delights, Murud Beach boasts an array of seaside shacks and restaurants offering fresh seafood delicacies. From succulent prawns and fish curries to grilled lobsters and crab masala, there's no shortage of flavors to tantalize your taste buds.
+            
+            To enhance your beach experience, consider renting a beach hut or cottage overlooking the sea, allowing you to wake up to the soothing sound of waves crashing against the shore. Alternatively, pitch a tent at one of the beachside campsites and spend a night under the starlit sky, immersed in the serenity of nature.
+            
+            Whether you're seeking adventure, relaxation, or cultural immersion, Murud Beach promises an unforgettable coastal retreat for travelers of all interests. So pack your bags, escape the hustle and bustle of city life, and surrender to the charms of this coastal paradise.</p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://konkantrippystories.files.wordpress.com/2017/09/beach-image.jpg?w=640" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Kashid Beach</p>
+            <p class="container-description"> Kashid Beach, nestled on the shores of the Arabian Sea, is renowned for its pristine white sands and inviting turquoise waters. Surrounded by lush green hills and casuarina groves, this beach offers a tranquil escape for visitors seeking solace amidst breathtaking natural beauty, making it a haven for relaxation and rejuvenation.</p><div class="Links">
+                
+                <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1MsriMw6b7UfLia8JUqU5_4whINg&hl=en&ll=18.42781762337235%2C72.9364835&z=12"><i class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=4ccfea42-bac4-4fca-9d90-d1b819d17ed4&hotel=48452708&selectedproperty=48452708&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRdaPMflIdrZKh2P5kfOMdKLYZGiCpcrMg6JRK3wbJxbGpW9bZEXuzZEd4Hbmo74kaIhuudxWQWRl3I7YknFAr3eNXkMrN4L8GSQsLfM4C6EN9QoMh4TVdvTVlBLtyPwKN0wgj%2BkriynDxqXVxGPWqjJ8JfM%2BmPnZbnXIuzjHKb2Q5v2LdmV9yljO1%2BEs10RK8ZvTFJks8bEzJb6IMezwOwzwYjBzEj10IDpht7aYiO1E%3D&tick=638502974552&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&currency=INR&correlationId=10e4d353-da5f-4c68-bbc6-91a8dafe6094&analyticsSessionId=-7632424750340611108&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-8c65c9d48-v4jvz&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-04&checkOut=2024-05-06&rooms=1&adults=1&children=0&priceCur=INR&los=2&textToSearch=The+Beach+Hive+Resort&travellerType=0&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i class="fa-solid fa-hotel"></i></a>
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Attraction_Review-g1370250-d2522440-Reviews-Kashid_Beach-Kashid_Raigad_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+   
+    <div class="details-border">
+        <div class="slider slider5" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://alibagtourism.com/wp-content/uploads/2023/02/Kashid-Beach.jpg" alt="Kashid Beach Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.seawatersports.com/img/newimage/activies/slide/kashid-beach-water-sports-in-maharashtra-cost.jpg" alt="Kashid Beach Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.trawell.in/admin/images/upload/699699661Alibaug_Kashid_Beach_Main.jpg" alt="Kashid Beach Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://q-xx.bstatic.com/xdata/images/city/608x352/974822.webp?k=79144a79eb89b35f2d854c0c147847e972ac6a799a5791c59321cc89cc7f907b&o=" alt="Kashid Beach Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2LWrMgsZOlJaqsxjMAONj80KlmyRP0FVxRaPGorY_4g&s" alt="Kashid Beach Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_1316/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1677060849%2Fkdr8zskaiiz2vqzfp0wb.png" alt="Kashid Beach Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.seawatersports.com/img/newimage/activies/slide/kashid-beach-water-sports-in-maharashtra-price.jpg" alt="Kashid Beach Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://kokanplaces.com/wp-content/uploads/2019/12/Kashid.jpg" alt="Kashid Beach Image 8">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Kashid Beaches </p>
+        <p class="details-description">
+            Kashid Beach, situated along the majestic Arabian Sea coastline in Maharashtra, is renowned for its tranquil ambiance and golden sands stretching for miles. This picturesque beach offers visitors a serene retreat away from the hustle and bustle of city life. With its clear blue waters and gentle waves, Kashid Beach is an ideal spot for swimming, sunbathing, and leisurely strolls along the shore.
+
+Adventure enthusiasts can indulge in a variety of water sports activities such as jet skiing, banana boat rides, parasailing, and surfing, adding an adrenaline rush to their beach experience. For those seeking relaxation, there are plenty of beach shacks and cottages where one can unwind and enjoy the breathtaking views of the sea.
+
+Nature lovers will appreciate the scenic beauty surrounding Kashid Beach, with lush green hills and coconut palms dotting the landscape. The beach also serves as a perfect spot for witnessing mesmerizing sunsets, painting the sky in vibrant hues of orange and pink.
+
+Visitors can explore nearby attractions such as the historic Korlai Fort and Phansad Wildlife Sanctuary, adding cultural and natural diversity to their trip. With its untouched beauty and tranquil ambiance, Kashid Beach promises a memorable escape for travelers seeking peace and serenity amidst nature's bounty.</p>
+        </div>
+<div class="footer">
+    <a class="footer-text" href="maharashtra-beaches.html">
+    <p class="footer-text">Back To Top <i class="fa-solid fa-arrow-up"></i> </p></a>
+</div>
+<script>
+    function showDetails(id) {
+        var details = document.getElementById(id);
+        if (details.classList.contains('active')) {
+            details.classList.remove('active');
+        } else {
+            // Hide all other details before showing the clicked one
+            var allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(function (detail) {
+                detail.classList.remove('active');
+            });
+            details.classList.add('active');
+        }
+    }
+
+</script>
+
+<script>// For Lonavla slideshow
+    var slideIndex1 = 0;
+    var slides1 = document.querySelectorAll('.slider1 .slide');
+    var timer1;
+    
+    showSlides1();
+    
+    function plusSlides1(n) {
+        clearTimeout(timer1);
+        showSlides1(slideIndex1 += n);
+    }
+    
+    function showSlides1() {
+        var i;
+        for (i = 0; i < slides1.length; i++) {
+            slides1[i].style.display = "none";
+        }
+        slideIndex1++;
+        if (slideIndex1 > slides1.length) { slideIndex1 = 1; }
+        slides1[slideIndex1 - 1].style.display = "block";
+        timer1 = setTimeout(showSlides1, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider1() {
+        clearTimeout(timer1);
+    }
+    
+    function startSlider1() {
+        timer1 = setTimeout(showSlides1, 5000);
+    }
+    
+    // For Tadoba National Park slideshow
+    var slideIndex2 = 0;
+    var slides2 = document.querySelectorAll('.slider2 .slide');
+    var timer2;
+    
+    showSlides2();
+    
+    function plusSlides2(n) {
+        clearTimeout(timer2);
+        showSlides2(slideIndex2 += n);
+    }
+    
+    function showSlides2() {
+        var i;
+        for (i = 0; i < slides2.length; i++) {
+            slides2[i].style.display = "none";
+        }
+        slideIndex2++;
+        if (slideIndex2 > slides2.length) { slideIndex2 = 1; }
+        slides2[slideIndex2 - 1].style.display = "block";
+        timer2 = setTimeout(showSlides2, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider2() {
+        clearTimeout(timer2);
+    }
+    
+    function startSlider2() {
+        timer2 = setTimeout(showSlides2, 5000);
+    }
+    // for Mahabaleshwar
+    var slideIndex3 = 0;
+var slides3 = document.querySelectorAll('.slider3 .slide');
+var timer3;
+
+showSlides3();
+
+function plusSlides3(n) {
+    clearTimeout(timer3);
+    showSlides3(slideIndex3 += n);
+}
+
+function showSlides3() {
+    var i;
+    for (i = 0; i < slides3.length; i++) {
+        slides3[i].style.display = "none";
+    }
+    slideIndex3++;
+    if (slideIndex3 > slides3.length) { slideIndex3 = 1; }
+    slides3[slideIndex3 - 1].style.display = "block";
+    timer3 = setTimeout(showSlides3, 5000); // Change image every 5 seconds
+}
+
+function stopSlider3() {
+    clearTimeout(timer3);
+}
+
+function startSlider3() {
+    timer3 = setTimeout(showSlides3, 5000);
+}
+// 4
+var slideIndex4 = 0;
+var slides4 = document.querySelectorAll('.slider4 .slide');
+var timer4;
+
+showSlides4();
+
+function plusSlides4(n) {
+    clearTimeout(timer4);
+    showSlides4(slideIndex4 += n);
+}
+
+function showSlides4() {
+    var i;
+    for (i = 0; i < slides4.length; i++) {
+        slides4[i].style.display = "none";
+    }
+    slideIndex4++;
+    if (slideIndex4 > slides4.length) { slideIndex4 = 1; }
+    slides4[slideIndex4 - 1].style.display = "block";
+    timer4 = setTimeout(showSlides4, 5000); // Change image every 5 seconds
+}
+
+function stopSlider4() {
+    clearTimeout(timer4);
+}
+
+function startSlider4() {
+    timer4 = setTimeout(showSlides4, 5000);
+}
+//
+var slideIndex5 = 0;
+var slides5 = document.querySelectorAll('.slider5 .slide');
+var timer5;
+
+showSlides5();
+
+function plusSlides5(n) {
+    clearTimeout(timer5);
+    showSlides5(slideIndex5 += n);
+}
+
+function showSlides5() {
+    var i;
+    for (i = 0; i < slides5.length; i++) {
+        slides5[i].style.display = "none";
+    }
+    slideIndex5++;
+    if (slideIndex5 > slides5.length) { slideIndex5 = 1; }
+    slides5[slideIndex5 - 1].style.display = "block";
+    timer5 = setTimeout(showSlides5, 5000); // Change image every 5 seconds
+}
+
+function stopSlider5() {
+    clearTimeout(timer5);
+}
+
+function startSlider5() {
+    timer5 = setTimeout(showSlides5, 5000);
+}
+//
+
+
+</script>
+</script>
+</body>
+</html>

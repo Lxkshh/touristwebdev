@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mahrashtra unesco heritagw webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+
+.body {
+            padding-top: 0%;
+
+            margin: 0%;
+        }
+
+        header {
+            background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .main-container {
+            margin-top: 30px;
+        }
+
+        .pages-location {
+            margin-top: 0%;
+            background-color: #AF8260;
+            ;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location-text {
+            cursor: pointer;
+        }
+
+
+        .pages-location {
+            padding: 0px;
+            margin: 0px;
+            background-color: #AF8260;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .pages-location a {
+            text-decoration: none;
+            color: #322C2B;
+        }
+
+        .pages-location-text {
+            margin: 0px;
+            padding: 2px;
+            cursor: pointer;
+
+            .redirecting-3 {
+                color: #803D3B;
+            }
+        }
+
+        .pages-location-text a {
+            transition: all 0.4s;
+        }
+
+        .redirecting:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-1:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .redirecting-2:hover {
+            transition: all 0.2s;
+            color: #ffffff;
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 48%;
+
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            padding-bottom: 0.5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0.3, 0.3, 0.3, 0.3);
+        }
+
+        .container-sub {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .container-heading {
+            margin-left: 20px;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container-description {
+            padding-left: 20px;
+            color: gray;
+            font-family: monospace;
+        }
+
+        #details1 {
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+
+        .details-image1 {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 700px;
+        }
+
+        .details {
+            width: 42%;
+
+            margin-top: 240px;
+            position: fixed;
+            padding-bottom: 59px;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.9s ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            padding-top: 0.5%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+            border: solid #AF8260;
+            margin-right: 20px;
+            border-radius: 10px;
+            z-index: -1;
+
+
+        }
+
+        .details.move-up {
+            bottom: 80px;
+        }
+
+        .details-heading {
+            font-size: x-large;
+            color: #803D3B;
+            font-weight: bold;
+
+        }
+
+        .details-description {
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .details-description-individual {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-information-para {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+
+        .details-border {
+               padding-bottom: 5px;
+            border-bottom: 2px solid #AF8260;
+            /* Faint border color */
+
+
+        }
+
+        .details.active {
+            opacity: 1;
+            bottom: auto;
+            top: 0;
+        }
+
+        .image1 {
+            width: 500px;
+            border-radius: 6px;
+            padding-top: 3px;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3px;
+            border-radius: 6px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            border: solid 3px gray;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            
+
+        }
+
+        .button {
+            /* Adjust padding as needed */
+            background-color: rgb(226, 83, 83);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 165px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+            /* Darken color on hover */
+            color: rgb(226, 83, 83);
+            border: solid 2px rgb(226, 83, 83);
+
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+
+        /* Fade animation */
+        .slide {
+            -webkit-animation: fade 5s infinite;
+            /* Chrome, Safari, Opera */
+            animation: fade 5s infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-decoration: none;
+            /* added */
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .images {
+            width: 700px;
+            height: 394px;
+            border-radius: 10px;
+        }
+
+        .redirecting {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-1 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-2 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirecting-3 {
+            color: white;
+            text-decoration: none;
+        }
+
+        .Links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d8d5d5;
+            /* default background color */
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            transition: background-color 0.3s ease;
+            /* transition effect on background color */
+        }
+
+        .Links a:hover {
+            background-color: #999;
+            /* background color on hover */
+        }
+
+        .footer {
+
+            background-color: rgb(35, 47, 62);
+            height: 80px;
+            color: #ddd;
+            text-align: center;
+            padding-top: 10px;
+            font-size: x-large;
+            font-weight: bolder;
+            z-index: 1;
+        }
+
+        .footer-text {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    
+<header>
+  
+    <img  class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+  
+  </header>
+
+  <div class="pages-location">
+    <p class="pages-location-text"><a class="redirecting" href="index.html">Home &#x3e;</a> <a
+            class="redirecting-1" href="indiamap.html">Plan Your Trip &#x3e;</a><a class="redirecting-2"
+            href="maharashtra.html"> Explore Maharashtra &#x3e;</a> <span class="pages-location-text-span"></span><a
+            class="redirecting-3"> Caves </a></span></p>
+</div>
+
+<div class="main-container">
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://static.toiimg.com/thumb/52533940.cms?resizemode=75&width=1200&height=900" alt="Image 1"
+             onclick="showDetails('details1')">
+        <div class="container-texts">
+            <p class="container-heading">Ajanta Caves </p>
+            <p class="container-description">Located in the Aurangabad district, the Ajanta Caves are a series of 30 rock-cut Buddhist cave monuments dating back to the 2nd century BCE and the 5th century CE. These caves are renowned for their exquisite ancient paintings and sculptures, depicting Buddhist religious art and stories.</p>
+            
+            <div class="Links">
+                
+            <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=17IItl9NcWqlDWWBDxgBXS0e6KRo&hl=en&ll=20.55186799999999%2C75.703262&z=17"><i class="fa-regular fa-location-dot"></i></a>
+        <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=d795bca1-77e9-4451-8e70-cf31036f766c&asq=h83K5OpxMgwyDRBM%2B68DD5ufa9Vwpz6XltTHq4n%2B9gMIhr%2FHdI3Zp6E1hg81WRuF%2FGLlTO%2BOJuFRQvw47N7paruYtIcIXt9qe2JivzY9xrN1U%2B1jpcOz0LvjtJbTBH%2BmtDwFzLnOrkq%2Fw%2BVgwBGAVQqQMycviD3CIWSJVwpQ8sqPpbwB%2BrUTuc4h%2Bbm5K1R7%2BYqFMXmXvsF49AYiADgtcw%3D%3D&city=593&tick=638501629587&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&currency=INR&correlationId=f2ccfb3e-ec32-49af-b82e-b317e4b2ec2b&analyticsSessionId=7847944680495843328&pageTypeId=1&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1908612&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86d779bc97-rq8r9&trafficGroupId=4&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=849&aid=296180&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Aurangabad&productType=-1&travellerType=1&familyMode=off&ds=kXw5SV3%2FuyE0Zp7y"><i class="fa-solid fa-hotel"></i></a>
+        <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+        <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g297649-Aurangabad_Aurangabad_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+        </div>
+        <button class="button" onclick="showDetails('details1')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details1" class="details">
+    <!-- Extra details for container 1 will be displayed here -->
+    <div class="details-border">
+    <div class="slider slider1" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/07/22/84/82/240_F_722848250_GunBjT5UOqccId5qzgFy1o473miYM3pI.jpg" alt="Image 1">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/03/36/72/08/240_F_336720821_4pER6NAizTxgIMxsMlaZadlFVTkRWbVQ.jpg" alt="Image 2">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/02/14/80/78/240_F_214807899_ydWw31aMe7v4CWZrlNCAC6J4hi8nwGgl.jpg" alt="Image 3">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/04/01/00/84/240_F_401008419_N9mOPVIotoe2GHY34mrI8zKOHFPVSIkg.jpg" alt="Image 4">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://as1.ftcdn.net/v2/jpg/04/92/81/34/1000_F_492813476_n6KLL2bHHwoIuuKWX4qjJlMWHxSgfwqj.jpg" alt="Image 5">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/04/74/41/60/240_F_474416098_cqMky36fWbvoptZAlj4WQ8ChBARaDQtE.jpg" alt="Image 6">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t4.ftcdn.net/jpg/04/68/49/93/240_F_468499397_Vb6Ia0X8fZfdCykt347JqoxPJDhrZrNu.jpg" alt="Image 7">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/01/27/99/48/240_F_127994827_MOD55EDz1Dl3y0STgtcJOapINvi326hE.jpg" alt="Image 8">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/02/14/80/68/240_F_214806834_UGFWbggIScMtsmIbltNcQ0qdCIhKSpvn.jpg" alt="Image 9">
+    </div>
+    
+    <div class="slide">
+        <img class="images" src="https://t3.ftcdn.net/jpg/04/68/49/92/240_F_468499268_9wPldg7Fd9Gw7TYEjxgIqm87gZQnY5V2.jpg" alt="Image 10">
+    </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+    <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Ajanta caves </p>
+    <p class="details-description">Nestled in the Aurangabad district of Maharashtra, the Ajanta Caves are a remarkable testament to ancient Indian art and architecture. Carved into the rugged cliffs along the Waghora River, these rock-cut Buddhist cave monuments date back to the 2nd century BCE to the 5th century CE. The caves consist of 30 intricately decorated caves adorned with exquisite paintings and sculptures that depict Buddhist religious art and narratives. Visitors are captivated by the vibrant frescoes, intricate carvings, and serene Buddha statues that adorn the interiors of these UNESCO-listed caves, offering a fascinating glimpse into India's rich cultural heritage.The Ajanta Caves are not only renowned for their artistic significance but also for their historical importance as a center for Buddhist learning and meditation. These caves, hidden within a horseshoe-shaped gorge, served as monastic retreats for Buddhist monks, offering a serene sanctuary for contemplation and spiritual practice amidst the tranquil surroundings of the Sahyadri hills.In addition to its religious significance, Ellora is a testament to ancient Indian craftsmanship and engineering prowess. The caves represent a remarkable feat of human ingenuity, with intricate carvings and sculptures meticulously crafted by skilled artisans over centuries. The site's rock-cut temples and monasteries serve as a living testament to India's multicultural heritage and enduring spiritual legacy.</p>
+
+</div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://64.media.tumblr.com/d5642c2377804e3db720d081ef9457f5/tumblr_pbywz5KWld1ru322to2_r1_1280.jpg" alt="Tadoba National Park"
+             onclick="showDetails('details2')">
+        <div class="container-texts">
+            <p class="container-heading">Ellora Caves</p>
+            <p class="container-description"> situated in the Aurangabad district, the Ellora Caves comprise a complex of rock-cut temples and monasteries dedicated to Buddhism, Hinduism, and Jainism. Dating from the 6th to 10th centuries CE, these caves showcase remarkable craftsmanship and architectural diversity.</p>
+            
+            <div class="Links">
+                
+                <a title="Map" href="https://whc.unesco.org/en/list/243/maps/"><i class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels" href=" https://www.agoda.com/en-in/search?guid=e88311ef-1d0f-42cc-a913-2a6b51041773&hotel=33193762&selectedproperty=33193762&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBREt3nNxeF0qRe4c4QEPlpWMZIqLAC%2BleOAnVwkjhfXgVKLMP1Saw6knlKlWOKXnMULPE2AYoYvKO7PGpQRirdZpgPtQbEl6OlhsaDmCEJnvkQFW7YBvSQi2pXxu8DUwSrdKT8zx5W5BioMdUuG%2F%2Fqg9M%2By6ojo9zM%2BaBuguIhw7zoewqXsnRFiLlbb8awGEKSxjN9geLsnNHrN87VXMisMEUHZWt4XPFwvVA8U2nz5WILV3swwPXt5ODZuc0WXmkb&tick=638500189403&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=0f25716c-acac-4d70-955d-de8260b6cc6c&analyticsSessionId=8409217827101028978&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-dbxh9&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-06-10&checkOut=2024-06-12&rooms=3&adults=3&children=0&priceCur=INR&los=2&textToSearch=Tigers+Empire+Resort+-+Tadoba+National+Park&productType=-1&travellerType=3&familyMode=off&ds=BiqX58Qg6RlrZCOP"><i class="fa-solid fa-hotel"></i></a>
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g297649-Aurangabad_Aurangabad_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details2')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details2" class="details">
+    <div class="details-border">
+        <div class="slider slider2" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://media.istockphoto.com/id/583958532/photo/kailas-temple-in-ellora-caves-complex-in-india.jpg?s=612x612&w=0&k=20&c=kmbUZpgjHlohgIuJNYRrjE0B5WFUFyseSJ3Ld4KyyJg=" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t4.ftcdn.net/jpg/02/28/13/25/240_F_228132543_UnVy7HkGlvTdFpbklHqi3TBdVtJilkv5.jpg" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.istockphoto.com/id/514991038/photo/ellora-caves-in-india.jpg?s=612x612&w=0&k=20&c=mGpgTujahN8VUTQnKei3T40Lh3AOMK_XKM5727eOUwY=" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.istockphoto.com/id/583958200/photo/kailas-temple-in-ellora-caves-complex-in-india.jpg?s=612x612&w=0&k=20&c=vAPsus8pgOB90MtlPqrdu8-vIkjrwbNc_0SGKl-TvGs=" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.istockphoto.com/id/1414336551/photo/kailasa-temple-ellora-cave-aurangabad-maharashtra-india-asia.jpg?s=612x612&w=0&k=20&c=_FdO5ZjUb_SiajwzWYl_9IEQ6ffA2AHM82gJ62lJp-Y=" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.istockphoto.com/id/1098101596/photo/ellora-caves-sculptures-and-architecture.jpg?s=612x612&w=0&k=20&c=elA4YYr1S2mzhV1BPFUqY5mnNPvzEsrORm8eh1lzjcQ=" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.istockphoto.com/id/491728760/photo/kailasa-temple.jpg?s=612x612&w=0&k=20&c=mynTdecW2Aviio8EjVvdMLaHk0awdwsdrKNRC66NN7I=" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ll-BOaUhhPyHvdLjKtX1NiMs_NYOPDYj0eP9Xiw9gQ&s" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://aurangabadtourism.in/images/places-to-visit/header/ellora-caves-aurangabad-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Image 9">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Ellora Caves </p>
+        <p class="details-description">Situated near the city of Aurangabad in Maharashtra, the Ellora Caves are a magnificent complex of rock-cut temples and monasteries that showcase the harmonious coexistence of Hindu, Buddhist, and Jain faiths. Dating from the 6th to 10th centuries CE, these UNESCO-listed caves comprise 34 monasteries and temples carved out of the Charanandri hills. The highlight of Ellora is the Kailasa Temple, a colossal monolithic structure dedicated to Lord Shiva, which is considered one of the largest rock-cut temples in the world. With its intricate sculptures, ornate pillars, and architectural grandeur, Ellora mesmerizes visitors with its spiritual ambiance and cultural significance.The Ellora Caves, a UNESCO World Heritage Site, are a complex of Buddhist, Hindu, and Jain cave temples and monasteries carved out of solid rock. Dating back to the 6th to 10th centuries CE, these remarkable caves represent a synthesis of multiple religious traditions, showcasing the religious harmony that prevailed in ancient India.
+
+            The site comprises a total of 34 caves, each with its own unique architectural style and decorative motifs. The caves are divided into three main groups: Buddhist (Caves 1-12), Hindu (Caves 13-29), and Jain (Caves 30-34).
+            
+            The most iconic structure at Ellora is the Kailasa Temple (Cave 16), dedicated to Lord Shiva. Carved out of a single massive rock, it is considered one of the largest monolithic structures in the world. The temple complex features intricately carved sculptures, including depictions of gods, goddesses, and mythological scenes, all masterfully executed by skilled artisans.
+            
+            Aside from the Kailasa Temple, other notable caves include the Dashavatara Temple (Cave 15), which showcases exquisite carvings of Vishnu's avatars, and the Jain caves, known for their intricate detailing and elegant architecture.
+            
+            The Ellora Caves serve as a testament to the artistic and architectural achievements of ancient India, attracting visitors from around the world to marvel at their beauty and historical significance. They offer a fascinating glimpse into the rich cultural tapestry of India's past and continue to inspire awe and admiration to this day.
+    </div>
+
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src=" https://cdn.getyourguide.com/img/tour/599d2d5c85491.jpeg/148.jpg" alt="Image 1"
+             onclick="showDetails('details3')">
+        <div class="container-texts">
+            <p class="container-heading">Karla Caves </p>
+            <p class="container-description"> Situated near the city of Aurangabad, the Ellora Caves are a UNESCO World Heritage Site. These caves comprise Buddhist, Hindu, and Jain temples and monasteries, spanning over a thousand years of history. The most famous structure here is the Kailasa Temple, carved out of a single rock.</p>
+                <div class="Links">
+                
+                       
+            <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=17IItl9NcWqlDWWBDxgBXS0e6KRo&hl=en&ll=20.55186799999999%2C75.703262&z=17"><i class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=d795bca1-77e9-4451-8e70-cf31036f766c&asq=h83K5OpxMgwyDRBM%2B68DD5ufa9Vwpz6XltTHq4n%2B9gMIhr%2FHdI3Zp6E1hg81WRuF%2FGLlTO%2BOJuFRQvw47N7paruYtIcIXt9qe2JivzY9xrN1U%2B1jpcOz0LvjtJbTBH%2BmtDwFzLnOrkq%2Fw%2BVgwBGAVQqQMycviD3CIWSJVwpQ8sqPpbwB%2BrUTuc4h%2Bbm5K1R7%2BYqFMXmXvsF49AYiADgtcw%3D%3D&city=593&tick=638501629587&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&currency=INR&correlationId=f2ccfb3e-ec32-49af-b82e-b317e4b2ec2b&analyticsSessionId=7847944680495843328&pageTypeId=1&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1908612&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86d779bc97-rq8r9&trafficGroupId=4&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=849&aid=296180&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Aurangabad&productType=-1&travellerType=1&familyMode=off&ds=kXw5SV3%2FuyE0Zp7y"><i class="fa-solid fa-hotel"></i></a>
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Restaurants-g297649-Aurangabad_Aurangabad_District_Maharashtra.html"><i class="fa-solid fa-utensils"></i></a></div>
+                <button class="button" onclick="showDetails('details3')"> Explore more </button>
+        </div>
+    </div>
+</div>
+<div id="details3" class="details">
+
+    <div class="details-border">
+        <div class="slider slider3" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://lakshmisharath.com/wp-content/uploads/2017/07/Bhaja-Caves-1024x678.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media-cdn.tripadvisor.com/media/photo-s/16/70/52/da/bhaja-caves.jpg" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.images.rocksea.org/maharashtra/karla/slides/karla_caves_14.jpg" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfeRLctNuo-7VL0nRiG1N9czH33MtTt2Vt9FvE90UPw&s" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media2.thrillophilia.com/images/photos/000/172/779/original/1569824454_shutterstock_1174487167.jpg?width=1600&height=775" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.trawell.in/admin/images/upload/080966277Lonavala_Karla_Caves_Main.jpg" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://drifteradwait.com/wp-content/uploads/GOPR3610.jpg" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Karla_caves.jpg" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://i0.wp.com/eindiatourism.in/wp-content/uploads/2023/05/Karla-Caves.jpg?resize=640%2C335&ssl=1" alt="Image 9">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://live.staticflickr.com/8260/8650593693_660a48dcd2_b.jpg" alt="Image 10">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://indiaheritagesites.files.wordpress.com/2013/08/karla-caves-2.jpg" alt="Image 11">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9OvG0Alv7TgnCHtkUGAjnKqfRU2UGxNqa4RXcOmhNZWMhxyB8Ywi5WHGc0XZUJgCnJ8elX6ZmgvCsUywp21sNHNyff8EU1du6tEL4W7Q31vIJ00wW9Ckmz4_USTlxXdoJIgqTGHBkOe0/s1600/deepak+378.jpg" alt="Image 12">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Karla caves</p>
+        <p class="details-description">The Karla Caves, situated near Lonavala in Maharashtra, India, represent a significant ancient Buddhist rock-cut cave complex dating back to approximately the 2nd century BC. This architectural marvel consists of a series of rock-cut chambers and monasteries, showcasing the skilled craftsmanship of artisans from ancient times. The caves follow the traditional chaitya-griha (prayer hall) architecture typical of Buddhist rock-cut caves, featuring intricately carved pillars, sculptures, and inscriptions that depict various Buddhist motifs, including Buddha, Bodhisattvas, and scenes from Jataka tales. Among the most prominent features of the Karla Caves is the Great Chaitya, a grand prayer hall adorned with a horseshoe-shaped window, elaborate pillars, and a stupa at its far end. This chaitya hall served as a place of congregational worship and meditation for Buddhist monks and devotees. Throughout history, the Karla Caves have been significant centers of Buddhist worship, education, and pilgrimage, attracting scholars, travelers, and devotees from across the Indian subcontinent. Today, these caves stand as a testament to India's rich cultural heritage and architectural legacy, offering valuable insights into ancient Buddhist art, architecture, and religious practices. They continue to captivate visitors with their intricate carvings, historical significance, and serene ambiance, serving as a reminder of a bygone era of spiritual enlightenment and artistic excellence.
+            
+        </p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://media1.thrillophilia.com/filestore/qj62nh68fativk30jny3i6osrzgw_1524229348_Elephanta_caves.jpg?w=400&dpr=2" alt="Amboli"
+             onclick="showDetails('details4')">
+        <div class="container-texts">
+            <p class="container-heading">Elephanta caves</p>
+            <p class="container-description">Situated on Elephanta Island in Mumbai Harbor, these ancient cave temples are dedicated to Lord Shiva and date back to the 5th to 8th centuries CE. The caves feature intricate rock-cut sculptures and carvings, including the notable Trimurti sculpture of Shiva.</p>
+            <div class="Links">
+                <a title="Map" href="https://www.google.com/maps/d/u/0/viewer?mid=1-aXG-SsINgNImj7DTPdX7FaIqZ0&hl=en_US&ll=18.94591249418083%2C72.88373399999999&z=13"><i class="fa-regular fa-location-dot"></i></a>
+                <a title="Hotels" href="https://www.agoda.com/en-in/search?guid=cbb2723a-3cd6-44c4-a64b-9fae48c868e3&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBRtOAgXtTcP7sMdWTylE%2BmQRh9Wa1lsPGm404orA33wA2fwoVL8u6n9BrOvd9wP52hr6QDs48C6hOjLzuYUvlEgOm%2B3QacrQMDUE7JkJAfzu2S%2BkbeGiaj%2F0Qkj1CojC1jNefiiGOEfPaB%2FBBcMbJhAQ%3D%3D&city=16850&tick=638501637449&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=bd063c32-29e3-4d7d-b945-8a0087713439&analyticsSessionId=7847944680495843328&pageTypeId=103&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6f-acm-web-user-86d779bc97-bl97s&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Mumbai&productType=-1&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec"><i class="fa-solid fa-hotel"></i></a>
+            
+            <a  title="Transport services" href="https://www.makemytrip.com"><i class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants" href="https://www.tripadvisor.in/Search?q=mumbai&geo=12400047&ssrc=a&searchNearby=false&searchSessionId=0016c16f3adbe6b6.ssid&blockRedirect=true&offset=0"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+            <button class="button" onclick="showDetails('details4')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details4" class="details">
+
+    <div class="details-border">
+        <div class="slider slider4" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/07/33/27/62/240_F_733276263_gAxNdSjNFGocweoEoJ74r7Qpx4kRZWh6.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t4.ftcdn.net/jpg/07/65/47/75/240_F_765477574_BmE37Y8wmlZ6HQRFIwupiU3AfvZS0C4B.jpg" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://i.pinimg.com/originals/8b/88/93/8b8893c676e1e37c90d7d4b33e3c1edf.jpg" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/00/78/51/02/360_F_78510259_LHfInVbEHuFR5jPeTheawD0CP7cs33LE.jpg" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://w0.peakpx.com/wallpaper/225/596/HD-wallpaper-statue-elephanta-caves.jpg" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.fabhotels.com/blog/wp-content/uploads/2018/08/600x400-35.jpg:cf-webp:w-1400:h-500" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/00/78/51/00/360_F_78510003_cTiMWGgTV85XGzp24K3ZndF79fcrbv23.jpg" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://t3.ftcdn.net/jpg/04/22/70/80/360_F_422708065_TfQIKVNaTx1ZRpVBSyrADtpPjkYg7SGR.jpg" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media.istockphoto.com/id/1149814882/video/people-visit-at-elephanta-island-cave-mumbai.jpg?s=640x640&k=20&c=GXNkF5RiRYAWXCkXO_84yCsjiynBf_NNwmzTrvRVXf8=" alt="Image 9">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Elephanta caves </p>
+        <p class="details-description">Situated on Elephanta Island in Mumbai Harbor, the Elephanta Caves are an ancient rock-cut cave complex that dates back to the 5th to 8th centuries CE. Dedicated to Lord Shiva, these UNESCO-listed caves are renowned for their intricate sculptures and bas-reliefs, including the iconic Trimurti statue depicting Shiva in three distinct forms. Visitors to Elephanta are captivated by the spiritual ambiance of the caves, as well as the panoramic views of the Arabian Sea from the island. Accessible via a short ferry ride from Mumbai, the Elephanta Caves are a testament to India's rich cultural heritage and artistic legacy.The main cave, known as the Great Cave or Cave 1, features a large hall with intricate sculptures depicting various aspects of Hindu mythology, including the Trimurti (the three aspects of Shiva), Nataraja (Shiva in his cosmic dance form), Ardhanarishvara (Shiva and Parvati as a single entity), and other deities and celestial beings.
+
+            
+            
+            In addition to the main cave, there are several smaller caves on the island, each containing its own unique sculptures and carvings. These caves offer visitors a glimpse into the rich artistic heritage of ancient India and provide a tranquil retreat from the hustle and bustle of Mumbai city.</p>
+</div>
+<div class="container">
+    <div class="container-sub">
+        <img class="image1" src="https://th-i.thgim.com/public/sci-tech/science/yw2ew9/article23761533.ece/alternates/LANDSCAPE_1200/WESTERNGHATS" alt="Image 1"
+             onclick="showDetails('details5')">
+        <div class="container-texts">
+            <p class="container-heading">Bhaja Caves</p>
+            <p class="container-description"> Also situated near Lonavala, the Bhaja Caves are another set of ancient Buddhist rock-cut caves dating back to the 2nd century BCE. These caves are known for their unique architectural features, including decorative sculptures and chaitya halls.<div class="Links">
+                
+
+                <a title="Map"
+                href="https://www.google.com/maps/d/u/0/viewer?mid=1z8OxxUD8ePlYgK8lecmky3P4J-__wFPO&hl=en_US&ll=18.733673876486254%2C73.41886162838291&z=12"><i
+                    class="fa-regular fa-location-dot"></i></a>
+            <a title="Hotels"
+                href="https://www.agoda.com/en-in/search?guid=3c5782a4-4c79-48a8-950d-6df2678afeda&asq=EyzY95ba3XbL6tlQU7daopufa9Vwpz6XltTHq4n%2B9gOEofyfxg2ME%2FUV%2Bn09wpBR6hNYZUyuJi0sHKG8ekU4hS202d6nMVy%2B8WOY7KXyZ7F2KQjAjmCABWqtv9zIbf%2FTtVnKWhZ24jrVsMFUTxZOiO%2FlnvFk9rWm5OzcXC1vb%2Fu7LRaaa%2FMgNDV9t8x8eEFsqEgLJcdokfX9SBeOhQEEbcj%2BxG%2F0EXyqEpLKdlme8IQ%3D&city=706687&tick=638500066844&locale=en-in&ckuid=32fee770-a6a8-4069-8de9-f5795302250d&prid=0&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk84zkXpNqc5UzXTTNhfBbE8ZsmovtpEikHjZJZU9sBeawh_W4pZedhYaAqoGEALw_wcB&currency=INR&correlationId=7ee9de2b-4b6e-4f4e-8830-b7395096ae2f&analyticsSessionId=-7897437997097328045&pageTypeId=1&realLanguageId=15&languageId=1&origin=IN&stateCode=MH&cid=1891461&tag=3cda3586-9ec8-88d2-2819-7b1e8bb3ad04&userId=32fee770-a6a8-4069-8de9-f5795302250d&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=27&currencyCode=INR&htmlLanguage=en-in&cultureInfoName=en-in&machineName=sg-pc-6g-acm-web-user-5cd799dfc6-tqm2x&trafficGroupId=5&sessionId=1jpzr4wdhua2edrgx4l33jzb&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&browserFamily=Safari&cdnDomain=agoda.net&checkIn=2024-05-08&checkOut=2024-05-09&rooms=1&adults=2&children=0&priceCur=INR&los=1&textToSearch=Lonavla&travellerType=1&familyMode=off&ds=TR3peWHWEJZINXec&productType=-1"><i
+                    class="fa-solid fa-hotel"></i></a>
+            <a title="Transport services" href="https://www.makemytrip.com"><i
+                    class="fa-solid fa-bus"></i></a>
+            <a title="Restaurants"
+                href="https://www.tripadvisor.in/Restaurants-g608474-Lonavala_Pune_District_Maharashtra.html"><i
+                    class="fa-solid fa-utensils"></i></a></div>
+            <button class="button" onclick="showDetails('details5')"> Explore more </button>
+        </div>
+    </div>
+</div>
+
+<div id="details5" class="details">
+   
+    <div class="details-border">
+        <div class="slider slider5" onmouseover="stopSlider()" onmouseout="startSlider()"><div class="slide">
+            <img class="images" src="https://lakshmisharath.com/wp-content/uploads/2017/07/Bhaja-Caves-1024x678.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media-cdn.tripadvisor.com/media/photo-s/16/70/52/da/bhaja-caves.jpg" alt="Image 2">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.images.rocksea.org/maharashtra/karla/slides/karla_caves_14.jpg" alt="Image 3">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfeRLctNuo-7VL0nRiG1N9czH33MtTt2Vt9FvE90UPw&s" alt="Image 4">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://media2.thrillophilia.com/images/photos/000/172/779/original/1569824454_shutterstock_1174487167.jpg?width=1600&height=775" alt="Image 5">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://www.trawell.in/admin/images/upload/080966277Lonavala_Karla_Caves_Main.jpg" alt="Image 6">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://drifteradwait.com/wp-content/uploads/GOPR3610.jpg" alt="Image 7">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Karla_caves.jpg" alt="Image 8">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://i0.wp.com/eindiatourism.in/wp-content/uploads/2023/05/Karla-Caves.jpg?resize=640%2C335&ssl=1" alt="Image 9">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://live.staticflickr.com/8260/8650593693_660a48dcd2_b.jpg" alt="Image 10">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://indiaheritagesites.files.wordpress.com/2013/08/karla-caves-2.jpg" alt="Image 11">
+        </div>
+        
+        <div class="slide">
+            <img class="images" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9OvG0Alv7TgnCHtkUGAjnKqfRU2UGxNqa4RXcOmhNZWMhxyB8Ywi5WHGc0XZUJgCnJ8elX6ZmgvCsUywp21sNHNyff8EU1du6tEL4W7Q31vIJ00wW9Ckmz4_USTlxXdoJIgqTGHBkOe0/s1600/deepak+378.jpg" alt="Image 12">
+        </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        </div>
+        <p class="details-heading"><i class="fa-solid fa-tag"></i> Explore Bhuja Caves </p>
+        <p class="details-description">The Bhaja Caves, situated near Lonavala in Maharashtra, India, are a group of ancient Buddhist rock-cut caves dating back to the 2nd century BCE. These caves hold significant historical and architectural importance, showcasing the early development of Buddhist architecture and art in India.
+
+            Carved out of a single rocky hillside, the Bhaja Caves consist of 22 rock-cut caves, including chaityas (prayer halls), viharas (monasteries), and stupas (dome-shaped structures containing Buddhist relics). The caves served as meditation retreats and residences for Buddhist monks during ancient times.
+            
+            The architectural features of the Bhaja Caves are noteworthy, with intricately carved columns, doorways, and sculptures depicting various Buddhist deities and motifs. The chaitya hall, Cave 12, is particularly impressive, featuring a stupa surrounded by pillars adorned with ornate carvings.
+            
+            The caves also contain inscriptions in Brahmi script, providing valuable insights into the history and religious practices of the period. Additionally, the location of the Bhaja Caves amidst lush green surroundings adds to their aesthetic appeal and spiritual ambiance.
+            
+            Overall, the Bhaja Caves are not only a testament to the rich cultural heritage of ancient India but also serve as important archaeological sites for the study of early Buddhist architecture and iconography.</p></div>
+<div class="footer">
+    <a class="footer-text" href="maharashtra-caves.html">
+    <p class="footer-text">Back To Top <i class="fa-solid fa-arrow-up"></i> </p></a>
+</div>
+<script>
+    function showDetails(id) {
+        var details = document.getElementById(id);
+        if (details.classList.contains('active')) {
+            details.classList.remove('active');
+        } else {
+            // Hide all other details before showing the clicked one
+            var allDetails = document.querySelectorAll('.details');
+            allDetails.forEach(function (detail) {
+                detail.classList.remove('active');
+            });
+            details.classList.add('active');
+        }
+    }
+
+</script>
+
+<script>// For Lonavla slideshow
+    var slideIndex1 = 0;
+    var slides1 = document.querySelectorAll('.slider1 .slide');
+    var timer1;
+    
+    showSlides1();
+    
+    function plusSlides1(n) {
+        clearTimeout(timer1);
+        showSlides1(slideIndex1 += n);
+    }
+    
+    function showSlides1() {
+        var i;
+        for (i = 0; i < slides1.length; i++) {
+            slides1[i].style.display = "none";
+        }
+        slideIndex1++;
+        if (slideIndex1 > slides1.length) { slideIndex1 = 1; }
+        slides1[slideIndex1 - 1].style.display = "block";
+        timer1 = setTimeout(showSlides1, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider1() {
+        clearTimeout(timer1);
+    }
+    
+    function startSlider1() {
+        timer1 = setTimeout(showSlides1, 5000);
+    }
+    
+    // For Tadoba National Park slideshow
+    var slideIndex2 = 0;
+    var slides2 = document.querySelectorAll('.slider2 .slide');
+    var timer2;
+    
+    showSlides2();
+    
+    function plusSlides2(n) {
+        clearTimeout(timer2);
+        showSlides2(slideIndex2 += n);
+    }
+    
+    function showSlides2() {
+        var i;
+        for (i = 0; i < slides2.length; i++) {
+            slides2[i].style.display = "none";
+        }
+        slideIndex2++;
+        if (slideIndex2 > slides2.length) { slideIndex2 = 1; }
+        slides2[slideIndex2 - 1].style.display = "block";
+        timer2 = setTimeout(showSlides2, 5000); // Change image every 5 seconds
+    }
+    
+    function stopSlider2() {
+        clearTimeout(timer2);
+    }
+    
+    function startSlider2() {
+        timer2 = setTimeout(showSlides2, 5000);
+    }
+    // for Mahabaleshwar
+    var slideIndex3 = 0;
+var slides3 = document.querySelectorAll('.slider3 .slide');
+var timer3;
+
+showSlides3();
+
+function plusSlides3(n) {
+    clearTimeout(timer3);
+    showSlides3(slideIndex3 += n);
+}
+
+function showSlides3() {
+    var i;
+    for (i = 0; i < slides3.length; i++) {
+        slides3[i].style.display = "none";
+    }
+    slideIndex3++;
+    if (slideIndex3 > slides3.length) { slideIndex3 = 1; }
+    slides3[slideIndex3 - 1].style.display = "block";
+    timer3 = setTimeout(showSlides3, 5000); // Change image every 5 seconds
+}
+
+function stopSlider3() {
+    clearTimeout(timer3);
+}
+
+function startSlider3() {
+    timer3 = setTimeout(showSlides3, 5000);
+}
+// 4
+var slideIndex4 = 0;
+var slides4 = document.querySelectorAll('.slider4 .slide');
+var timer4;
+
+showSlides4();
+
+function plusSlides4(n) {
+    clearTimeout(timer4);
+    showSlides4(slideIndex4 += n);
+}
+
+function showSlides4() {
+    var i;
+    for (i = 0; i < slides4.length; i++) {
+        slides4[i].style.display = "none";
+    }
+    slideIndex4++;
+    if (slideIndex4 > slides4.length) { slideIndex4 = 1; }
+    slides4[slideIndex4 - 1].style.display = "block";
+    timer4 = setTimeout(showSlides4, 5000); // Change image every 5 seconds
+}
+
+function stopSlider4() {
+    clearTimeout(timer4);
+}
+
+function startSlider4() {
+    timer4 = setTimeout(showSlides4, 5000);
+}
+//
+var slideIndex5 = 0;
+var slides5 = document.querySelectorAll('.slider5 .slide');
+var timer5;
+
+showSlides5();
+
+function plusSlides5(n) {
+    clearTimeout(timer5);
+    showSlides5(slideIndex5 += n);
+}
+
+function showSlides5() {
+    var i;
+    for (i = 0; i < slides5.length; i++) {
+        slides5[i].style.display = "none";
+    }
+    slideIndex5++;
+    if (slideIndex5 > slides5.length) { slideIndex5 = 1; }
+    slides5[slideIndex5 - 1].style.display = "block";
+    timer5 = setTimeout(showSlides5, 5000); // Change image every 5 seconds
+}
+
+function stopSlider5() {
+    clearTimeout(timer5);
+}
+
+function startSlider5() {
+    timer5 = setTimeout(showSlides5, 5000);
+}
+//
+
+
+</script>
+</script>
+</body>
+</html>

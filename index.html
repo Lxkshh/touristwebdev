@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    main page !!
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Syne+Mono&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: "Syne Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+      
+    }
+  
+
+    header {
+     
+
+      background-color: #803D3B;
+            padding: 20px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+    }
+
+    .company-logo {
+      padding-left: 5 0px;
+    }
+
+    .logo {
+      width: 150px;
+    }
+    .explore-india {
+      font-size: large;
+    margin-left: 110px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#322C2B;
+    font-weight: bold;
+    position: relative; /* Position the underline relative to the text */
+    display: inline-block; /* Ensure the underline doesn't take the full width */
+}
+
+.explore-india::after {
+    content: ''; /* Create the underline */
+    position: absolute; /* Position the underline absolutely */
+    left: 50%; /* Start from the center */
+    bottom: -3px; /* Adjust the distance from the text */
+    width: 0; /* Initially no width */
+    height: 2px; /* Height of the underline */
+    background-color: #803D3B; /* Color of the underline */
+    animation: underlineMove 3s infinite; /* Apply the animation */
+}
+
+@keyframes underlineMove {
+    0% {
+        width: 0; /* Start with no width */
+        left: 50%; /* Start from the center */
+    }
+    50% {
+        width: 100%; /* Expand to full width */
+        left: 0; /* Move to the left edge */
+    }
+    100% {
+        width: 0; /* Back to no width */
+        left: 50%; /* Move back to the center */
+    }
+}
+    .video-container {
+      width: 1600px;
+      margin-left: 70px;
+      margin-right: 30px;
+      height: 850px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
+      border-radius: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .video-texts {
+      color: #322C2B;
+      font-size: x-large;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+
+    .text-container {
+      max-height: 150px;
+      /* Set the maximum height for the text */
+      overflow: hidden;
+      /* Hide overflowing content */
+      transition: 0.3s all;
+      font-family: monospace;
+      padding-left: 10px;
+      
+     
+      /* Add smooth transition */
+    }
+
+
+    .more-text {
+      display: none;
+      /* Hide the additional text by default */
+    }
+
+    .view-link {
+      text-decoration: none;
+      color: rgb(0, 183, 255);
+      /* Blue color for the link */
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+      /* Remove default underline */
+    }
+
+    .view-link:hover {
+      color: rgb(0, 178, 248); 
+      text-decoration: underline;
+      transform: translateY(-2px);
+      font-family: Arial, Helvetica, sans-serif;
+      /* Underline on hover */
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    .advertise-image {
+      width: 100%;
+      height: 300px;
+      border-top:solid rgb(221, 216, 216) ;
+      border-bottom:solid rgb(221, 216, 216);
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
+    }
+
+    .image-slider-heading {
+      text-align: center;
+      color: #803D3B;
+      font-size: xx-large;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      
+    }
+
+    .image-slider-texts {
+      color: #322C2B;
+      text-align: center;
+      font-family: monospace;
+      font-size: large;
+
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .slider {
+    width: 100vw; /* 100% of viewport width */
+    height: 100vh; /* 100% of viewport height */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    position: relative; /* Ensure relative positioning for slides */
+   border-bottom: 2px solid  rgb(221, 216, 216);
+    border-top:solid  rgb(221, 216, 216) ;
+
+}
+
+.slide {
+    width: 100%; /* 100% width of the slider */
+    height: 100%; /* 100% height of the slider */
+    position: absolute; /* Absolute positioning for slides */
+    top: 0; /* Align to the top of the slider */
+    left: 0; /* Align to the left of the slider */
+    display: none; /* Initially hide all slides */
+}
+
+.slide:first-child {
+    display: block; /* Display the first slide */
+}
+
+.slide-images {
+    width: 100%; /* 100% width of the image */
+    height: 100%; /* 100% height of the image */
+    object-fit: cover; /* Cover the entire container */
+}
+
+/* Add more styles for transition effect */
+.slider .slide {
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+
+    
+    .controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-btn {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .thumbnails {
+      position: absolute;
+      margin: 20px;
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+      z-index: 10;
+      /* Add this line */
+    }
+
+    .container {
+      width: 500px;
+      height: 100px;
+      padding-top: 0.5%;
+      padding-left: 0.5%;
+      padding-right: 0.5%;
+      padding-bottom: 0.5%;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+      margin-bottom: 20px;
+      border-radius: 10px;
+      transition: all 0.4s;
+    }
+
+    .container:hover {
+      .container-heading {
+        color: #803D3B;
+      }
+
+      .container-description {
+        color: #AF8260;
+      }
+
+      background-color: white;
+      transform: translateY(10px);
+    }
+
+    .container-sub {
+      display: flex;
+    }
+
+    .container-heading {
+      font-size: large;
+      margin: 2px 10px;
+      color: #AF8260;
+
+    }
+
+    .container-description {
+      margin-top: 30px;
+      margin-right: 50px;
+      margin-left: -50px;
+      font-size: small;
+      color: #322C2B;
+    }
+
+    .image1 {
+      width: 100px;
+      border-radius: 6px;
+      height: 100px;
+    }
+
+    .container-texts {
+      display: flex;
+      padding-bottom: 10px;
+     
+    }
+
+    .container-2-heading {
+      font-size: xx-large;
+      color: #803D3B;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      padding-left: 10px;
+    }
+
+    .container-2-text {
+      text-align: center;
+      font-family: monospace;
+      font-size: large;
+
+    }
+
+    .container-2-main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      justify-content: center;
+      margin: 20px;
+      flex-wrap: wrap;
+    
+
+    }
+
+
+
+    .container-2-main-sub {
+      box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+      margin: 20px;
+     
+      border-radius: 5%;
+      transition: all 0.3s;
+  background-color:rgb(237, 224, 224);
+    }
+
+    .container-2-main-sub:hover {
+      transform: translateY(10px);
+      background-color: white;
+    }
+
+    .container-2-main-sub-img {
+      border-radius: 5%;
+      width: 440px;
+      height: 250px;
+    }
+
+    .container-2-main-sub-text {
+      text-align: center;
+      font-family: monospace;
+      font-size: x-large;
+    }
+
+    .immersive-slide {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      margin-left: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+    }
+
+    .immersive-slide-img {
+      width: 360px;
+      height: 200px;
+      transition: all 0.4s;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+
+    }
+
+    .immersive-containers {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.11);
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 30px;
+      background-color:rgb(237, 224, 224);
+
+    }
+
+    .immersive-text-container {
+      text-align: center;
+      font-size: xx-large;
+      font-family: monospace;
+    }
+
+    .immersive-container-1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-content: space-evenly;  
+    }
+
+    .immersive-slide-img:hover{
+      transform: translateY(-10px);
+
+    }
+    .evyp-redirecting{
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .blog-container-heading {
+      color: #803D3B;
+      font-size: xx-large;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    .blog-description {
+      text-align: center;
+      font-family: monospace;
+      font-size: large;
+    }
+
+    .blog-containers {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-content: space-evenly;
+
+    }
+
+    .blog-container {
+      margin: 20px;
+
+    }
+
+    .blog-image {
+      height: 600px;
+      width: 400px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 16px rgba(0.10, 0.10, 0.10, 0.20);
+      border-radius: 5px;
+    }
+
+    .blog-Explore-button { 
+     
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color:#000000;
+      border: #322C2B solid ; 
+     border-radius: 3px;
+      font-size: normal;
+      text-decoration: none;
+      margin-left: 2px;
+      transition: all 0.4s;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+
+    }
+
+    .blog-Explore-button:hover{
+     padding-left: 10px;
+     padding-right: 10px;
+      background-color: #803D3B;
+      border-color:  #803D3B;;
+      color: #fff;
+      
+    }
+
+    .plan-your-trip-link { 
+      text-decoration: none;
+      display: flex;
+
+      justify-content: center;
+      margin: 90px 500px;
+      color:#322C2B;
+      border: #322C2B solid; 
+      border-radius: 40px;
+      font-size: x-large;
+      padding: 2px;
+      align-content: center; 
+      transition: all 0.4s;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .plan-your-trip-link:hover{
+      color: #fff;
+    }
+.plan-your-trip-link{
+  color: black;
+  text-decoration: none;
+}
+
+    .plan-your-trip-link:hover{
+      transform: translateY(-10px);
+      text-decoration: none;
+      box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+      background-color: #803D3B;
+      border-color: #803D3B;
+      .plan-your-trip-link{
+        color: white;
+      }
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    
+
+    .last-div{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(35, 47, 62);
+   padding-top:10px ;
+   padding-bottom: 50px;
+   color: aliceblue;
+}
+.last-div1{
+    margin-right: 20px;
+    margin-left: 120px;
+    color: aliceblue;
+    margin-left: 400px;
+  
+}
+.p1-1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    cursor: pointer;
+    color: aliceblue;
+}
+.p1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size:small;
+    cursor: pointer;
+}
+.last-div2{
+    margin-right: 200px;
+    margin-left: 200px;
+    width :250px;
+    color: aliceblue;
+}
+.p2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    padding-bottom: 0px;
+    color: aliceblue;
+}
+.p2-1{
+    font-family: Arial, Helvetica, sans-serif;
+ color: rgb(0, 183, 255);
+ text-decoration: underline;
+ cursor: pointer;
+ text-decoration: underline;
+ 
+}
+.p2-2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    color: aliceblue;
+
+}
+.p2-3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    color: aliceblue;
+}
+.p2-4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    color: aliceblue;
+}
+.p2-5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    color: aliceblue;
+}
+.p2-6{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    color: aliceblue;
+
+}
+.p3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: aliceblue;
+}
+.p3-1{
+    padding-left: 15px;
+    cursor: pointer;
+    color: aliceblue;
+}
+.mobile-no{
+    color: aliceblue;
+}
+.email{
+    color: aliceblue;
+}
+.redirecting-links{
+  text-decoration: none;
+}
+.links{
+  text-decoration: none;
+  color: #fff;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <img class="company-logo" src="comapanylogo.png" alt="Company Logo" class="logo">
+
+  </header>
+  <p class="explore-india">Exploring India <i class="fa-solid fa-video"></i></p>
+  <div class="mainbody">
+    <video class="video-container"
+      src="mainpagevideo.mp4" autoplay
+      muted></video>
+  </div>
+  <br><br>
+
+  
+  <div class="text-container">
+    <p class="video-texts">
+      One of the oldest civilisations in the world, India is a mosaic of multicultural experiences. With a rich heritage
+      and myriad attractions, the country is among the most popular tourist destinations in the world. It covers an area
+      of 32, 87,263 sq. km, extending from the snow-covered Himalayan heights to the tropical rain forests of the south.
+      <span class="more-text">As the 7th largest country in the world, India stands apart from the rest of Asia, marked
+        off as it is by mountains and the sea, which give the country a distinct geographical entity. Fringed by the
+        Great Himalayas in the north, it stretches southwards and at the Tropic of Cancer, tapers off into the Indian
+        Ocean between the Bay of Bengal on the east and the Arabian Sea on the west. As you travel the expanse of the
+        country, you are greeted by diverse nuances of cuisines, faiths, arts, crafts, music, nature, lands, tribes,
+        history and adventure sports. India has a mesmeric conflation of the old and the new. As the bustling old
+        bazaars rub shoulders with swanky shopping malls, and majestic monuments accompany luxurious heritage hotels,
+        the quintessential traveller can get the best of both worlds. Head to the mountains, enjoy a beach retreat or
+        cruise through the golden Thar, India has options galore for all.</span>
+    </p>
+    <div class="button-container">
+      <span class="view-link" id="view-more">View More</span>
+      <span class="view-link" id="view-less" style="display: none;">View Less</span>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="advertise-image-container">
+    <img class="advertise-image" src="india-rich-in-culture.jpg.webp"></img>
+  </div>
+  <br>
+
+
+  <p class="image-slider-heading"><i class="fa-solid fa-tags"></i> Popular In India</p>
+  <p class="image-slider-texts"><i class="fa-solid fa-exclamation"></i> <i class="fa-solid fa-exclamation"></i> India's architectural marvels, serene ghats, breathtaking landscapes, and expansive
+    tiger reserves epitomize its diverse beauty <i class="fa-solid fa-exclamation"></i> <i class="fa-solid fa-exclamation"></i></p>
+<br>
+
+  <div class="slider-container">
+    <div class="thumbnails">
+      <div class="thumbnail">
+        <div class="container">
+          <a class="redirecting-links" href="statue-of-unity.html">
+          <div class="container-sub">
+            <img class="image1" src="https://wallpapercave.com/wp/wp6587364.jpg" alt="Image1">
+            <div class="container-texts">
+              <p class="container-heading">STATUEOFUNITY</p>
+              <p class="container-description">Embrace the scenic splendor of Lonavla: where every moment is a
+                picture-perfect memory waiting to be captured</p>
+
+            </div>
+          </div></a>
+        </div>
+      </div>
+      <div class="thumbnail">
+        <div class="container">
+          <a class="redirecting-links" href="tajmahal.html">
+          <div class="container-sub">
+            <img class="image1" src="https://wallpapercave.com/wp/wp5982791.jpg" alt="Image1">
+            <div class="container-texts">
+              <p class="container-heading">TAJMAHAL</p>
+              <p class="container-description">Nestled along the banks of the Yamuna River in Agra, India, the Taj Mahal stands as a timeless symbol of love and architectural brilliance.</p>
+
+            </div>
+          </div></a>
+        </div>
+      </div>
+      <div class="thumbnail">
+        <div class="container">
+          <a class="redirecting-links" href="mumbai.html">
+          <div class="container-sub">
+            <img class="image1" src="https://wallpapercave.com/wp/wp12448044.jpg" alt="Image1">
+            <div class="container-texts">
+              <p class="container-heading">MUMBAI</p>
+              <p class="container-description">Discover the vibrant mosaic of Mumbai, India's bustling metropolis, where soaring skyscrapers, historic landmarks.</p>
+
+            </div>
+          </div></a>
+        </div>
+      </div>
+      <div class="thumb nail">
+        <div class="container">
+          <a class="redirecting-links" href="jaipur.html">
+          <div class="container-sub">
+            <img class="image1" src="https://wallpapercave.com/wp/wp4917313.jpg" alt="Image1">
+            <div class="container-texts">
+              <p class="container-heading">JAIPUR </p>
+              <p class="container-description">Explore the regal charm of Jaipur, the Pink City of India, where vibrant bazaars, majestic forts</p>
+
+            </div>
+          </div></a>
+        </div>
+      </div>
+      <div class="thumbnail">
+        <div class="container">
+          <a class="redirecting-links" href="lehladakh.html">
+          <div class="container-sub">
+            <img class="image1" src="https://wallpapercave.com/wp/wp7029163.jpg" alt="Image1">
+            <div class="container-texts">
+              <p class="container-heading">LEHLADAKH </p>
+              <p class="container-description">Embrace the rugged beauty of Ladakh: where every landscape is a breathtaking masterpiece waiting to be explored</p>
+
+            </div>
+          </div></a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="slide"><img class="slide-images" src="img1.jpg" alt="TAJ MAHAL"></div>
+      <div class="slide"><img class="slide-images" src="img20.jpg" alt="Image 2"></div>
+      <div class="slide"><img class="slide-images" src="img3.jpg" alt="Image 3"></div>
+      <div class="slide"><img class="slide-images" src="img23.jpg" alt="TAJ MAHAL"></div>
+      <div class="slide"><img class="slide-images" src="img5.jpg" alt="Image 2"></div>
+      <div class="slide"><img class="slide-images" src="img6.jpg" alt="Image 3"></div>
+      <div class="slide"><img class="slide-images" src="img7.jpg" alt="TAJ MAHAL"></div>
+      <div class="slide"><img class="slide-images" src="ladakh1.jpg" alt="Image 2"></div>
+      <div class="slide"><img class="slide-images" src="img22.jpg" alt="Image 3"></div>
+      <div class="slide"><img class="slide-images" src="img10.jpg" alt="TAJ MAHAL"></div>
+      <div class="slide"><img class="slide-images" src="img11.jpg" alt="Image 2"></div>
+      <div class="slide"><img class="slide-images" src="img12.jpg" alt="Image 3"></div>
+    </div>
+    
+    <div class="controls">
+      <button class="control-btn prev" onclick="prevSlide()">&#10094;</button>
+      <button class="control-btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </div>
+
+  <br>
+  <p class="container-2-heading"><i class="fa-solid fa-tags"></i> Explore Before You Visit </p>
+  <p class="container-2-text"><i class="fa-solid fa-exclamation"></i> <i class="fa-solid fa-exclamation"></i> Dive deeper into India's rich culture and heritage <i class="fa-solid fa-exclamation"></i> <i class="fa-solid fa-exclamation"></i></p>
+  <br> <div class="container-2-main">
+    <div class="container-2-main-sub">
+      <a class="evyp-redirecting" href="ebyv-1.html">
+      <img class="container-2-main-sub-img"
+        src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRlZNVinmZx0Z3iJ8WXC02UV_Gzxwi0_-qX97R2U1QOuBGpHq0Js2gTJ_ROqVLdwaf1bbsFnWWxGrz1_jsyOmR-TfJ8USEkdMQR8qoAsK4">
+      <p class="container-2-main-sub-text"> KHAURAHO - Poetry In Unity</p>
+    </a>
+    </div>
+    <div class="container-2-main-sub">
+      <a class="evyp-redirecting" href="ebyv-2.html">
+      <img class="container-2-main-sub-img"
+        src="KEDARNATHIMAGE.jpg">
+      <p class="container-2-main-sub-text">KEDARNATH</p>
+    </a>
+    </div>
+    <div class="container-2-main-sub">
+      <a class="evyp-redirecting" href="ebvy-3.html">
+      <img class="container-2-main-sub-img"
+        src="img20.jpg">
+      <p class="container-2-main-sub-text">SHRI RAM MANDIR</p>
+    </a>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="immersive-containers">
+    <div class="immersive-container-1">
+      <div class="immersive-slide">
+
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp7372495.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">RISHIKESH</div>
+      </div>
+      <div class="immersive-slide">
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp10121515.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">KULLU MANALI</div>
+      </div>
+      <div class="immersive-slide">
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp12582061.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">NEPAL</div>
+      </div>
+      <div class="immersive-slide">
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp13480436.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">BANGLADESH</div>
+      </div>
+      <div class="immersive-slide">
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp4190123.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">WEST BENGAL</div>
+      </div>
+      <div class="immersive-slide">
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp7665003.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">KARNATAKA</div>
+      </div>
+      <div class="immersive-slide">
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp5281242.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">Gujarat</div>
+      </div>
+      <div class="immersive-slide">
+        <img class="immersive-slide-img"
+          src="https://wallpapercave.com/wp/wp8172890.jpg"
+          alt="Image 1">
+        <div class="immersive-text-container">GULMARG</div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+
+  <p class="blog-container-heading"><i class="fa-solid fa-tags"></i> Blogs</p>
+  <p class="blog-description"><i class="fa-solid fa-exclamation"></i> <i class="fa-solid fa-exclamation"></i> An insight to the incredible experiences in India <i class="fa-solid fa-exclamation"></i> <i class="fa-solid fa-exclamation"></i></p>
+  <div class="blog-containers">
+    <div class="blog-container">
+      <a href="rajasthan-blog.html">
+      <img class="blog-image" src="https://wallpapercave.com/wp/wp12663337.jpg"></a><br>
+    <a class="blog-Explore-button" href="rajasthan-blog.html" > RAJASTHAN </a>
+    </div>
+    <div class="blog-container">
+      <a href="assam-blog.html">
+      <img class="blog-image" src="https://wallpapercave.com/wp/wp9822414.jpg"></a><br>
+      <a class="blog-Explore-button" href="assam-blog.html" > ASSAM </a>
+    </div>
+    <div class="blog-container">
+      <a href="j&k-blog.html">
+      <img class="blog-image" src="https://wallpapercave.com/wp/wp2678176.jpg"></a><br>
+      <a class="blog-Explore-button" href="j&k-blog.html"> JAMMU & KASHMIR </a>
+    </div>
+  </div>
+
+
+  <a class="plan-your-trip-link" href="indiamap.html">
+   Plan your trip <i class="fa-solid fa-map-pin"></i><a></div></a>
+
+
+
+  <div class="last-div">
+    <div class="last-div1">
+      <p class="p1-1">Explore <i class="fa-solid fa-magnifying-glass"></i></p>
+      <p class="p1">Packages</p>
+      <p class="p1">Hotels</p>
+      <p class="p1">Destinations</p>
+      <p class="p1">Collections</p>
+      <p class="p1">About us </p>
+    </div>
+    <div class="last-div2">
+      <p class="p2">Need help with tour packages ?</p>
+      <p class="p2-1"><a class="p2-1" href="feedback.html"> fill this Form to get a Callback <i class="fa-solid fa-file-signature"></i></a></p>
+      <p class="p2-3"><i class="fa-regular fa-phone"></i> <a class="mobile-no"
+          href="tel:+91 8767365987">022-48934444</a> </span></p>
+      <p class="p2-4"><i class="fa-regular fa-envelope"> </i><span class='span-email'> <a class="email"
+            href="mailto:lrsangnale_b23@it.vjti.ac.in" target="_blank">meekbhatkanti@gmail.com </a></span></p>
+      <p class="p2-5">Mon-Fri: 10AM - 7PM (IST)</p>
+      <p class="p2-6"> Saturday: 10AM - 2PM (IST)</p>
+    </div>
+    <div class="last-div3">
+      <p class="p3">Follow us <i class="fa-solid fa-user-plus"></i></p>
+      <p class="p3-1"> <a class="links" href="https://www.instagram.com/meekbhatkanti/"><i class="fa-brands fa-instagram"></i> </a><i class="fa-brands fa-facebook"></i> <i
+          class="fa-brands fa-twitter"></i> <i class="fa-brands fa-youtube"></i> </p>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var moreText = document.querySelector('.more-text');
+      var viewMoreBtn = document.querySelector('#view-more');
+      var viewLessBtn = document.querySelector('#view-less');
+
+      viewMoreBtn.addEventListener('click', function () {
+        moreText.style.display = 'inline';
+        viewMoreBtn.style.display = 'none';
+        viewLessBtn.style.display = 'inline-block';
+        // Adjust the container height to fit the expanded text
+        document.querySelector('.text-container').style.maxHeight = 'none';
+      });
+
+      viewLessBtn.addEventListener('click', function () {
+        moreText.style.display = 'none';
+        viewMoreBtn.style.display = 'inline-block';
+        viewLessBtn.style.display = 'none';
+        // Reset the container height to its original value
+        document.querySelector('.text-container').style.maxHeight = '150px';
+      });
+    });
+
+
+
+  </script>
+  <script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach((slide, i) => {
+        if (i === slideIndex) {
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+// Automatically change slides every 3 seconds
+setInterval(nextSlide, 3000);
+
+showSlide(slideIndex);
+</script>
+
+</body>
+
+</html>
